@@ -13,7 +13,7 @@
     bootstrap="vendor/autoload.php"
 >
     <testsuites>
-        <testsuite name="ISO4127 Test Suite">
+        <testsuite name="ISO4217 Test Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

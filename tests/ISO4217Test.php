@@ -2,9 +2,9 @@
 
 namespace Alcohol\Tests;
 
-use Alcohol\ISO4127;
+use Alcohol\ISO4217;
 
-class ISO4127Test extends \PHPUnit_Framework_TestCase
+class ISO4217Test extends \PHPUnit_Framework_TestCase
 {
     public $data = array(
         'alpha3' => 'EUR',
@@ -17,7 +17,7 @@ class ISO4127Test extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(
             $this->data,
-            ISO4127::getByAlpha3($this->data['alpha3'])
+            ISO4217::getByAlpha3($this->data['alpha3'])
         );
     }
 
@@ -26,14 +26,14 @@ class ISO4127Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByAlpha3ThrowsException()
     {
-        ISO4127::getByAlpha3('ZZZ');
+        ISO4217::getByAlpha3('ZZZ');
     }
 
     public function testGetByNumericReturnsCorrectData()
     {
         $this->assertEquals(
             $this->data,
-            ISO4127::getByNumeric($this->data['numeric'])
+            ISO4217::getByNumeric($this->data['numeric'])
         );
     }
 
@@ -42,6 +42,6 @@ class ISO4127Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByNumericThrowsException()
     {
-        ISO4127::getByNumeric('000');
+        ISO4217::getByNumeric('000');
     }
 }

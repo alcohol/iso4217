@@ -1,15 +1,15 @@
-[![Build Status](https://travis-ci.org/alcohol/iso4127.png?branch=master)](https://travis-ci.org/alcohol/iso4127)
+[![Build Status](https://travis-ci.org/alcohol/iso4217.png?branch=master)](https://travis-ci.org/alcohol/iso4217)
 
-# Alcohol\ISO4127
+# Alcohol\ISO4217
 
 Example:
 
 ```php
-use Alcohol\ISO4127;
+use Alcohol\ISO4217;
 
-ISO4127::getByAlpha3('EUR');
+ISO4217::getByAlpha3('EUR');
  // or
-ISO4127::getByNumeric('978');
+ISO4217::getByNumeric('978');
 ```
 
 Result:

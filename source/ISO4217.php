@@ -2,7 +2,7 @@
 
 namespace Alcohol;
 
-class ISO4127
+class ISO4217
 {
     protected static $currencies = null;
 
@@ -57,7 +57,7 @@ class ISO4127
 
     final protected static function fromDataDir()
     {
-        $json = file_get_contents(__DIR__.'/../data/iso4127.json');
+        $json = file_get_contents(__DIR__.'/../data/iso4217.json');
 
         return json_decode($json, true);
     }
