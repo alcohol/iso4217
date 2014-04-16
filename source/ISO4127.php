@@ -48,7 +48,7 @@ class ISO4127
 
     public static function load(array $currencies = array())
     {
-        if (empty($countries)) {
+        if (empty($currencies)) {
             $currencies = self::fromDataDir();
         }
 
