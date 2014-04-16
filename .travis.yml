@@ -1,0 +1,15 @@
+language: php
+
+before_script:
+  - composer self-update -n
+  - composer install -o -n
+
+php:
+  - 5.5
+  - 5.4
+  - 5.3
+
+script:
+  - vendor/bin/phpcs --standard=PSR2 source/
+  - vendor/bin/phpmd source/ xml codesize,controversial,design,naming,unusedcode
+  - vendor/bin/phpunit --strict

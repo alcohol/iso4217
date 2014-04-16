@@ -1,0 +1,40 @@
+{
+    "name": "alcohol/iso4127",
+    "description": "ISO 4217 PHP Library",
+    "keywords": [
+        "ISO 4217",
+        "ISO",
+        "4217",
+        "currencies",
+        "library"
+    ],
+    "homepage": "https://github.com/alcohol/iso4127",
+    "license": "WTFPL",
+    "authors": [{
+        "name": "Rob Bast",
+        "email": "rob.bast@gmail.com"
+    }],
+    "support": {
+        "issues": "https://github.com/alcohol/iso4127/issues",
+        "source": "https://github.com/alcohol/iso4127"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "phpmd/phpmd": "~1.5",
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alcohol\\": "source/",
+            "Alcohol\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
