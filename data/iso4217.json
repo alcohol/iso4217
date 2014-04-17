@@ -276,12 +276,6 @@
         "name": "Egyptian Pound"
     },
     {
-        "alpha3": "SVC",
-        "numeric": "222",
-        "exp": 2,
-        "name": "El Salvador Colon"
-    },
-    {
         "alpha3": "ETB",
         "numeric": "230",
         "exp": 2,
@@ -528,12 +522,6 @@
         "name": "Mexican Peso"
     },
     {
-        "alpha3": "MXV",
-        "numeric": "979",
-        "exp": 2,
-        "name": "Mexican Unidad de Inversion (UDI)"
-    },
-    {
         "alpha3": "MDL",
         "numeric": "498",
         "exp": 2,
@@ -550,12 +538,6 @@
         "numeric": "943",
         "exp": 2,
         "name": "Mozambique Metical"
-    },
-    {
-        "alpha3": "BOV",
-        "numeric": "984",
-        "exp": 2,
-        "name": "Mvdol"
     },
     {
         "alpha3": "NGN",
@@ -756,12 +738,6 @@
         "name": "Saudi Riyal"
     },
     {
-        "alpha3": "XDR",
-        "numeric": "960",
-        "exp": 0,
-        "name": "SDR (Special Drawing Right)"
-    },
-    {
         "alpha3": "RSD",
         "numeric": "941",
         "exp": 2,
@@ -814,12 +790,6 @@
         "numeric": "144",
         "exp": 2,
         "name": "Sri Lanka Rupee"
-    },
-    {
-        "alpha3": "XSU",
-        "numeric": "994",
-        "exp": 0,
-        "name": "Sucre"
     },
     {
         "alpha3": "SDG",
@@ -903,7 +873,7 @@
         "alpha3": "TMT",
         "numeric": "934",
         "exp": 2,
-        "name": "Turkmenistan New Manat"
+        "name": "Manat"
     },
     {
         "alpha3": "AED",
@@ -916,24 +886,6 @@
         "numeric": "800",
         "exp": 0,
         "name": "Uganda Shilling"
-    },
-    {
-        "alpha3": "COU",
-        "numeric": "970",
-        "exp": 2,
-        "name": "Unidad de Valor Real"
-    },
-    {
-        "alpha3": "CLF",
-        "numeric": "990",
-        "exp": 0,
-        "name": "Unidades de fomento"
-    },
-    {
-        "alpha3": "UYI",
-        "numeric": "940",
-        "exp": 0,
-        "name": "Uruguay Peso en Unidades Indexadas (URUIURUI)"
     },
     {
         "alpha3": "USD",
@@ -952,18 +904,6 @@
         "numeric": "548",
         "exp": 0,
         "name": "Vatu"
-    },
-    {
-        "alpha3": "CHE",
-        "numeric": "947",
-        "exp": 2,
-        "name": "WIR Euro"
-    },
-    {
-        "alpha3": "CHW",
-        "numeric": "948",
-        "exp": 2,
-        "name": "WIR Franc"
     },
     {
         "alpha3": "KRW",
