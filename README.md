@@ -25,6 +25,14 @@ Array
     [numeric] => 978
     [exp] => 2
     [name] => Euro
+    [country] => Array
+        (
+            [0] => AX
+            [1] => AD
+            ...
+            [30] => ES
+            [31] => ZW
+        )
 )
 ```
 
