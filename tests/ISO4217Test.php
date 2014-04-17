@@ -56,11 +56,12 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider invalidAlpha3
      * @expectedException \InvalidArgumentException
      */
-    public function testGetInvalidByAlpha3ThrowsInvalidArgumentException()
+    public function testGetInvalidByAlpha3ThrowsInvalidArgumentException($alpha3)
     {
-        ISO4217::getByAlpha3('ZZ');
+        ISO4217::getByAlpha3($alpha3);
     }
 
     /**
@@ -80,11 +81,12 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider invalidNumeric
      * @expectedException \InvalidArgumentException
      */
-    public function testGetByInvalidNumericThrowsInvalidArgumentException()
+    public function testGetByInvalidNumericThrowsInvalidArgumentException($numeric)
     {
-        ISO4217::getByNumeric('00');
+        ISO4217::getByNumeric($numeric);
     }
 
     /**
@@ -93,5 +95,15 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     public function testGetByUnknownNumericThrowsRuntimeException()
     {
         ISO4217::getByNumeric('000');
+    }
+
+    public function invalidAlpha3()
+    {
+        return array(array('ZZ'), array('ZZZZ'));
+    }
+
+    public function invalidNumeric()
+    {
+        return array(array('00'), array('0000'));
     }
 }
