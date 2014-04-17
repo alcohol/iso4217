@@ -10,7 +10,41 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
         'alpha3' => 'EUR',
         'numeric' => '978',
         'exp' => 2,
-        'name' => 'Euro'
+        'name' => 'Euro',
+        'country' => array(
+            "AX",
+            "AD",
+            "AT",
+            "BE",
+            "CY",
+            "FI",
+            "FR",
+            "GF",
+            "TF",
+            "DE",
+            "GR",
+            "GP",
+            "VA",
+            "IE",
+            "IT",
+            "LU",
+            "MT",
+            "MQ",
+            "YT",
+            "MC",
+            "ME",
+            "NL",
+            "PT",
+            "RE",
+            "BL",
+            "MF",
+            "PM",
+            "SM",
+            "SK",
+            "SI",
+            "ES",
+            "ZW"
+        )
     );
 
     public function testGetByAlpha3ReturnsCorrectData()

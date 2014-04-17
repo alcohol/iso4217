@@ -1,944 +1,1231 @@
 [
     {
+        "alpha3": "AED",
+        "numeric": "784",
+        "exp": 2,
+        "name": "UAE Dirham",
+        "country": "AE"
+    },
+    {
         "alpha3": "AFN",
         "numeric": "971",
         "exp": 2,
-        "name": "Afghani"
-    },
-    {
-        "alpha3": "DZD",
-        "numeric": "012",
-        "exp": 2,
-        "name": "Algerian Dinar"
-    },
-    {
-        "alpha3": "ARS",
-        "numeric": "032",
-        "exp": 2,
-        "name": "Argentine Peso"
-    },
-    {
-        "alpha3": "AMD",
-        "numeric": "051",
-        "exp": 2,
-        "name": "Armenian Dram"
-    },
-    {
-        "alpha3": "AWG",
-        "numeric": "533",
-        "exp": 2,
-        "name": "Aruban Florin"
-    },
-    {
-        "alpha3": "AUD",
-        "numeric": "036",
-        "exp": 2,
-        "name": "Australian Dollar"
-    },
-    {
-        "alpha3": "AZN",
-        "numeric": "944",
-        "exp": 2,
-        "name": "Azerbaijanian Manat"
-    },
-    {
-        "alpha3": "BSD",
-        "numeric": "044",
-        "exp": 2,
-        "name": "Bahamian Dollar"
-    },
-    {
-        "alpha3": "BHD",
-        "numeric": "048",
-        "exp": 3,
-        "name": "Bahraini Dinar"
-    },
-    {
-        "alpha3": "THB",
-        "numeric": "764",
-        "exp": 2,
-        "name": "Baht"
-    },
-    {
-        "alpha3": "PAB",
-        "numeric": "590",
-        "exp": 2,
-        "name": "Balboa"
-    },
-    {
-        "alpha3": "BBD",
-        "numeric": "052",
-        "exp": 2,
-        "name": "Barbados Dollar"
-    },
-    {
-        "alpha3": "BYR",
-        "numeric": "974",
-        "exp": 0,
-        "name": "Belarussian Ruble"
-    },
-    {
-        "alpha3": "BZD",
-        "numeric": "084",
-        "exp": 2,
-        "name": "Belize Dollar"
-    },
-    {
-        "alpha3": "BMD",
-        "numeric": "060",
-        "exp": 2,
-        "name": "Bermudian Dollar"
-    },
-    {
-        "alpha3": "VEF",
-        "numeric": "937",
-        "exp": 2,
-        "name": "Bolivar"
-    },
-    {
-        "alpha3": "BOB",
-        "numeric": "068",
-        "exp": 2,
-        "name": "Boliviano"
-    },
-    {
-        "alpha3": "BRL",
-        "numeric": "986",
-        "exp": 2,
-        "name": "Brazilian Real"
-    },
-    {
-        "alpha3": "BND",
-        "numeric": "096",
-        "exp": 2,
-        "name": "Brunei Dollar"
-    },
-    {
-        "alpha3": "BGN",
-        "numeric": "975",
-        "exp": 2,
-        "name": "Bulgarian Lev"
-    },
-    {
-        "alpha3": "BIF",
-        "numeric": "108",
-        "exp": 0,
-        "name": "Burundi Franc"
-    },
-    {
-        "alpha3": "CAD",
-        "numeric": "124",
-        "exp": 2,
-        "name": "Canadian Dollar"
-    },
-    {
-        "alpha3": "CVE",
-        "numeric": "132",
-        "exp": 2,
-        "name": "Cape Verde Escudo"
-    },
-    {
-        "alpha3": "KYD",
-        "numeric": "136",
-        "exp": 2,
-        "name": "Cayman Islands Dollar"
-    },
-    {
-        "alpha3": "XOF",
-        "numeric": "952",
-        "exp": 0,
-        "name": "CFA Franc BCEAO"
-    },
-    {
-        "alpha3": "XAF",
-        "numeric": "950",
-        "exp": 0,
-        "name": "CFA Franc BEAC"
-    },
-    {
-        "alpha3": "XPF",
-        "numeric": "953",
-        "exp": 0,
-        "name": "CFP Franc"
-    },
-    {
-        "alpha3": "CLP",
-        "numeric": "152",
-        "exp": 0,
-        "name": "Chilean Peso"
-    },
-    {
-        "alpha3": "COP",
-        "numeric": "170",
-        "exp": 2,
-        "name": "Colombian Peso"
-    },
-    {
-        "alpha3": "KMF",
-        "numeric": "174",
-        "exp": 0,
-        "name": "Comoro Franc"
-    },
-    {
-        "alpha3": "CDF",
-        "numeric": "976",
-        "exp": 2,
-        "name": "Congolese Franc"
-    },
-    {
-        "alpha3": "BAM",
-        "numeric": "977",
-        "exp": 2,
-        "name": "Convertible Mark"
-    },
-    {
-        "alpha3": "NIO",
-        "numeric": "558",
-        "exp": 2,
-        "name": "Córdoba"
-    },
-    {
-        "alpha3": "CRC",
-        "numeric": "188",
-        "exp": 2,
-        "name": "Costa Rican Colon"
-    },
-    {
-        "alpha3": "HRK",
-        "numeric": "191",
-        "exp": 2,
-        "name": "Croatian Kuna"
-    },
-    {
-        "alpha3": "CUP",
-        "numeric": "192",
-        "exp": 2,
-        "name": "Cuban Peso"
-    },
-    {
-        "alpha3": "CZK",
-        "numeric": "203",
-        "exp": 2,
-        "name": "Czech Koruna"
-    },
-    {
-        "alpha3": "GMD",
-        "numeric": "270",
-        "exp": 2,
-        "name": "Dalasi"
-    },
-    {
-        "alpha3": "DKK",
-        "numeric": "208",
-        "exp": 2,
-        "name": "Danish Krone"
-    },
-    {
-        "alpha3": "MKD",
-        "numeric": "807",
-        "exp": 2,
-        "name": "Denar"
-    },
-    {
-        "alpha3": "DJF",
-        "numeric": "262",
-        "exp": 0,
-        "name": "Djibouti Franc"
-    },
-    {
-        "alpha3": "STD",
-        "numeric": "678",
-        "exp": 2,
-        "name": "Dobra"
-    },
-    {
-        "alpha3": "DOP",
-        "numeric": "214",
-        "exp": 2,
-        "name": "Dominican Peso"
-    },
-    {
-        "alpha3": "VND",
-        "numeric": "704",
-        "exp": 0,
-        "name": "Dong"
-    },
-    {
-        "alpha3": "XCD",
-        "numeric": "951",
-        "exp": 2,
-        "name": "East Caribbean Dollar"
-    },
-    {
-        "alpha3": "EGP",
-        "numeric": "818",
-        "exp": 2,
-        "name": "Egyptian Pound"
-    },
-    {
-        "alpha3": "ETB",
-        "numeric": "230",
-        "exp": 2,
-        "name": "Ethiopian Birr"
-    },
-    {
-        "alpha3": "EUR",
-        "numeric": "978",
-        "exp": 2,
-        "name": "Euro"
-    },
-    {
-        "alpha3": "FKP",
-        "numeric": "238",
-        "exp": 2,
-        "name": "Falkland Islands Pound"
-    },
-    {
-        "alpha3": "FJD",
-        "numeric": "242",
-        "exp": 2,
-        "name": "Fiji Dollar"
-    },
-    {
-        "alpha3": "HUF",
-        "numeric": "348",
-        "exp": 2,
-        "name": "Forint"
-    },
-    {
-        "alpha3": "GHS",
-        "numeric": "936",
-        "exp": 2,
-        "name": "Ghana Cedi"
-    },
-    {
-        "alpha3": "GIP",
-        "numeric": "292",
-        "exp": 2,
-        "name": "Gibraltar Pound"
-    },
-    {
-        "alpha3": "HTG",
-        "numeric": "332",
-        "exp": 2,
-        "name": "Gourde"
-    },
-    {
-        "alpha3": "PYG",
-        "numeric": "600",
-        "exp": 0,
-        "name": "Guarani"
-    },
-    {
-        "alpha3": "GNF",
-        "numeric": "324",
-        "exp": 0,
-        "name": "Guinea Franc"
-    },
-    {
-        "alpha3": "GYD",
-        "numeric": "328",
-        "exp": 2,
-        "name": "Guyana Dollar"
-    },
-    {
-        "alpha3": "HKD",
-        "numeric": "344",
-        "exp": 2,
-        "name": "Hong Kong Dollar"
-    },
-    {
-        "alpha3": "UAH",
-        "numeric": "980",
-        "exp": 2,
-        "name": "Hryvnia"
-    },
-    {
-        "alpha3": "ISK",
-        "numeric": "352",
-        "exp": 0,
-        "name": "Iceland Krona"
-    },
-    {
-        "alpha3": "INR",
-        "numeric": "356",
-        "exp": 2,
-        "name": "Indian Rupee"
-    },
-    {
-        "alpha3": "IRR",
-        "numeric": "364",
-        "exp": 2,
-        "name": "Iranian Rial"
-    },
-    {
-        "alpha3": "IQD",
-        "numeric": "368",
-        "exp": 3,
-        "name": "Iraqi Dinar"
-    },
-    {
-        "alpha3": "JMD",
-        "numeric": "388",
-        "exp": 2,
-        "name": "Jamaican Dollar"
-    },
-    {
-        "alpha3": "JOD",
-        "numeric": "400",
-        "exp": 3,
-        "name": "Jordanian Dinar"
-    },
-    {
-        "alpha3": "KES",
-        "numeric": "404",
-        "exp": 2,
-        "name": "Kenyan Shilling"
-    },
-    {
-        "alpha3": "PGK",
-        "numeric": "598",
-        "exp": 2,
-        "name": "Kina"
-    },
-    {
-        "alpha3": "LAK",
-        "numeric": "418",
-        "exp": 2,
-        "name": "Kip"
-    },
-    {
-        "alpha3": "KWD",
-        "numeric": "414",
-        "exp": 3,
-        "name": "Kuwaiti Dinar"
-    },
-    {
-        "alpha3": "MWK",
-        "numeric": "454",
-        "exp": 2,
-        "name": "Kwacha"
-    },
-    {
-        "alpha3": "AOA",
-        "numeric": "973",
-        "exp": 2,
-        "name": "Kwanza"
-    },
-    {
-        "alpha3": "MMK",
-        "numeric": "104",
-        "exp": 2,
-        "name": "Kyat"
-    },
-    {
-        "alpha3": "GEL",
-        "numeric": "981",
-        "exp": 2,
-        "name": "Lari"
-    },
-    {
-        "alpha3": "LVL",
-        "numeric": "428",
-        "exp": 2,
-        "name": "Latvian Lats"
-    },
-    {
-        "alpha3": "LBP",
-        "numeric": "422",
-        "exp": 2,
-        "name": "Lebanese Pound"
+        "name": "Afghani",
+        "country": "AF"
     },
     {
         "alpha3": "ALL",
         "numeric": "008",
         "exp": 2,
-        "name": "Lek"
+        "name": "Lek",
+        "country": "AL"
     },
     {
-        "alpha3": "HNL",
-        "numeric": "340",
+        "alpha3": "AMD",
+        "numeric": "051",
         "exp": 2,
-        "name": "Lempira"
-    },
-    {
-        "alpha3": "SLL",
-        "numeric": "694",
-        "exp": 2,
-        "name": "Leone"
-    },
-    {
-        "alpha3": "LRD",
-        "numeric": "430",
-        "exp": 2,
-        "name": "Liberian Dollar"
-    },
-    {
-        "alpha3": "LYD",
-        "numeric": "434",
-        "exp": 3,
-        "name": "Libyan Dinar"
-    },
-    {
-        "alpha3": "SZL",
-        "numeric": "748",
-        "exp": 2,
-        "name": "Lilangeni"
-    },
-    {
-        "alpha3": "LTL",
-        "numeric": "440",
-        "exp": 2,
-        "name": "Lithuanian Litas"
-    },
-    {
-        "alpha3": "LSL",
-        "numeric": "426",
-        "exp": 2,
-        "name": "Loti"
-    },
-    {
-        "alpha3": "MGA",
-        "numeric": "969",
-        "exp": 2,
-        "name": "Malagasy Ariary"
-    },
-    {
-        "alpha3": "MYR",
-        "numeric": "458",
-        "exp": 2,
-        "name": "Malaysian Ringgit"
-    },
-    {
-        "alpha3": "MUR",
-        "numeric": "480",
-        "exp": 2,
-        "name": "Mauritius Rupee"
-    },
-    {
-        "alpha3": "MXN",
-        "numeric": "484",
-        "exp": 2,
-        "name": "Mexican Peso"
-    },
-    {
-        "alpha3": "MDL",
-        "numeric": "498",
-        "exp": 2,
-        "name": "Moldovan Leu"
-    },
-    {
-        "alpha3": "MAD",
-        "numeric": "504",
-        "exp": 2,
-        "name": "Moroccan Dirham"
-    },
-    {
-        "alpha3": "MZN",
-        "numeric": "943",
-        "exp": 2,
-        "name": "Mozambique Metical"
-    },
-    {
-        "alpha3": "NGN",
-        "numeric": "566",
-        "exp": 2,
-        "name": "Naira"
-    },
-    {
-        "alpha3": "ERN",
-        "numeric": "232",
-        "exp": 2,
-        "name": "Nakfa"
-    },
-    {
-        "alpha3": "NAD",
-        "numeric": "516",
-        "exp": 2,
-        "name": "Namibia Dollar"
-    },
-    {
-        "alpha3": "NPR",
-        "numeric": "524",
-        "exp": 2,
-        "name": "Nepalese Rupee"
+        "name": "Armenian Dram",
+        "country": "AM"
     },
     {
         "alpha3": "ANG",
         "numeric": "532",
         "exp": 2,
-        "name": "Netherlands Antillean Guilder"
+        "name": "Netherlands Antillean Guilder",
+        "country": [
+            "CW",
+            "SX"
+        ]
     },
     {
-        "alpha3": "ILS",
-        "numeric": "376",
+        "alpha3": "AOA",
+        "numeric": "973",
         "exp": 2,
-        "name": "New Israeli Sheqel"
+        "name": "Kwanza",
+        "country": "AO"
     },
     {
-        "alpha3": "RON",
-        "numeric": "946",
+        "alpha3": "ARS",
+        "numeric": "032",
         "exp": 2,
-        "name": "New Romanian Leu"
+        "name": "Argentine Peso",
+        "country": "AR"
     },
     {
-        "alpha3": "TWD",
-        "numeric": "901",
+        "alpha3": "AUD",
+        "numeric": "036",
         "exp": 2,
-        "name": "New Taiwan Dollar"
+        "name": "Australian Dollar",
+        "country": [
+            "AU",
+            "CX",
+            "CC",
+            "HM",
+            "KI",
+            "NR",
+            "NF",
+            "TV"
+        ]
     },
     {
-        "alpha3": "NZD",
-        "numeric": "554",
+        "alpha3": "AWG",
+        "numeric": "533",
         "exp": 2,
-        "name": "New Zealand Dollar"
+        "name": "Aruban Florin",
+        "country": "AW"
     },
     {
-        "alpha3": "BTN",
-        "numeric": "064",
+        "alpha3": "AZN",
+        "numeric": "944",
         "exp": 2,
-        "name": "Ngultrum"
+        "name": "Azerbaijanian Manat",
+        "country": "AZ"
     },
     {
-        "alpha3": "KPW",
-        "numeric": "408",
+        "alpha3": "BAM",
+        "numeric": "977",
         "exp": 2,
-        "name": "North Korean Won"
+        "name": "Convertible Mark",
+        "country": "BA"
     },
     {
-        "alpha3": "NOK",
-        "numeric": "578",
+        "alpha3": "BBD",
+        "numeric": "052",
         "exp": 2,
-        "name": "Norwegian Krone"
-    },
-    {
-        "alpha3": "PEN",
-        "numeric": "604",
-        "exp": 2,
-        "name": "Nuevo Sol"
-    },
-    {
-        "alpha3": "MRO",
-        "numeric": "478",
-        "exp": 2,
-        "name": "Ouguiya"
-    },
-    {
-        "alpha3": "PKR",
-        "numeric": "586",
-        "exp": 2,
-        "name": "Pakistan Rupee"
-    },
-    {
-        "alpha3": "MOP",
-        "numeric": "446",
-        "exp": 2,
-        "name": "Pataca"
-    },
-    {
-        "alpha3": "TOP",
-        "numeric": "776",
-        "exp": 2,
-        "name": "Pa’anga"
-    },
-    {
-        "alpha3": "CUC",
-        "numeric": "931",
-        "exp": 2,
-        "name": "Peso Convertible"
-    },
-    {
-        "alpha3": "UYU",
-        "numeric": "858",
-        "exp": 2,
-        "name": "Peso Uruguayo"
-    },
-    {
-        "alpha3": "PHP",
-        "numeric": "608",
-        "exp": 2,
-        "name": "Philippine Peso"
-    },
-    {
-        "alpha3": "GBP",
-        "numeric": "826",
-        "exp": 2,
-        "name": "Pound Sterling"
-    },
-    {
-        "alpha3": "BWP",
-        "numeric": "072",
-        "exp": 2,
-        "name": "Pula"
-    },
-    {
-        "alpha3": "QAR",
-        "numeric": "634",
-        "exp": 2,
-        "name": "Qatari Rial"
-    },
-    {
-        "alpha3": "GTQ",
-        "numeric": "320",
-        "exp": 2,
-        "name": "Quetzal"
-    },
-    {
-        "alpha3": "ZAR",
-        "numeric": "710",
-        "exp": 2,
-        "name": "Rand"
-    },
-    {
-        "alpha3": "OMR",
-        "numeric": "512",
-        "exp": 3,
-        "name": "Rial Omani"
-    },
-    {
-        "alpha3": "KHR",
-        "numeric": "116",
-        "exp": 2,
-        "name": "Riel"
-    },
-    {
-        "alpha3": "MVR",
-        "numeric": "462",
-        "exp": 2,
-        "name": "Rufiyaa"
-    },
-    {
-        "alpha3": "IDR",
-        "numeric": "360",
-        "exp": 2,
-        "name": "Rupiah"
-    },
-    {
-        "alpha3": "RUB",
-        "numeric": "643",
-        "exp": 2,
-        "name": "Russian Ruble"
-    },
-    {
-        "alpha3": "RWF",
-        "numeric": "646",
-        "exp": 0,
-        "name": "Rwanda Franc"
-    },
-    {
-        "alpha3": "SHP",
-        "numeric": "654",
-        "exp": 2,
-        "name": "Saint Helena Pound"
-    },
-    {
-        "alpha3": "SAR",
-        "numeric": "682",
-        "exp": 2,
-        "name": "Saudi Riyal"
-    },
-    {
-        "alpha3": "RSD",
-        "numeric": "941",
-        "exp": 2,
-        "name": "Serbian Dinar"
-    },
-    {
-        "alpha3": "SCR",
-        "numeric": "690",
-        "exp": 2,
-        "name": "Seychelles Rupee"
-    },
-    {
-        "alpha3": "SGD",
-        "numeric": "702",
-        "exp": 2,
-        "name": "Singapore Dollar"
-    },
-    {
-        "alpha3": "SBD",
-        "numeric": "090",
-        "exp": 2,
-        "name": "Solomon Islands Dollar"
-    },
-    {
-        "alpha3": "KGS",
-        "numeric": "417",
-        "exp": 2,
-        "name": "Som"
-    },
-    {
-        "alpha3": "SOS",
-        "numeric": "706",
-        "exp": 2,
-        "name": "Somali Shilling"
-    },
-    {
-        "alpha3": "TJS",
-        "numeric": "972",
-        "exp": 2,
-        "name": "Somoni"
-    },
-    {
-        "alpha3": "SSP",
-        "numeric": "728",
-        "exp": 2,
-        "name": "South Sudanese Pound"
-    },
-    {
-        "alpha3": "LKR",
-        "numeric": "144",
-        "exp": 2,
-        "name": "Sri Lanka Rupee"
-    },
-    {
-        "alpha3": "SDG",
-        "numeric": "938",
-        "exp": 2,
-        "name": "Sudanese Pound"
-    },
-    {
-        "alpha3": "SRD",
-        "numeric": "968",
-        "exp": 2,
-        "name": "Surinam Dollar"
-    },
-    {
-        "alpha3": "SEK",
-        "numeric": "752",
-        "exp": 2,
-        "name": "Swedish Krona"
-    },
-    {
-        "alpha3": "CHF",
-        "numeric": "756",
-        "exp": 2,
-        "name": "Swiss Franc"
-    },
-    {
-        "alpha3": "SYP",
-        "numeric": "760",
-        "exp": 2,
-        "name": "Syrian Pound"
+        "name": "Barbados Dollar",
+        "country": "BB"
     },
     {
         "alpha3": "BDT",
         "numeric": "050",
         "exp": 2,
-        "name": "Taka"
+        "name": "Taka",
+        "country": "BD"
     },
     {
-        "alpha3": "WST",
-        "numeric": "882",
+        "alpha3": "BGN",
+        "numeric": "975",
         "exp": 2,
-        "name": "Tala"
+        "name": "Bulgarian Lev",
+        "country": "BG"
     },
     {
-        "alpha3": "TZS",
-        "numeric": "834",
-        "exp": 2,
-        "name": "Tanzanian Shilling"
-    },
-    {
-        "alpha3": "KZT",
-        "numeric": "398",
-        "exp": 2,
-        "name": "Tenge"
-    },
-    {
-        "alpha3": "TTD",
-        "numeric": "780",
-        "exp": 2,
-        "name": "Trinidad and Tobago Dollar"
-    },
-    {
-        "alpha3": "MNT",
-        "numeric": "496",
-        "exp": 2,
-        "name": "Tugrik"
-    },
-    {
-        "alpha3": "TND",
-        "numeric": "788",
+        "alpha3": "BHD",
+        "numeric": "048",
         "exp": 3,
-        "name": "Tunisian Dinar"
+        "name": "Bahraini Dinar",
+        "country": "BH"
     },
     {
-        "alpha3": "TRY",
-        "numeric": "949",
-        "exp": 2,
-        "name": "Turkish Lira"
-    },
-    {
-        "alpha3": "TMT",
-        "numeric": "934",
-        "exp": 2,
-        "name": "Manat"
-    },
-    {
-        "alpha3": "AED",
-        "numeric": "784",
-        "exp": 2,
-        "name": "UAE Dirham"
-    },
-    {
-        "alpha3": "UGX",
-        "numeric": "800",
+        "alpha3": "BIF",
+        "numeric": "108",
         "exp": 0,
-        "name": "Uganda Shilling"
+        "name": "Burundi Franc",
+        "country": "BI"
     },
     {
-        "alpha3": "USD",
-        "numeric": "840",
+        "alpha3": "BMD",
+        "numeric": "060",
         "exp": 2,
-        "name": "US Dollar"
+        "name": "Bermudian Dollar",
+        "country": "BM"
     },
     {
-        "alpha3": "UZS",
-        "numeric": "860",
+        "alpha3": "BND",
+        "numeric": "096",
         "exp": 2,
-        "name": "Uzbekistan Sum"
+        "name": "Brunei Dollar",
+        "country": "BN"
     },
     {
-        "alpha3": "VUV",
-        "numeric": "548",
-        "exp": 0,
-        "name": "Vatu"
-    },
-    {
-        "alpha3": "KRW",
-        "numeric": "410",
-        "exp": 0,
-        "name": "Won"
-    },
-    {
-        "alpha3": "YER",
-        "numeric": "886",
+        "alpha3": "BOB",
+        "numeric": "068",
         "exp": 2,
-        "name": "Yemeni Rial"
+        "name": "Boliviano",
+        "country": "BO"
     },
     {
-        "alpha3": "JPY",
-        "numeric": "392",
+        "alpha3": "BRL",
+        "numeric": "986",
+        "exp": 2,
+        "name": "Brazilian Real",
+        "country": "BR"
+    },
+    {
+        "alpha3": "BSD",
+        "numeric": "044",
+        "exp": 2,
+        "name": "Bahamian Dollar",
+        "country": "BS"
+    },
+    {
+        "alpha3": "BTN",
+        "numeric": "064",
+        "exp": 2,
+        "name": "Ngultrum",
+        "country": "BT"
+    },
+    {
+        "alpha3": "BWP",
+        "numeric": "072",
+        "exp": 2,
+        "name": "Pula",
+        "country": [
+            "BW",
+            "ZW"
+        ]
+    },
+    {
+        "alpha3": "BYR",
+        "numeric": "974",
         "exp": 0,
-        "name": "Yen"
+        "name": "Belarussian Ruble",
+        "country": "BY"
+    },
+    {
+        "alpha3": "BZD",
+        "numeric": "084",
+        "exp": 2,
+        "name": "Belize Dollar",
+        "country": "BZ"
+    },
+    {
+        "alpha3": "CAD",
+        "numeric": "124",
+        "exp": 2,
+        "name": "Canadian Dollar",
+        "country": "CA"
+    },
+    {
+        "alpha3": "CDF",
+        "numeric": "976",
+        "exp": 2,
+        "name": "Congolese Franc",
+        "country": "CD"
+    },
+    {
+        "alpha3": "CHF",
+        "numeric": "756",
+        "exp": 2,
+        "name": "Swiss Franc",
+        "country": [
+            "LI",
+            "CH"
+        ]
+    },
+    {
+        "alpha3": "CLP",
+        "numeric": "152",
+        "exp": 0,
+        "name": "Chilean Peso",
+        "country": "CL"
     },
     {
         "alpha3": "CNY",
         "numeric": "156",
         "exp": 2,
-        "name": "Yuan Renminbi"
+        "name": "Yuan Renminbi",
+        "country": "CN"
     },
     {
-        "alpha3": "ZMW",
-        "numeric": "967",
+        "alpha3": "COP",
+        "numeric": "170",
         "exp": 2,
-        "name": "Zambian Kwacha"
+        "name": "Colombian Peso",
+        "country": "CO"
+    },
+    {
+        "alpha3": "CRC",
+        "numeric": "188",
+        "exp": 2,
+        "name": "Costa Rican Colon",
+        "country": "CR"
+    },
+    {
+        "alpha3": "CUC",
+        "numeric": "931",
+        "exp": 2,
+        "name": "Peso Convertible",
+        "country": "CU"
+    },
+    {
+        "alpha3": "CUP",
+        "numeric": "192",
+        "exp": 2,
+        "name": "Cuban Peso",
+        "country": "CU"
+    },
+    {
+        "alpha3": "CVE",
+        "numeric": "132",
+        "exp": 2,
+        "name": "Cape Verde Escudo",
+        "country": "CV"
+    },
+    {
+        "alpha3": "CZK",
+        "numeric": "203",
+        "exp": 2,
+        "name": "Czech Koruna",
+        "country": "CZ"
+    },
+    {
+        "alpha3": "DJF",
+        "numeric": "262",
+        "exp": 0,
+        "name": "Djibouti Franc",
+        "country": "DJ"
+    },
+    {
+        "alpha3": "DKK",
+        "numeric": "208",
+        "exp": 2,
+        "name": "Danish Krone",
+        "country": [
+            "DK",
+            "FO",
+            "GL"
+        ]
+    },
+    {
+        "alpha3": "DOP",
+        "numeric": "214",
+        "exp": 2,
+        "name": "Dominican Peso",
+        "country": "DO"
+    },
+    {
+        "alpha3": "DZD",
+        "numeric": "012",
+        "exp": 2,
+        "name": "Algerian Dinar",
+        "country": "DZ"
+    },
+    {
+        "alpha3": "EGP",
+        "numeric": "818",
+        "exp": 2,
+        "name": "Egyptian Pound",
+        "country": "EG"
+    },
+    {
+        "alpha3": "ERN",
+        "numeric": "232",
+        "exp": 2,
+        "name": "Nakfa",
+        "country": "ER"
+    },
+    {
+        "alpha3": "ETB",
+        "numeric": "230",
+        "exp": 2,
+        "name": "Ethiopian Birr",
+        "country": "ET"
+    },
+    {
+        "alpha3": "EUR",
+        "numeric": "978",
+        "exp": 2,
+        "name": "Euro",
+        "country": [
+            "AX",
+            "AD",
+            "AT",
+            "BE",
+            "CY",
+            "FI",
+            "FR",
+            "GF",
+            "TF",
+            "DE",
+            "GR",
+            "GP",
+            "VA",
+            "IE",
+            "IT",
+            "LU",
+            "MT",
+            "MQ",
+            "YT",
+            "MC",
+            "ME",
+            "NL",
+            "PT",
+            "RE",
+            "BL",
+            "MF",
+            "PM",
+            "SM",
+            "SK",
+            "SI",
+            "ES",
+            "ZW"
+        ]
+    },
+    {
+        "alpha3": "FJD",
+        "numeric": "242",
+        "exp": 2,
+        "name": "Fiji Dollar",
+        "country": "FJ"
+    },
+    {
+        "alpha3": "FKP",
+        "numeric": "238",
+        "exp": 2,
+        "name": "Falkland Islands Pound",
+        "country": "FK"
+    },
+    {
+        "alpha3": "GBP",
+        "numeric": "826",
+        "exp": 2,
+        "name": "Pound Sterling",
+        "country": [
+            "IO",
+            "GG",
+            "IM",
+            "JE",
+            "GS",
+            "GB",
+            "ZW"
+        ]
+    },
+    {
+        "alpha3": "GEL",
+        "numeric": "981",
+        "exp": 2,
+        "name": "Lari",
+        "country": "GE"
+    },
+    {
+        "alpha3": "GHS",
+        "numeric": "936",
+        "exp": 2,
+        "name": "Ghana Cedi",
+        "country": "GH"
+    },
+    {
+        "alpha3": "GIP",
+        "numeric": "292",
+        "exp": 2,
+        "name": "Gibraltar Pound",
+        "country": "GI"
+    },
+    {
+        "alpha3": "GMD",
+        "numeric": "270",
+        "exp": 2,
+        "name": "Dalasi",
+        "country": "GM"
+    },
+    {
+        "alpha3": "GNF",
+        "numeric": "324",
+        "exp": 0,
+        "name": "Guinea Franc",
+        "country": "GN"
+    },
+    {
+        "alpha3": "GTQ",
+        "numeric": "320",
+        "exp": 2,
+        "name": "Quetzal",
+        "country": "GT"
+    },
+    {
+        "alpha3": "GYD",
+        "numeric": "328",
+        "exp": 2,
+        "name": "Guyana Dollar",
+        "country": "GY"
+    },
+    {
+        "alpha3": "HKD",
+        "numeric": "344",
+        "exp": 2,
+        "name": "Hong Kong Dollar",
+        "country": "HK"
+    },
+    {
+        "alpha3": "HNL",
+        "numeric": "340",
+        "exp": 2,
+        "name": "Lempira",
+        "country": "HN"
+    },
+    {
+        "alpha3": "HRK",
+        "numeric": "191",
+        "exp": 2,
+        "name": "Croatian Kuna",
+        "country": "HR"
+    },
+    {
+        "alpha3": "HTG",
+        "numeric": "332",
+        "exp": 2,
+        "name": "Gourde",
+        "country": "HT"
+    },
+    {
+        "alpha3": "HUF",
+        "numeric": "348",
+        "exp": 2,
+        "name": "Forint",
+        "country": "HU"
+    },
+    {
+        "alpha3": "IDR",
+        "numeric": "360",
+        "exp": 2,
+        "name": "Rupiah",
+        "country": "ID"
+    },
+    {
+        "alpha3": "ILS",
+        "numeric": "376",
+        "exp": 2,
+        "name": "New Israeli Sheqel",
+        "country": [
+            "IL",
+            "PS"
+        ]
+    },
+    {
+        "alpha3": "INR",
+        "numeric": "356",
+        "exp": 2,
+        "name": "Indian Rupee",
+        "country": "IN"
+    },
+    {
+        "alpha3": "IQD",
+        "numeric": "368",
+        "exp": 3,
+        "name": "Iraqi Dinar",
+        "country": "IQ"
+    },
+    {
+        "alpha3": "IRR",
+        "numeric": "364",
+        "exp": 2,
+        "name": "Iranian Rial",
+        "country": "IR"
+    },
+    {
+        "alpha3": "ISK",
+        "numeric": "352",
+        "exp": 0,
+        "name": "Iceland Krona",
+        "country": "IS"
+    },
+    {
+        "alpha3": "JMD",
+        "numeric": "388",
+        "exp": 2,
+        "name": "Jamaican Dollar",
+        "country": "JM"
+    },
+    {
+        "alpha3": "JOD",
+        "numeric": "400",
+        "exp": 3,
+        "name": "Jordanian Dinar",
+        "country": "JO"
+    },
+    {
+        "alpha3": "JPY",
+        "numeric": "392",
+        "exp": 0,
+        "name": "Yen",
+        "country": "JP"
+    },
+    {
+        "alpha3": "KES",
+        "numeric": "404",
+        "exp": 2,
+        "name": "Kenyan Shilling",
+        "country": "KE"
+    },
+    {
+        "alpha3": "KGS",
+        "numeric": "417",
+        "exp": 2,
+        "name": "Som",
+        "country": "KG"
+    },
+    {
+        "alpha3": "KHR",
+        "numeric": "116",
+        "exp": 2,
+        "name": "Riel",
+        "country": "KH"
+    },
+    {
+        "alpha3": "KMF",
+        "numeric": "174",
+        "exp": 0,
+        "name": "Comoro Franc",
+        "country": "KM"
+    },
+    {
+        "alpha3": "KPW",
+        "numeric": "408",
+        "exp": 2,
+        "name": "North Korean Won",
+        "country": "KP"
+    },
+    {
+        "alpha3": "KRW",
+        "numeric": "410",
+        "exp": 0,
+        "name": "Won",
+        "country": "KR"
+    },
+    {
+        "alpha3": "KWD",
+        "numeric": "414",
+        "exp": 3,
+        "name": "Kuwaiti Dinar",
+        "country": "KW"
+    },
+    {
+        "alpha3": "KYD",
+        "numeric": "136",
+        "exp": 2,
+        "name": "Cayman Islands Dollar",
+        "country": "KY"
+    },
+    {
+        "alpha3": "KZT",
+        "numeric": "398",
+        "exp": 2,
+        "name": "Tenge",
+        "country": "KZ"
+    },
+    {
+        "alpha3": "LAK",
+        "numeric": "418",
+        "exp": 2,
+        "name": "Kip",
+        "country": "LA"
+    },
+    {
+        "alpha3": "LBP",
+        "numeric": "422",
+        "exp": 2,
+        "name": "Lebanese Pound",
+        "country": "LB"
+    },
+    {
+        "alpha3": "LKR",
+        "numeric": "144",
+        "exp": 2,
+        "name": "Sri Lanka Rupee",
+        "country": "LK"
+    },
+    {
+        "alpha3": "LRD",
+        "numeric": "430",
+        "exp": 2,
+        "name": "Liberian Dollar",
+        "country": "LR"
+    },
+    {
+        "alpha3": "LSL",
+        "numeric": "426",
+        "exp": 2,
+        "name": "Loti",
+        "country": "LS"
+    },
+    {
+        "alpha3": "LTL",
+        "numeric": "440",
+        "exp": 2,
+        "name": "Lithuanian Litas",
+        "country": "LT"
+    },
+    {
+        "alpha3": "LVL",
+        "numeric": "428",
+        "exp": 2,
+        "name": "Latvian Lats",
+        "country": "LV"
+    },
+    {
+        "alpha3": "LYD",
+        "numeric": "434",
+        "exp": 3,
+        "name": "Libyan Dinar",
+        "country": "LY"
+    },
+    {
+        "alpha3": "MAD",
+        "numeric": "504",
+        "exp": 2,
+        "name": "Moroccan Dirham",
+        "country": [
+            "MA",
+            "EH"
+        ]
+    },
+    {
+        "alpha3": "MDL",
+        "numeric": "498",
+        "exp": 2,
+        "name": "Moldovan Leu",
+        "country": "MD"
+    },
+    {
+        "alpha3": "MGA",
+        "numeric": "969",
+        "exp": 2,
+        "name": "Malagasy Ariary",
+        "country": "MG"
+    },
+    {
+        "alpha3": "MKD",
+        "numeric": "807",
+        "exp": 2,
+        "name": "Denar",
+        "country": "MK"
+    },
+    {
+        "alpha3": "MMK",
+        "numeric": "104",
+        "exp": 2,
+        "name": "Kyat",
+        "country": "MM"
+    },
+    {
+        "alpha3": "MNT",
+        "numeric": "496",
+        "exp": 2,
+        "name": "Tugrik",
+        "country": "MN"
+    },
+    {
+        "alpha3": "MOP",
+        "numeric": "446",
+        "exp": 2,
+        "name": "Pataca",
+        "country": "MO"
+    },
+    {
+        "alpha3": "MRO",
+        "numeric": "478",
+        "exp": 2,
+        "name": "Ouguiya",
+        "country": "MR"
+    },
+    {
+        "alpha3": "MUR",
+        "numeric": "480",
+        "exp": 2,
+        "name": "Mauritius Rupee",
+        "country": "MU"
+    },
+    {
+        "alpha3": "MVR",
+        "numeric": "462",
+        "exp": 2,
+        "name": "Rufiyaa",
+        "country": "MV"
+    },
+    {
+        "alpha3": "MWK",
+        "numeric": "454",
+        "exp": 2,
+        "name": "Kwacha",
+        "country": "MW"
+    },
+    {
+        "alpha3": "MXN",
+        "numeric": "484",
+        "exp": 2,
+        "name": "Mexican Peso",
+        "country": "MX"
+    },
+    {
+        "alpha3": "MYR",
+        "numeric": "458",
+        "exp": 2,
+        "name": "Malaysian Ringgit",
+        "country": "MY"
+    },
+    {
+        "alpha3": "MZN",
+        "numeric": "943",
+        "exp": 2,
+        "name": "Mozambique Metical",
+        "country": "MZ"
+    },
+    {
+        "alpha3": "NAD",
+        "numeric": "516",
+        "exp": 2,
+        "name": "Namibia Dollar",
+        "country": "NA"
+    },
+    {
+        "alpha3": "NGN",
+        "numeric": "566",
+        "exp": 2,
+        "name": "Naira",
+        "country": "NG"
+    },
+    {
+        "alpha3": "NIO",
+        "numeric": "558",
+        "exp": 2,
+        "name": "Córdoba",
+        "country": "NI"
+    },
+    {
+        "alpha3": "NOK",
+        "numeric": "578",
+        "exp": 2,
+        "name": "Norwegian Krone",
+        "country": [
+            "AQ",
+            "BV",
+            "NO",
+            "SJ"
+        ]
+    },
+    {
+        "alpha3": "NPR",
+        "numeric": "524",
+        "exp": 2,
+        "name": "Nepalese Rupee",
+        "country": "NP"
+    },
+    {
+        "alpha3": "NZD",
+        "numeric": "554",
+        "exp": 2,
+        "name": "New Zealand Dollar",
+        "country": [
+            "CK",
+            "NZ",
+            "NU",
+            "PN",
+            "TK"
+        ]
+    },
+    {
+        "alpha3": "OMR",
+        "numeric": "512",
+        "exp": 3,
+        "name": "Rial Omani",
+        "country": "OM"
+    },
+    {
+        "alpha3": "PAB",
+        "numeric": "590",
+        "exp": 2,
+        "name": "Balboa",
+        "country": "PA"
+    },
+    {
+        "alpha3": "PEN",
+        "numeric": "604",
+        "exp": 2,
+        "name": "Nuevo Sol",
+        "country": "PE"
+    },
+    {
+        "alpha3": "PGK",
+        "numeric": "598",
+        "exp": 2,
+        "name": "Kina",
+        "country": "PG"
+    },
+    {
+        "alpha3": "PHP",
+        "numeric": "608",
+        "exp": 2,
+        "name": "Philippine Peso",
+        "country": "PH"
+    },
+    {
+        "alpha3": "PKR",
+        "numeric": "586",
+        "exp": 2,
+        "name": "Pakistan Rupee",
+        "country": "PK"
     },
     {
         "alpha3": "PLN",
         "numeric": "985",
         "exp": 2,
-        "name": "Zloty"
+        "name": "Zloty",
+        "country": "PL"
+    },
+    {
+        "alpha3": "PYG",
+        "numeric": "600",
+        "exp": 0,
+        "name": "Guarani",
+        "country": "PY"
+    },
+    {
+        "alpha3": "QAR",
+        "numeric": "634",
+        "exp": 2,
+        "name": "Qatari Rial",
+        "country": "QA"
+    },
+    {
+        "alpha3": "RON",
+        "numeric": "946",
+        "exp": 2,
+        "name": "New Romanian Leu",
+        "country": "RO"
+    },
+    {
+        "alpha3": "RSD",
+        "numeric": "941",
+        "exp": 2,
+        "name": "Serbian Dinar",
+        "country": "RS"
+    },
+    {
+        "alpha3": "RUB",
+        "numeric": "643",
+        "exp": 2,
+        "name": "Russian Ruble",
+        "country": "RU"
+    },
+    {
+        "alpha3": "RWF",
+        "numeric": "646",
+        "exp": 0,
+        "name": "Rwanda Franc",
+        "country": "RW"
+    },
+    {
+        "alpha3": "SAR",
+        "numeric": "682",
+        "exp": 2,
+        "name": "Saudi Riyal",
+        "country": "SA"
+    },
+    {
+        "alpha3": "SBD",
+        "numeric": "090",
+        "exp": 2,
+        "name": "Solomon Islands Dollar",
+        "country": "SB"
+    },
+    {
+        "alpha3": "SCR",
+        "numeric": "690",
+        "exp": 2,
+        "name": "Seychelles Rupee",
+        "country": "SC"
+    },
+    {
+        "alpha3": "SDG",
+        "numeric": "938",
+        "exp": 2,
+        "name": "Sudanese Pound",
+        "country": "SD"
+    },
+    {
+        "alpha3": "SEK",
+        "numeric": "752",
+        "exp": 2,
+        "name": "Swedish Krona",
+        "country": "SE"
+    },
+    {
+        "alpha3": "SGD",
+        "numeric": "702",
+        "exp": 2,
+        "name": "Singapore Dollar",
+        "country": "SG"
+    },
+    {
+        "alpha3": "SHP",
+        "numeric": "654",
+        "exp": 2,
+        "name": "Saint Helena Pound",
+        "country": "SH"
+    },
+    {
+        "alpha3": "SLL",
+        "numeric": "694",
+        "exp": 2,
+        "name": "Leone",
+        "country": "SL"
+    },
+    {
+        "alpha3": "SOS",
+        "numeric": "706",
+        "exp": 2,
+        "name": "Somali Shilling",
+        "country": "SO"
+    },
+    {
+        "alpha3": "SRD",
+        "numeric": "968",
+        "exp": 2,
+        "name": "Surinam Dollar",
+        "country": "SR"
+    },
+    {
+        "alpha3": "SSP",
+        "numeric": "728",
+        "exp": 2,
+        "name": "South Sudanese Pound",
+        "country": "SS"
+    },
+    {
+        "alpha3": "STD",
+        "numeric": "678",
+        "exp": 2,
+        "name": "Dobra",
+        "country": "ST"
+    },
+    {
+        "alpha3": "SYP",
+        "numeric": "760",
+        "exp": 2,
+        "name": "Syrian Pound",
+        "country": "SY"
+    },
+    {
+        "alpha3": "SZL",
+        "numeric": "748",
+        "exp": 2,
+        "name": "Lilangeni",
+        "country": "SZ"
+    },
+    {
+        "alpha3": "THB",
+        "numeric": "764",
+        "exp": 2,
+        "name": "Baht",
+        "country": "TH"
+    },
+    {
+        "alpha3": "TJS",
+        "numeric": "972",
+        "exp": 2,
+        "name": "Somoni",
+        "country": "TJ"
+    },
+    {
+        "alpha3": "TMT",
+        "numeric": "934",
+        "exp": 2,
+        "name": "Manat",
+        "country": "TM"
+    },
+    {
+        "alpha3": "TND",
+        "numeric": "788",
+        "exp": 3,
+        "name": "Tunisian Dinar",
+        "country": "TN"
+    },
+    {
+        "alpha3": "TOP",
+        "numeric": "776",
+        "exp": 2,
+        "name": "Pa’anga",
+        "country": "TO"
+    },
+    {
+        "alpha3": "TRY",
+        "numeric": "949",
+        "exp": 2,
+        "name": "Turkish Lira",
+        "country": "TR"
+    },
+    {
+        "alpha3": "TTD",
+        "numeric": "780",
+        "exp": 2,
+        "name": "Trinidad and Tobago Dollar",
+        "country": "TT"
+    },
+    {
+        "alpha3": "TWD",
+        "numeric": "901",
+        "exp": 2,
+        "name": "New Taiwan Dollar",
+        "country": "TW"
+    },
+    {
+        "alpha3": "TZS",
+        "numeric": "834",
+        "exp": 2,
+        "name": "Tanzanian Shilling",
+        "country": "TZ"
+    },
+    {
+        "alpha3": "UAH",
+        "numeric": "980",
+        "exp": 2,
+        "name": "Hryvnia",
+        "country": "UA"
+    },
+    {
+        "alpha3": "UGX",
+        "numeric": "800",
+        "exp": 0,
+        "name": "Uganda Shilling",
+        "country": "UG"
+    },
+    {
+        "alpha3": "USD",
+        "numeric": "840",
+        "exp": 2,
+        "name": "US Dollar",
+        "country": [
+            "AS",
+            "BQ",
+            "EC",
+            "SV",
+            "GU",
+            "MH",
+            "FM",
+            "MP",
+            "PW",
+            "PR",
+            "MF",
+            "TL",
+            "TC",
+            "US",
+            "UM",
+            "VG",
+            "VI",
+            "ZW"
+        ]
+    },
+    {
+        "alpha3": "UYU",
+        "numeric": "858",
+        "exp": 2,
+        "name": "Peso Uruguayo",
+        "country": "UY"
+    },
+    {
+        "alpha3": "UZS",
+        "numeric": "860",
+        "exp": 2,
+        "name": "Uzbekistan Sum",
+        "country": "UZ"
+    },
+    {
+        "alpha3": "VEF",
+        "numeric": "937",
+        "exp": 2,
+        "name": "Bolivar",
+        "country": "VE"
+    },
+    {
+        "alpha3": "VND",
+        "numeric": "704",
+        "exp": 0,
+        "name": "Dong",
+        "country": "VN"
+    },
+    {
+        "alpha3": "VUV",
+        "numeric": "548",
+        "exp": 0,
+        "name": "Vatu",
+        "country": "VU"
+    },
+    {
+        "alpha3": "WST",
+        "numeric": "882",
+        "exp": 2,
+        "name": "Tala",
+        "country": "WS"
+    },
+    {
+        "alpha3": "XAF",
+        "numeric": "950",
+        "exp": 0,
+        "name": "CFA Franc BEAC",
+        "country": [
+            "BJ",
+            "BF",
+            "CM",
+            "CF",
+            "TD",
+            "CG",
+            "CI",
+            "GQ",
+            "GA",
+            "ML",
+            "TG"
+        ]
+    },
+    {
+        "alpha3": "XCD",
+        "numeric": "951",
+        "exp": 2,
+        "name": "East Caribbean Dollar",
+        "country": [
+            "AI",
+            "AG",
+            "DM",
+            "GD",
+            "MS",
+            "KN",
+            "LC",
+            "VC"
+        ]
+    },
+    {
+        "alpha3": "XOF",
+        "numeric": "952",
+        "exp": 0,
+        "name": "CFA Franc BCEAO",
+        "country": [
+            "NE",
+            "SN"
+        ]
+    },
+    {
+        "alpha3": "XPF",
+        "numeric": "953",
+        "exp": 0,
+        "name": "CFP Franc",
+        "country": [
+            "PF",
+            "NC",
+            "WF"
+        ]
+    },
+    {
+        "alpha3": "YER",
+        "numeric": "886",
+        "exp": 2,
+        "name": "Yemeni Rial",
+        "country": "YE"
+    },
+    {
+        "alpha3": "ZAR",
+        "numeric": "710",
+        "exp": 2,
+        "name": "Rand",
+        "country": [
+            "ZA",
+            "ZW"
+        ]
+    },
+    {
+        "alpha3": "ZMW",
+        "numeric": "967",
+        "exp": 2,
+        "name": "Zambian Kwacha",
+        "country": "ZM"
     }
 ]
