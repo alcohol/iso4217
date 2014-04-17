@@ -21,11 +21,19 @@ class ISO4217
 
     public static function getByAlpha3($alpha3)
     {
+        if (!preg_match('/[a-zA-Z]{3}/', $alpha3)) {
+            throw new \InvalidArgumentException('Not a valid alpha3: ' . $alpha3);
+        }
+
         return self::getByCode($alpha3);
     }
 
     public static function getByNumeric($numeric)
     {
+        if (!preg_match('/[0-9]{3}/', $numeric)) {
+            throw new \InvalidArgumentException('Not a valid numeric: ' . $numeric);
+        }
+
         $currencies = self::getAll();
 
         foreach ($currencies as $currency) {

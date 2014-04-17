@@ -56,9 +56,17 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetInvalidByAlpha3ThrowsInvalidArgumentException()
+    {
+        ISO4217::getByAlpha3('ZZ');
+    }
+
+    /**
      * @expectedException \RuntimeException
      */
-    public function testGetByAlpha3ThrowsException()
+    public function testGetUnknownByAlpha3ThrowsRuntimeException()
     {
         ISO4217::getByAlpha3('ZZZ');
     }
@@ -72,9 +80,17 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetByInvalidNumericThrowsInvalidArgumentException()
+    {
+        ISO4217::getByNumeric('00');
+    }
+
+    /**
      * @expectedException \RuntimeException
      */
-    public function testGetByNumericThrowsException()
+    public function testGetByUnknownNumericThrowsRuntimeException()
     {
         ISO4217::getByNumeric('000');
     }
