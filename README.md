@@ -21,10 +21,10 @@ Result:
 ```
 Array
 (
+    [name] => Euro
     [alpha3] => EUR
     [numeric] => 978
     [exp] => 2
-    [name] => Euro
     [country] => Array
         (
             [0] => AX
