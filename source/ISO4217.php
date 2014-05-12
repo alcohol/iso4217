@@ -65,8 +65,8 @@ class ISO4217
 
     final protected static function fromDataDir()
     {
-        $json = file_get_contents(__DIR__.'/../data/iso4217.json');
+        $currencies = __DIR__ . '/../data/iso4217.php';
 
-        return json_decode($json, true);
+        return $currencies;
     }
 }
