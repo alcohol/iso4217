@@ -65,7 +65,7 @@ class ISO4217
 
     final protected static function fromDataDir()
     {
-        $currencies = __DIR__ . '/../data/iso4217.php';
+        $currencies = require __DIR__ . '/../data/iso4217.php';
 
         return $currencies;
     }
