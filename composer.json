@@ -2,7 +2,7 @@
     "name": "alcohol/iso4217",
     "description": "ISO 4217 PHP Library",
     "keywords": ["ISO 4217", "ISO", "4217", "currencies", "library"],
-    "homepage": "https://github.com/alcohol/iso4217",
+    "homepage": "http://alcohol.github.io/iso4217/",
     "license": "MIT",
     "authors": [{
         "name": "Rob Bast",
