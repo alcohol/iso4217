@@ -4,8 +4,15 @@ namespace Alcohol;
 
 class ISO4217
 {
-    protected static $currencies = null;
+    /**
+     * @var array
+     */
+    protected static $currencies = array();
 
+    /**
+     * @param string $code
+     * @return array
+     */
     public static function getByCode($code)
     {
         $currencies = self::getAll();
@@ -19,6 +26,11 @@ class ISO4217
         throw new \RuntimeException('No data found for: ' . $code);
     }
 
+    /**
+     * @param string $alpha3
+     * @return array
+     * @throws \InvalidArgumentException
+     */
     public static function getByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
@@ -28,6 +40,11 @@ class ISO4217
         return self::getByCode($alpha3);
     }
 
+    /**
+     * @param string $numeric
+     * @return array
+     * @throws \RuntimeException
+     */
     public static function getByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
@@ -45,15 +62,21 @@ class ISO4217
         throw new \RuntimeException('No data found for: ' . $numeric);
     }
 
+    /**
+     * @return array
+     */
     public static function getAll()
     {
-        if (is_null(self::$currencies)) {
+        if (empty(self::$currencies)) {
             self::load();
         }
 
         return self::$currencies;
     }
 
+    /**
+     * @param array $currencies
+     */
     public static function load(array $currencies = array())
     {
         if (empty($currencies)) {
@@ -63,6 +86,9 @@ class ISO4217
         self::$currencies = $currencies;
     }
 
+    /**
+     * @return array
+     */
     final protected static function fromDataDir()
     {
         $currencies = require __DIR__ . '/../data/iso4217.php';

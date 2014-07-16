@@ -6,6 +6,9 @@ use Alcohol\ISO4217;
 
 class ISO4217Test extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var array
+     */
     public $data = array(
         'alpha3' => 'EUR',
         'numeric' => '978',
@@ -56,6 +59,8 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param string $alpha3
+     *
      * @dataProvider invalidAlpha3
      * @expectedException \InvalidArgumentException
      */
@@ -81,6 +86,8 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param string $numeric
+     *
      * @dataProvider invalidNumeric
      * @expectedException \InvalidArgumentException
      */
@@ -97,11 +104,17 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
         ISO4217::getByNumeric('000');
     }
 
+    /**
+     * @return array
+     */
     public function invalidAlpha3()
     {
         return array(array('ZZ'), array('ZZZZ'));
     }
 
+    /**
+     * @return array
+     */
     public function invalidNumeric()
     {
         return array(array('00'), array('0000'));
