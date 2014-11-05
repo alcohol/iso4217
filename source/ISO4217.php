@@ -1,12 +1,17 @@
 <?php
 
+/**
+ * (c) Rob Bast <rob.bast@gmail.com>
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
 namespace Alcohol;
 
 class ISO4217
 {
-    /**
-     * @var array
-     */
+    /** @var array */
     protected static $currencies = array();
 
     /**
