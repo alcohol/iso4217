@@ -12,5 +12,4 @@ php:
 
 script:
   - vendor/bin/phpcs --standard=PSR2 source/
-  - vendor/bin/phpmd source/ xml codesize,controversial,design,naming,unusedcode
   - vendor/bin/phpunit --strict --testdox
