@@ -4,7 +4,7 @@ A PHP library providing ISO 4217 data.
 
 ## What is ISO 4217
 
-> ISO 4217 is a standard published by the International Organization for Standardization, which delineates currency designators, country codes (alpha and numeric), and references to minor units in three tables
+> ISO 4217 is a standard published by the International Organization for Standardization, which delineates currency designators, country codes (alpha and numeric), and references to minor units in three tables.
 >
 > *-- [Wikipedia](http://en.wikipedia.org/wiki/ISO_4217)*
 
