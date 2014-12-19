@@ -2,6 +2,8 @@
 
 A PHP library providing ISO 4217 data.
 
+[![Build Status](https://travis-ci.org/alcohol/iso4217.svg?branch=master)](https://travis-ci.org/alcohol/iso4217)
+
 ## What is ISO 4217
 
 > ISO 4217 is a standard published by the International Organization for Standardization, which delineates currency designators, country codes (alpha and numeric), and references to minor units in three tables.
