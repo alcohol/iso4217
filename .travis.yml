@@ -1,15 +1,15 @@
 language: php
 
-before_script:
-  - composer self-update -n
-  - composer install -o -n
-
 php:
   - 5.3
   - 5.4
   - 5.5
   - 5.6
 
+before_script:
+  - composer self-update -n
+  - composer install -o -n
+
 script:
-  - vendor/bin/phpcs --standard=PSR2 source/
-  - vendor/bin/phpunit --strict --testdox
+  - composer test
+  - composer checkstyle
