@@ -108,16 +108,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function alpha3Provider()
     {
-        $currencies = $this->getCurrencies();
-
-        return array_reduce(
-            $currencies,
-            function (array $carry, array $currency) {
-                $carry[] = array($currency['alpha3'], $currency);
-                return $carry;
-            },
-            array()
-        );
+        return $this->getCurrencies('alpha3');
     }
 
     /**
@@ -133,27 +124,26 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function numericProvider()
     {
-        $currencies = $this->getCurrencies();
-
-        return array_reduce(
-            $currencies,
-            function (array $carry, array $currency) {
-                $carry[] = array($currency['numeric'], $currency);
-                return $carry;
-            },
-            array()
-        );
+        return $this->getCurrencies('numeric');
     }
 
     /**
      * @return array
      */
-    private function getCurrencies()
+    private function getCurrencies($indexedBy)
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
         $currencies->setAccessible(true);
+        $currencies = $currencies->getValue(new ISO4217);
 
-        return $currencies->getValue(new ISO4217);
+        return array_reduce(
+            $currencies,
+            function (array $carry, array $currency) use ($indexedBy) {
+                $carry[] = array($currency[$indexedBy], $currency);
+                return $carry;
+            },
+            array()
+        );
     }
 }
