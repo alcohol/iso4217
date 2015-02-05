@@ -22,8 +22,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Alcohol\\": "source/",
-            "Alcohol\\Tests\\": "tests/"
+            "Alcohol\\Tests\\": ".",
+            "Alcohol\\": "."
         }
     },
     "extra": {
@@ -32,7 +32,7 @@
         }
     },
     "scripts": {
-        "checkstyle": "vendor/bin/phpcs --standard=psr2 source tests",
+        "checkstyle": "vendor/bin/phpcs --standard=psr2 *.php",
         "clean": "git clean -ffxdi",
         "test": "vendor/bin/phpunit"
     }
