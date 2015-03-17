@@ -11,8 +11,6 @@ namespace Alcohol;
 
 /**
  * A library providing ISO 4217 data.
- *
- * @author Rob Bast <rob.bast@gmail.com>
  */
 class ISO4217
 {
