@@ -4,7 +4,6 @@ A PHP library providing ISO 4217 data.
 
 [![Build Status](https://img.shields.io/travis/alcohol/iso4217/master.svg?style=flat-square)](https://travis-ci.org/alcohol/iso4217)
 [![License](https://img.shields.io/packagist/l/alcohol/iso4217.svg?style=flat-square)](https://packagist.org/packages/alcohol/iso4217)
-[![Version](https://img.shields.io/packagist/v/alcohol/iso4217.svg?style=flat-square)](https://packagist.org/packages/alcohol/iso4217)
 
 ## What is ISO 4217
 
