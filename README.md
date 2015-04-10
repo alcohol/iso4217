@@ -36,34 +36,17 @@ Code:
 ``` php
 <?php
 
-$iso4217 = new Alcohol\ISO4217;
+$euro = new \Alcohol\ISO4217::findByAlpha3('EUR');
 
-$iso4217->getByAlpha3('EUR');
 // or
-$iso4217->getByNumeric('978');
 
-// also
-$iso4217->getAll();
-```
+$euro = new \Alcohol\ISO4217::findByNumeric('978');
 
-Result:
-
-```
-Array
-(
-    [name] => Euro
-    [alpha3] => EUR
-    [numeric] => 978
-    [exp] => 2
-    [country] => Array
-        (
-            [0] => AD
-            [1] => AT
-            ...
-            [30] => YT
-            [31] => ZW
-        )
-)
+$euro->getName();    // Euro
+$euro->getAlpha3();  // EUR
+$euro->getNumeric(); // 978
+$euro->getExp();     // 2
+$euro->getCountry(); // ['AD', 'AT' ... 'YT', 'ZW']
 ```
 
 ## Excluded
