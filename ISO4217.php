@@ -15,15 +15,96 @@ namespace Alcohol;
 class ISO4217
 {
     /**
+     * @var string
+     */
+    protected $name;
+
+    /**
+     * @var string
+     */
+    protected $alpha3;
+
+    /**
+     * @var int
+     */
+    protected $numeric;
+
+    /**
+     * @var int
+     */
+    protected $exp;
+
+    /**
+     * @var string|string[]
+     */
+    protected $country;
+
+    /**
+     * @param string $name
+     * @param string $alpha3
+     * @param int $numeric
+     * @param int $exp
+     * @param string|string[] $country
+     */
+    public function __construct($name, $alpha3, $numeric, $exp, $country)
+    {
+        $this->name = $name;
+        $this->alpha3 = $alpha3;
+        $this->numeric = $numeric;
+        $this->exp = $exp;
+        $this->country = $country;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlpha3()
+    {
+        return $this->alpha3;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNumeric()
+    {
+        return $this->numeric;
+    }
+
+    /**
+     * @return int
+     */
+    public function getExp()
+    {
+        return $this->exp;
+    }
+
+    /**
+     * @return string|\string[]
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
      * @param string $code
      * @return array
      * @throws \RuntimeException
      */
-    public function getByCode($code)
+    public static function findByCode($code)
     {
-        foreach ($this->currencies as $currency) {
+        foreach (static::$currencies as $currency) {
             if (0 === strcasecmp($code, $currency['alpha3'])) {
-                return $currency;
+                return static::create($currency);
             }
         }
 
@@ -32,32 +113,32 @@ class ISO4217
 
     /**
      * @param string $alpha3
-     * @return array
+     * @return static
      * @throws \InvalidArgumentException
      */
-    public function getByAlpha3($alpha3)
+    public static function findByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
             throw new \InvalidArgumentException('Not a valid alpha3: ' . $alpha3);
         }
 
-        return $this->getByCode($alpha3);
+        return static::findByCode($alpha3);
     }
 
     /**
      * @param string $numeric
-     * @return array
+     * @return static
      * @throws \RuntimeException
      */
-    public function getByNumeric($numeric)
+    public static function findByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
             throw new \InvalidArgumentException('Not a valid numeric: ' . $numeric);
         }
 
-        foreach ($this->currencies as $currency) {
+        foreach (static::$currencies as $currency) {
             if (0 === strcasecmp($numeric, $currency['numeric'])) {
-                return $currency;
+                return static::create($currency);
             }
         }
 
@@ -65,15 +146,33 @@ class ISO4217
     }
 
     /**
-     * @return array
+     * @return static[]
      */
-    public function getAll()
+    public static function findAll()
     {
-        return $this->currencies;
+        $currencies = array();
+
+        foreach (static::$currencies as $currency) {
+            $currencies[] = static::create($currency);
+        }
+
+        return $currencies;
     }
 
-    /** @var array */
-    protected $currencies = array(
+    /**
+     * @param string[] $currency
+     *
+     * @return static
+     */
+    protected static function create(array $currency)
+    {
+        return new static($currency['name'], $currency['alpha3'], $currency['numeric'], $currency['exp'], $currency['country']);
+    }
+
+    /**
+     * @var array
+     */
+    protected static $currencies = array(
         array(
             'name' => 'UAE Dirham',
             'alpha3' => 'AED',

@@ -20,10 +20,9 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessageRegExp /^Not a valid alpha3: .*$/
      */
-    public function testGetByAlpha3Invalid($alpha3)
+    public function testFindByAlpha3Invalid($alpha3)
     {
-        $iso4217 = new ISO4217;
-        $iso4217->getByAlpha3($alpha3);
+        ISO4217::findByAlpha3($alpha3);
     }
 
     /**
@@ -31,10 +30,9 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @expectedException \RuntimeException
      * @expectedExceptionMessage ISO 4217 does not contain: ZZZ
      */
-    public function testGetByAlpha3Unknown()
+    public function testFindByAlpha3Unknown()
     {
-        $iso4217 = new ISO4217;
-        $iso4217->getByAlpha3('ZZZ');
+        ISO4217::findByAlpha3('ZZZ');
     }
 
     /**
@@ -43,10 +41,15 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @param string $alpha3
      * @param array $expected
      */
-    public function testGetByAlpha3($alpha3, array $expected)
+    public function testFindByAlpha3($alpha3, array $expected)
     {
-        $iso4217 = new ISO4217;
-        $this->assertEquals($expected, $iso4217->getByAlpha3($alpha3));
+        $currency = ISO4217::findByAlpha3($alpha3);
+
+        $this->assertEquals($expected['name'], $currency->getName());
+        $this->assertEquals($expected['alpha3'], $currency->getAlpha3());
+        $this->assertEquals($expected['numeric'], $currency->getNumeric());
+        $this->assertEquals($expected['exp'], $currency->getExp());
+        $this->assertEquals($expected['country'], $currency->getCountry());
     }
 
     /**
@@ -56,10 +59,9 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessageRegExp /^Not a valid numeric: .*$/
      */
-    public function testGetByNumericInvalid($numeric)
+    public function testFindByNumericInvalid($numeric)
     {
-        $iso4217 = new ISO4217;
-        $iso4217->getByNumeric($numeric);
+        ISO4217::findByNumeric($numeric);
     }
 
     /**
@@ -67,10 +69,9 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @expectedException \RuntimeException
      * @expectedExceptionMessage ISO 4217 does not contain: 000
      */
-    public function testGetByNumericUnknown()
+    public function testFindByNumericUnknown()
     {
-        $iso4217 = new ISO4217;
-        $iso4217->getByNumeric('000');
+        ISO4217::findByNumeric('000');
     }
 
     /**
@@ -79,20 +80,28 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      * @param string $numeric
      * @param array $expected
      */
-    public function testGetByNumeric($numeric, $expected)
+    public function testFindByNumeric($numeric, array $expected)
     {
-        $iso4217 = new ISO4217;
-        $this->assertEquals($expected, $iso4217->getByNumeric($numeric));
+        $currency = ISO4217::findByNumeric($numeric);
+
+        $this->assertEquals($expected['name'], $currency->getName());
+        $this->assertEquals($expected['alpha3'], $currency->getAlpha3());
+        $this->assertEquals($expected['numeric'], $currency->getNumeric());
+        $this->assertEquals($expected['exp'], $currency->getExp());
+        $this->assertEquals($expected['country'], $currency->getCountry());
     }
 
     /**
-     * @testdox Calling getAll returns an array with all elements.
+     * @testdox Calling findAll returns an array of ISO4217 instances.
      */
-    public function testGetAll()
+    public function testFindAll()
     {
-        $iso4217 = new ISO4217;
-        $this->assertInternalType('array', $iso4217->getAll());
-        $this->assertCount(157, $iso4217->getAll());
+        $currencies = ISO4217::findAll();
+
+        $this->assertInternalType('array', $currencies);
+        $this->assertCount(157, $currencies);
+
+        $this->assertContainsOnly('Alcohol\ISO4217', $currencies);
     }
 
     /**
@@ -132,10 +141,10 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     private function getCurrencies($indexedBy)
     {
-        $reflected = new \ReflectionClass('Alcohol\ISO4217');
-        $currencies = $reflected->getProperty('currencies');
-        $currencies->setAccessible(true);
-        $currencies = $currencies->getValue(new ISO4217);
+        $rp = new \ReflectionProperty('Alcohol\ISO4217', 'currencies');
+        $rp->setAccessible(true);
+        $currencies = $rp->getValue('Alcohol\ISO4217');
+        $rp->setAccessible(false);
 
         return array_reduce(
             $currencies,
