@@ -1,9 +1,9 @@
-# Alcohol\ISO4217
+# Payum\ISO4217
 
-A PHP library providing ISO 4217 data.
+A PHP library providing ISO 4217 data. This is a fork of [alcohol/iso4217](https://github.com/alcohol/iso4217) and here's why I [did the fork](https://github.com/alcohol/iso4217/pull/1).
 
-[![Build Status](https://img.shields.io/travis/alcohol/iso4217/master.svg?style=flat-square)](https://travis-ci.org/alcohol/iso4217)
-[![License](https://img.shields.io/packagist/l/alcohol/iso4217.svg?style=flat-square)](https://packagist.org/packages/alcohol/iso4217)
+[![Build Status](https://img.shields.io/travis/payum/iso4217/master.svg?style=flat-square)](https://travis-ci.org/payum/iso4217)
+[![License](https://img.shields.io/packagist/l/payum/iso4217.svg?style=flat-square)](https://packagist.org/packages/payum/iso4217)
 
 ## What is ISO 4217
 
@@ -16,17 +16,7 @@ A PHP library providing ISO 4217 data.
 Either install directly from command line using composer:
 
 ``` sh
-$ composer require "alcohol/iso4217:~2.0"
-```
-
-or manually include it as a dependency in your composer.json:
-
-``` javascript
-{
-    "require": {
-        "alcohol/iso4217": "~2.0"
-    }
-}
+$ composer require "payum/iso4217:~1.0"
 ```
 
 ## Using
@@ -36,35 +26,27 @@ Code:
 ``` php
 <?php
 
-$iso4217 = new Alcohol\ISO4217;
+$iso4217 = new \Payum\ISO4217\ISO4217; 
 
-$iso4217->getByAlpha3('EUR');
+$euro = $iso4217->findByAlpha3('EUR');
+
 // or
-$iso4217->getByNumeric('978');
 
-// also
-$iso4217->getAll();
+$euro = $iso4217->findByNumeric('978');
+
+$euro->getName();    // Euro
+$euro->getAlpha3();  // EUR
+$euro->getNumeric(); // 978
+$euro->getExp();     // 2
+$euro->getCountry(); // ['AD', 'AT' ... 'YT', 'ZW']
+
+
+// same instance
+$iso4217->findByAlpha3('EUR') === $iso4217->findByAlpha3('EUR'); // true
+$iso4217->findByAlpha3('EUR') === $iso4217->findByAlpha3('USD'); // false
 ```
 
-Result:
 
-```
-Array
-(
-    [name] => Euro
-    [alpha3] => EUR
-    [numeric] => 978
-    [exp] => 2
-    [country] => Array
-        (
-            [0] => AD
-            [1] => AT
-            ...
-            [30] => YT
-            [31] => ZW
-        )
-)
-```
 
 ## Excluded
 
@@ -102,7 +84,7 @@ Feel free to submit a pull request or create an issue.
 
 ## License
 
-Alcohol\ISO4217 is licensed under the MIT license.
+Payum\ISO4217 is licensed under the MIT license.
 
 ## Source(s)
 

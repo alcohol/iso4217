@@ -5,19 +5,18 @@ php:
   - 5.4
   - 5.5
   - 5.6
-  - 7
   - hhvm
+
+sudo: false
 
 matrix:
   allow_failures:
     - php: hhvm
-    - php: 7
-  fast_finish: true
 
 before_script:
-  - composer self-update -n
-  - composer install -o -n
+  - curl -sS https://getcomposer.org/installer | php
+  - php composer.phar update --prefer-stable
 
-script:
-  - composer test
-  - composer checkstyle
+notifications:
+  email:
+    - payumsupport@forma-pro.com
