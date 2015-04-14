@@ -1,6 +1,6 @@
 # Payum\ISO4217
 
-A PHP library providing ISO 4217 data. This is a fork of [alcohol/iso4217](https://github.com/alcohol/iso4217) and here's why I [did the fork](https://github.com/alcohol/iso4217/pull/1).
+A PHP library providing ISO 4217 data. This is a **fork** of [alcohol/iso4217](https://github.com/alcohol/iso4217) and here's why I [did the fork](https://github.com/alcohol/iso4217/pull/1).
 
 [![Build Status](https://img.shields.io/travis/payum/iso4217/master.svg?style=flat-square)](https://travis-ci.org/payum/iso4217)
 [![License](https://img.shields.io/packagist/l/payum/iso4217.svg?style=flat-square)](https://packagist.org/packages/payum/iso4217)
