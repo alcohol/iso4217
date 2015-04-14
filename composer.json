@@ -1,43 +1,52 @@
 {
-    "name": "alcohol/iso4217",
+    "name": "payum/iso4217",
     "description": "ISO 4217 PHP Library",
     "keywords": ["ISO 4217", "ISO", "4217", "currencies", "library"],
-    "homepage": "http://alcohol.github.io/iso4217/",
+    "homepage": "http://payum.org",
     "license": "MIT",
-    "authors": [{
-        "name": "Rob Bast",
-        "email": "rob.bast@gmail.com"
-    }],
+    "authors": [],
+
+    "authors": [
+        {
+          "name": "Rob Bast",
+          "email": "rob.bast@gmail.com"
+        },
+        {
+          "name": "Kotlyar Maksim",
+          "email": "kotlyar.maksim@gmail.com"
+        },
+        {
+          "name":     "Payum project",
+          "homepage": "http://payum.org/"
+        },
+        {
+          "name":     "Community contributions",
+          "homepage": "https://github.com/Payum/Payum/contributors"
+        }
+    ],
     "support": {
-        "issues": "https://github.com/alcohol/iso4217/issues",
-        "source": "https://github.com/alcohol/iso4217"
+        "issues": "https://github.com/payum/iso4217/issues",
+        "source": "https://github.com/payum/iso4217"
     },
     "require": {
         "php": ">=5.3"
     },
     "autoload": {
         "psr-4": {
-            "Alcohol\\": "."
+            "Payum\\ISO4217\\": "."
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
-        "phpunit/php-invoker": "@stable",
-        "squizlabs/php_codesniffer": "~2.0"
+        "phpunit/phpunit": "~4.0"
     },
     "autoload-dev": {
         "psr-4": {
-            "Alcohol\\Tests\\": "."
+            "Payum\\ISO4217\\Tests\\": "."
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "1.0.x-dev"
         }
-    },
-    "scripts": {
-        "checkstyle": "vendor/bin/phpcs --standard=psr2 *.php",
-        "clean": "git clean -ffxdi",
-        "test": "vendor/bin/phpunit"
     }
 }

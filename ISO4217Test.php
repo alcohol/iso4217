@@ -7,43 +7,46 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Alcohol\Tests;
+namespace Payum\ISO4217\Tests;
 
-use Alcohol\ISO4217;
+use Payum\ISO4217\ISO4217;
 
 class ISO4217Test extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @testdox Calling getByAlpha3 with an invalid alpha3 throws a InvalidArgumentException.
-     * @param string $alpha3
      * @dataProvider invalidAlpha3Provider
+     *
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessageRegExp /^Not a valid alpha3: .*$/
      */
     public function testFindByAlpha3Invalid($alpha3)
     {
-        ISO4217::findByAlpha3($alpha3);
+        $iso4217 = new ISO4217; 
+        
+        $iso4217->findByAlpha3($alpha3);
     }
 
     /**
-     * @testdox Calling getByAlpha3 with an unknown alpha3 throws a RuntimeException.
      * @expectedException \RuntimeException
      * @expectedExceptionMessage ISO 4217 does not contain: ZZZ
      */
     public function testFindByAlpha3Unknown()
     {
-        ISO4217::findByAlpha3('ZZZ');
+        $iso4217 = new ISO4217;
+
+        $iso4217->findByAlpha3('ZZZ');
     }
 
     /**
-     * @testdox Calling getByAlpha3 with a known alpha3 returns an associative array with the data.
      * @dataProvider alpha3Provider
-     * @param string $alpha3
-     * @param array $expected
      */
     public function testFindByAlpha3($alpha3, array $expected)
     {
-        $currency = ISO4217::findByAlpha3($alpha3);
+        $iso4217 = new ISO4217;
+
+        $currency = $iso4217->findByAlpha3($alpha3);
+
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $currency);
 
         $this->assertEquals($expected['name'], $currency->getName());
         $this->assertEquals($expected['alpha3'], $currency->getAlpha3());
@@ -53,36 +56,54 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @testdox Calling getByNumeric with an invalid numeric throws a InvalidArgumentException.
-     * @param string $numeric
+     * @dataProvider alpha3Provider
+     */
+    public function testFindByAlpha3MustReturnSameInstance($alpha3, array $expected)
+    {
+        $iso4217 = new ISO4217;
+
+        $firstCurrency = $iso4217->findByAlpha3($alpha3);
+        $secondCurrency = $iso4217->findByAlpha3($alpha3);
+
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $firstCurrency);
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $secondCurrency);
+        $this->assertSame($firstCurrency, $secondCurrency);
+    }
+
+    /**
      * @dataProvider invalidNumericProvider
+     *
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessageRegExp /^Not a valid numeric: .*$/
      */
     public function testFindByNumericInvalid($numeric)
     {
-        ISO4217::findByNumeric($numeric);
+        $iso4217 = new ISO4217;
+
+        $iso4217->findByNumeric($numeric);
     }
 
     /**
-     * @testdox Calling getByNumeric with an unknown numeric throws a RuntimeException.
      * @expectedException \RuntimeException
      * @expectedExceptionMessage ISO 4217 does not contain: 000
      */
     public function testFindByNumericUnknown()
     {
-        ISO4217::findByNumeric('000');
+        $iso4217 = new ISO4217;
+
+        $iso4217->findByNumeric('000');
     }
 
     /**
-     * @testdox Calling getByNumeric with a known numeric returns an associative array with the data.
      * @dataProvider numericProvider
-     * @param string $numeric
-     * @param array $expected
      */
     public function testFindByNumeric($numeric, array $expected)
     {
-        $currency = ISO4217::findByNumeric($numeric);
+        $iso4217 = new ISO4217;
+
+        $currency = $iso4217->findByNumeric($numeric);
+
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $currency);
 
         $this->assertEquals($expected['name'], $currency->getName());
         $this->assertEquals($expected['alpha3'], $currency->getAlpha3());
@@ -92,16 +113,30 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @testdox Calling findAll returns an array of ISO4217 instances.
+     * @dataProvider numericProvider
      */
+    public function testFindByNumericMustReturnSameInstance($numeric, array $expected)
+    {
+        $iso4217 = new ISO4217;
+
+        $firstCurrency = $iso4217->findByNumeric($numeric);
+        $secondCurrency = $iso4217->findByNumeric($numeric);
+
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $firstCurrency);
+        $this->assertInstanceOf('Payum\ISO4217\Currency', $secondCurrency);
+        $this->assertSame($firstCurrency, $secondCurrency);
+    }
+
     public function testFindAll()
     {
-        $currencies = ISO4217::findAll();
+        $iso4217 = new ISO4217;
+
+        $currencies = $iso4217->findAll();
 
         $this->assertInternalType('array', $currencies);
         $this->assertCount(157, $currencies);
 
-        $this->assertContainsOnly('Alcohol\ISO4217', $currencies);
+        $this->assertContainsOnly('Payum\ISO4217\Currency', $currencies);
     }
 
     /**
@@ -141,9 +176,9 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     private function getCurrencies($indexedBy)
     {
-        $rp = new \ReflectionProperty('Alcohol\ISO4217', 'currencies');
+        $rp = new \ReflectionProperty('Payum\ISO4217\ISO4217', 'rawCurrencies');
         $rp->setAccessible(true);
-        $currencies = $rp->getValue('Alcohol\ISO4217');
+        $currencies = $rp->getValue('Payum\ISO4217');
         $rp->setAccessible(false);
 
         return array_reduce(

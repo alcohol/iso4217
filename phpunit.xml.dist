@@ -17,11 +17,7 @@
     <testsuites>
         <testsuite name="ISO4217 Test Suite">
             <file>ISO4217Test.php</file>
+            <file>CurrencyTest.php</file>
         </testsuite>
     </testsuites>
-    <filters>
-        <whitelist>
-            <file>ISO4217.php</file>
-        </whitelist>
-    </filters>
 </phpunit>
