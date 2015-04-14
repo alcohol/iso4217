@@ -101,7 +101,7 @@ class ISO4217
     /**
      * @var Currency[]
      */
-    protected $currencies = [];
+    protected $currencies = array();
 
     /**
      * @var array
