@@ -1,7 +1,8 @@
 <?php
 namespace Payum\ISO4217;
 
-class Currency {
+class Currency
+{
     /**
      * @var string
      */
