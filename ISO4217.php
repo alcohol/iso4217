@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * (c) Rob Bast <rob.bast@gmail.com>
  *
  * For the full copyright and license information, please view
