@@ -36,7 +36,7 @@ Code:
 ``` php
 <?php
 
-$iso4217 = new Alcohol\ISO4217;
+$iso4217 = new Alcohol\ISO4217();
 
 $iso4217->getByAlpha3('EUR');
 // or
