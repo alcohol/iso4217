@@ -22,7 +22,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByAlpha3Invalid($alpha3)
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $iso4217->getByAlpha3($alpha3);
     }
 
@@ -33,7 +33,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByAlpha3Unknown()
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $iso4217->getByAlpha3('ZZZ');
     }
 
@@ -45,7 +45,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByAlpha3($alpha3, array $expected)
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $this->assertEquals($expected, $iso4217->getByAlpha3($alpha3));
     }
 
@@ -58,7 +58,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByNumericInvalid($numeric)
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $iso4217->getByNumeric($numeric);
     }
 
@@ -69,7 +69,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByNumericUnknown()
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $iso4217->getByNumeric('000');
     }
 
@@ -81,7 +81,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetByNumeric($numeric, $expected)
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $this->assertEquals($expected, $iso4217->getByNumeric($numeric));
     }
 
@@ -90,7 +90,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function testGetAll()
     {
-        $iso4217 = new ISO4217;
+        $iso4217 = new ISO4217();
         $this->assertInternalType('array', $iso4217->getAll());
         $this->assertCount(157, $iso4217->getAll());
     }
@@ -135,12 +135,13 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
         $currencies->setAccessible(true);
-        $currencies = $currencies->getValue(new ISO4217);
+        $currencies = $currencies->getValue(new ISO4217());
 
         return array_reduce(
             $currencies,
             function (array $carry, array $currency) use ($indexedBy) {
                 $carry[] = array($currency[$indexedBy], $currency);
+
                 return $carry;
             },
             array()

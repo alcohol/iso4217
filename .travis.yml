@@ -19,5 +19,4 @@ before_script:
   - composer install -o -n
 
 script:
-  - composer test
-  - composer checkstyle
+  - vendor/bin/phpunit

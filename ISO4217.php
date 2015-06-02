@@ -16,8 +16,8 @@ class ISO4217
 {
     /**
      * @param string $code
-     * @return array
      * @throws \RuntimeException
+     * @return array
      */
     public function getByCode($code)
     {
@@ -27,18 +27,18 @@ class ISO4217
             }
         }
 
-        throw new \RuntimeException('ISO 4217 does not contain: ' . $code);
+        throw new \RuntimeException('ISO 4217 does not contain: '.$code);
     }
 
     /**
      * @param string $alpha3
-     * @return array
      * @throws \InvalidArgumentException
+     * @return array
      */
     public function getByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
-            throw new \InvalidArgumentException('Not a valid alpha3: ' . $alpha3);
+            throw new \InvalidArgumentException('Not a valid alpha3: '.$alpha3);
         }
 
         return $this->getByCode($alpha3);
@@ -46,13 +46,13 @@ class ISO4217
 
     /**
      * @param string $numeric
-     * @return array
      * @throws \RuntimeException
+     * @return array
      */
     public function getByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
-            throw new \InvalidArgumentException('Not a valid numeric: ' . $numeric);
+            throw new \InvalidArgumentException('Not a valid numeric: '.$numeric);
         }
 
         foreach ($this->currencies as $currency) {
@@ -61,7 +61,7 @@ class ISO4217
             }
         }
 
-        throw new \RuntimeException('ISO 4217 does not contain: ' . $numeric);
+        throw new \RuntimeException('ISO 4217 does not contain: '.$numeric);
     }
 
     /**
@@ -107,11 +107,10 @@ class ISO4217
             'alpha3' => 'ANG',
             'numeric' => '532',
             'exp' => 2,
-            'country' =>
-                array(
-                    'CW',
-                    'SX',
-                ),
+            'country' => array(
+                'CW',
+                'SX',
+            ),
         ),
         array(
             'name' => 'Angolan Kwanza',
@@ -132,17 +131,16 @@ class ISO4217
             'alpha3' => 'AUD',
             'numeric' => '036',
             'exp' => 2,
-            'country' =>
-                array(
-                    'AU',
-                    'CC',
-                    'CX',
-                    'HM',
-                    'KI',
-                    'NF',
-                    'NR',
-                    'TV',
-                ),
+            'country' => array(
+                'AU',
+                'CC',
+                'CX',
+                'HM',
+                'KI',
+                'NF',
+                'NR',
+                'TV',
+            ),
         ),
         array(
             'name' => 'Aruban Florin',
@@ -247,11 +245,10 @@ class ISO4217
             'alpha3' => 'BWP',
             'numeric' => '072',
             'exp' => 2,
-            'country' =>
-                array(
-                    'BW',
-                    'ZW',
-                ),
+            'country' => array(
+                'BW',
+                'ZW',
+            ),
         ),
         array(
             'name' => 'Belarussian Ruble',
@@ -286,11 +283,10 @@ class ISO4217
             'alpha3' => 'CHF',
             'numeric' => '756',
             'exp' => 2,
-            'country' =>
-                array(
-                    'CH',
-                    'LI',
-                ),
+            'country' => array(
+                'CH',
+                'LI',
+            ),
         ),
         array(
             'name' => 'Chilean Peso',
@@ -360,12 +356,11 @@ class ISO4217
             'alpha3' => 'DKK',
             'numeric' => '208',
             'exp' => 2,
-            'country' =>
-                array(
-                    'DK',
-                    'FO',
-                    'GL',
-                ),
+            'country' => array(
+                'DK',
+                'FO',
+                'GL',
+            ),
         ),
         array(
             'name' => 'Dominican Peso',
@@ -407,41 +402,40 @@ class ISO4217
             'alpha3' => 'EUR',
             'numeric' => '978',
             'exp' => 2,
-            'country' =>
-                array(
-                    'AD',
-                    'AT',
-                    'AX',
-                    'BE',
-                    'BL',
-                    'CY',
-                    'DE',
-                    'ES',
-                    'FI',
-                    'FR',
-                    'GF',
-                    'GP',
-                    'GR',
-                    'IE',
-                    'IT',
-                    'LU',
-                    'MC',
-                    'ME',
-                    'MF',
-                    'MQ',
-                    'MT',
-                    'NL',
-                    'PM',
-                    'PT',
-                    'RE',
-                    'SI',
-                    'SK',
-                    'SM',
-                    'TF',
-                    'VA',
-                    'YT',
-                    'ZW',
-                ),
+            'country' => array(
+                'AD',
+                'AT',
+                'AX',
+                'BE',
+                'BL',
+                'CY',
+                'DE',
+                'ES',
+                'FI',
+                'FR',
+                'GF',
+                'GP',
+                'GR',
+                'IE',
+                'IT',
+                'LU',
+                'MC',
+                'ME',
+                'MF',
+                'MQ',
+                'MT',
+                'NL',
+                'PM',
+                'PT',
+                'RE',
+                'SI',
+                'SK',
+                'SM',
+                'TF',
+                'VA',
+                'YT',
+                'ZW',
+            ),
         ),
         array(
             'name' => 'Fiji Dollar',
@@ -462,16 +456,15 @@ class ISO4217
             'alpha3' => 'GBP',
             'numeric' => '826',
             'exp' => 2,
-            'country' =>
-                array(
-                    'GB',
-                    'GG',
-                    'GS',
-                    'IM',
-                    'IO',
-                    'JE',
-                    'ZW',
-                ),
+            'country' => array(
+                'GB',
+                'GG',
+                'GS',
+                'IM',
+                'IO',
+                'JE',
+                'ZW',
+            ),
         ),
         array(
             'name' => 'Georgian Lari',
@@ -569,11 +562,10 @@ class ISO4217
             'alpha3' => 'ILS',
             'numeric' => '376',
             'exp' => 2,
-            'country' =>
-                array(
-                    'IL',
-                    'PS',
-                ),
+            'country' => array(
+                'IL',
+                'PS',
+            ),
         ),
         array(
             'name' => 'Indian Rupee',
@@ -748,11 +740,10 @@ class ISO4217
             'alpha3' => 'MAD',
             'numeric' => '504',
             'exp' => 2,
-            'country' =>
-                array(
-                    'EH',
-                    'MA',
-                ),
+            'country' => array(
+                'EH',
+                'MA',
+            ),
         ),
         array(
             'name' => 'Moldovan Leu',
@@ -871,13 +862,12 @@ class ISO4217
             'alpha3' => 'NOK',
             'numeric' => '578',
             'exp' => 2,
-            'country' =>
-                array(
-                    'AQ',
-                    'BV',
-                    'NO',
-                    'SJ',
-                ),
+            'country' => array(
+                'AQ',
+                'BV',
+                'NO',
+                'SJ',
+            ),
         ),
         array(
             'name' => 'Nepalese Rupee',
@@ -891,14 +881,13 @@ class ISO4217
             'alpha3' => 'NZD',
             'numeric' => '554',
             'exp' => 2,
-            'country' =>
-                array(
-                    'CK',
-                    'NU',
-                    'NZ',
-                    'PN',
-                    'TK',
-                ),
+            'country' => array(
+                'CK',
+                'NU',
+                'NZ',
+                'PN',
+                'TK',
+            ),
         ),
         array(
             'name' => 'Omani Rial',
@@ -1031,11 +1020,10 @@ class ISO4217
             'alpha3' => 'SGD',
             'numeric' => '702',
             'exp' => 2,
-            'country' =>
-                array(
-                    'BN',
-                    'SG',
-                ),
+            'country' => array(
+                'BN',
+                'SG',
+            ),
         ),
         array(
             'name' => 'Saint Helena Pound',
@@ -1175,27 +1163,26 @@ class ISO4217
             'alpha3' => 'USD',
             'numeric' => '840',
             'exp' => 2,
-            'country' =>
-                array(
-                    'AS',
-                    'BQ',
-                    'EC',
-                    'FM',
-                    'GU',
-                    'MF',
-                    'MH',
-                    'MP',
-                    'PR',
-                    'PW',
-                    'SV',
-                    'TC',
-                    'TL',
-                    'UM',
-                    'US',
-                    'VG',
-                    'VI',
-                    'ZW',
-                ),
+            'country' => array(
+                'AS',
+                'BQ',
+                'EC',
+                'FM',
+                'GU',
+                'MF',
+                'MH',
+                'MP',
+                'PR',
+                'PW',
+                'SV',
+                'TC',
+                'TL',
+                'UM',
+                'US',
+                'VG',
+                'VI',
+                'ZW',
+            ),
         ),
         array(
             'name' => 'Uruguayan Peso',
@@ -1244,61 +1231,57 @@ class ISO4217
             'alpha3' => 'XAF',
             'numeric' => '950',
             'exp' => 0,
-            'country' =>
-                array(
-                    'CF',
-                    'CG',
-                    'CM',
-                    'GA',
-                    'GQ',
-                    'TD',
-                ),
+            'country' => array(
+                'CF',
+                'CG',
+                'CM',
+                'GA',
+                'GQ',
+                'TD',
+            ),
         ),
         array(
             'name' => 'East Caribbean Dollar',
             'alpha3' => 'XCD',
             'numeric' => '951',
             'exp' => 2,
-            'country' =>
-                array(
-                    'AG',
-                    'AI',
-                    'DM',
-                    'GD',
-                    'KN',
-                    'LC',
-                    'MS',
-                    'VC',
-                ),
+            'country' => array(
+                'AG',
+                'AI',
+                'DM',
+                'GD',
+                'KN',
+                'LC',
+                'MS',
+                'VC',
+            ),
         ),
         array(
             'name' => 'CFA Franc BCEAO',
             'alpha3' => 'XOF',
             'numeric' => '952',
             'exp' => 0,
-            'country' =>
-                array(
-                    'BJ',
-                    'BF',
-                    'CI',
-                    'GW',
-                    'ML',
-                    'NE',
-                    'SN',
-                    'TG',
-                ),
+            'country' => array(
+                'BJ',
+                'BF',
+                'CI',
+                'GW',
+                'ML',
+                'NE',
+                'SN',
+                'TG',
+            ),
         ),
         array(
             'name' => 'CFP Franc',
             'alpha3' => 'XPF',
             'numeric' => '953',
             'exp' => 0,
-            'country' =>
-                array(
-                    'NC',
-                    'PF',
-                    'WF',
-                ),
+            'country' => array(
+                'NC',
+                'PF',
+                'WF',
+            ),
         ),
         array(
             'name' => 'Yemeni Rial',
@@ -1312,14 +1295,13 @@ class ISO4217
             'alpha3' => 'ZAR',
             'numeric' => '710',
             'exp' => 2,
-            'country' =>
-                array(
-                    'NA',
-                    'LS',
-                    'SZ',
-                    'ZA',
-                    'ZW',
-                ),
+            'country' => array(
+                'NA',
+                'LS',
+                'SZ',
+                'ZA',
+                'ZW',
+            ),
         ),
         array(
             'name' => 'Zambian Kwacha',
