@@ -24,6 +24,9 @@ return Symfony\CS\Config\Config::create()
         'strict_param',
     ))
     ->finder(
-        Symfony\CS\Finder\DefaultFinder::create()->files()->name('*.php')->in(__DIR__)
+        Symfony\CS\Finder\DefaultFinder::create()
+            ->files()
+            ->name('*.php')
+            ->in(__DIR__)
     )
 ;
