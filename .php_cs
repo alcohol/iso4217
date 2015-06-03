@@ -11,9 +11,11 @@ Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
 
 return Symfony\CS\Config\Config::create()
     ->fixers(array(
+        '-concat_without_spaces',
         '-phpdoc_separation',
         '-phpdoc_params',
         '-return',
+        'concat_with_spaces',
         'newline_after_open_tag',
         'header_comment',
         'ordered_use',

@@ -27,7 +27,7 @@ class ISO4217
             }
         }
 
-        throw new \RuntimeException('ISO 4217 does not contain: '.$code);
+        throw new \RuntimeException('ISO 4217 does not contain: ' . $code);
     }
 
     /**
@@ -38,7 +38,7 @@ class ISO4217
     public function getByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
-            throw new \InvalidArgumentException('Not a valid alpha3: '.$alpha3);
+            throw new \InvalidArgumentException('Not a valid alpha3: ' . $alpha3);
         }
 
         return $this->getByCode($alpha3);
@@ -52,7 +52,7 @@ class ISO4217
     public function getByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
-            throw new \InvalidArgumentException('Not a valid numeric: '.$numeric);
+            throw new \InvalidArgumentException('Not a valid numeric: ' . $numeric);
         }
 
         foreach ($this->currencies as $currency) {
@@ -61,7 +61,7 @@ class ISO4217
             }
         }
 
-        throw new \RuntimeException('ISO 4217 does not contain: '.$numeric);
+        throw new \RuntimeException('ISO 4217 does not contain: ' . $numeric);
     }
 
     /**
