@@ -12,5 +12,5 @@
 /.gitignore export-ignore
 /.php_cs export-ignore
 /.travis.yml export-ignore
-/README.md
-/composer.lock
+/README.md export-ignore
+/composer.lock export-ignore
