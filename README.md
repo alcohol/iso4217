@@ -1,4 +1,4 @@
-# Alcohol\ISO4217
+# alcohol/iso4217
 
 A PHP library providing ISO 4217 data.
 
