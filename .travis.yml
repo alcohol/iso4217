@@ -10,6 +10,8 @@ cache:
 git:
   depth: 10
 
+sudo: false
+
 php:
   - 5.3
   - 5.4
