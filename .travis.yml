@@ -1,7 +1,7 @@
 language: php
 
 env:
-  secure: XBAGfmNWb4KNyHPhPO2qaf2ZXB2DfnqVVXxJBKTiu4PFenyK+/iJOwcHGJdYcmaNvrJ7uhb42vJKglHNsKEU3dIIy167TIznj+ksm7UigOUuqql519B1nggnFdXqMJ4fzGQVR5bV9GfmrmY3eXlBNF0VH7dlC0oHbM3xOzZJsbo=
+  secure: "N51xNIgSMV36p8U6wdF3UweUMKN2R+pnyidUH6EO4RgE+5I5NugEOUfJdwolHinvubwM31oBCRFAyBL221cIw+XzxYe9SOIToonmuGW7wZcpYDAHSRtkUJNACTlPT1M3iH0H54lIPmVCh8/DEfrYHgNWBztMyg3YD512QTM45uc="
 
 cache:
   directories:
@@ -19,17 +19,11 @@ php:
   - 5.6
   - 7
   - hhvm
-  - hhvm-nightly
-
-matrix:
-  allow_failures:
-    - php: hhvm-nightly
-  fast_finish: true
 
 before_script:
-  - composer config --global github-oauth.github.com $GITHUB_OAUTH_TOKEN
+  - composer config --global github-oauth.github.com $GITHUB_TRAVIS_TOKEN
   - composer self-update --no-interaction --no-progress
-  - composer install --no-interaction --no-progress --prefer-dist
+  - composer install --no-interaction --no-progress --prefer-dist --profile -v
 
 script:
   - vendor/bin/phpunit
