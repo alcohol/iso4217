@@ -418,6 +418,7 @@ class ISO4217
                 'GR',
                 'IE',
                 'IT',
+                'LT',
                 'LU',
                 'MC',
                 'ME',
@@ -713,13 +714,6 @@ class ISO4217
             'numeric' => '426',
             'exp' => 2,
             'country' => 'LS',
-        ),
-        array(
-            'name' => 'Lithuanian Litas',
-            'alpha3' => 'LTL',
-            'numeric' => '440',
-            'exp' => 2,
-            'country' => 'LT',
         ),
         array(
             'name' => 'Latvian Lats',

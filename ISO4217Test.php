@@ -92,7 +92,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     {
         $iso4217 = new ISO4217();
         $this->assertInternalType('array', $iso4217->getAll());
-        $this->assertCount(157, $iso4217->getAll());
+        $this->assertCount(156, $iso4217->getAll());
     }
 
     /**
