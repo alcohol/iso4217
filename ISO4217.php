@@ -15,44 +15,49 @@ namespace Alcohol;
 class ISO4217
 {
     /**
-     * @param string $code
-     * @throws \RuntimeException
+     * @param mixed $code
      * @return array
      */
     public function getByCode($code)
     {
-        foreach ($this->currencies as $currency) {
-            if (0 === strcasecmp($code, $currency['alpha3'])) {
-                return $currency;
-            }
+        try {
+            return $this->getByAlpha3($code);
+        } catch (\LogicException $e) {
+            return $this->getByNumeric($code);
         }
-
-        throw new \RuntimeException('ISO 4217 does not contain: ' . $code);
     }
 
     /**
      * @param string $alpha3
-     * @throws \InvalidArgumentException
+     * @throws \DomainException if the argument is not of the correct format
+     * @throws \OutOfBoundsException if the argument does not exist in the database
      * @return array
      */
     public function getByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
-            throw new \InvalidArgumentException('Not a valid alpha3: ' . $alpha3);
+            throw new \DomainException('Not a valid alpha3: ' . $alpha3);
         }
 
-        return $this->getByCode($alpha3);
+        foreach ($this->currencies as $currency) {
+            if (0 === strcasecmp($alpha3, $currency['alpha3'])) {
+                return $currency;
+            }
+        }
+
+        throw new \OutOfBoundsException('ISO 4217 does not contain: ' . $alpha3);
     }
 
     /**
      * @param string $numeric
-     * @throws \RuntimeException
+     * @throws \DomainException if the argument is not of the correct format
+     * @throws \OutOfBoundsException if the argument does not exist in the database
      * @return array
      */
     public function getByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
-            throw new \InvalidArgumentException('Not a valid numeric: ' . $numeric);
+            throw new \DomainException('Not a valid numeric: ' . $numeric);
         }
 
         foreach ($this->currencies as $currency) {
@@ -61,7 +66,7 @@ class ISO4217
             }
         }
 
-        throw new \RuntimeException('ISO 4217 does not contain: ' . $numeric);
+        throw new \OutOfBoundsException('ISO 4217 does not contain: ' . $numeric);
     }
 
     /**
@@ -72,7 +77,9 @@ class ISO4217
         return $this->currencies;
     }
 
-    /** @var array */
+    /**
+     * @var array
+     */
     protected $currencies = array(
         array(
             'name' => 'UAE Dirham',
