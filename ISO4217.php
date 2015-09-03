@@ -15,7 +15,7 @@ namespace Alcohol;
 class ISO4217
 {
     /**
-     * @param string $code
+     * @param mixed $code
      * @return array
      */
     public function getByCode($code)
