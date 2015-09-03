@@ -66,6 +66,26 @@ Array
 )
 ```
 
+### As above with HasCurrencies trait
+
+``` php
+<?php
+
+use Alcohol\HasCurrencies;
+
+class Example
+{
+    use HasCurrencies;
+
+    public function example()
+    {
+        return $this->currencies('EUR');
+    }
+}
+
+(new Example)->example();
+```
+
 ## Excluded
 
 The following codes have been intentionally left out:
