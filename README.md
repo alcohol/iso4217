@@ -16,7 +16,7 @@ A PHP library providing ISO 4217 data.
 Either install directly from command line using composer:
 
 ``` sh
-$ composer require "alcohol/iso4217:~2.0"
+$ composer require "alcohol/iso4217:~3.0"
 ```
 
 or manually include it as a dependency in your composer.json:
@@ -24,7 +24,7 @@ or manually include it as a dependency in your composer.json:
 ``` javascript
 {
     "require": {
-        "alcohol/iso4217": "~2.0"
+        "alcohol/iso4217": "~3.0"
     }
 }
 ```
