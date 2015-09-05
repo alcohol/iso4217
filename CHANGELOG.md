@@ -10,3 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Changed exceptions to better reflect the error they represent.
 - Dropped support for PHP 5.3, switched to short array notation.
+
+## 2.1.0 - 2015-07-31
+
+### Changed
+- Removed Lithuanian currency.
