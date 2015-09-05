@@ -70,7 +70,7 @@ class ISO4217
     }
 
     /**
-     * @uses ::$countries
+     * @uses ::$currencies
      *
      * @return array
      */
