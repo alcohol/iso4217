@@ -14,7 +14,7 @@ A PHP library providing ISO 4217 data.
 ## Installing
 
 ``` sh
-$ composer require "alcohol/iso4217"
+$ composer require alcohol/iso4217
 ```
 
 ## Using
