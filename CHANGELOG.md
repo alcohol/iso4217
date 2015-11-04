@@ -18,6 +18,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
-[3.0.0]: https://github.com/alcohol/iso4217/compare/3.0.0...3.1.0
+[3.1.0]: https://github.com/alcohol/iso4217/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/alcohol/iso4217/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/alcohol/iso4217/compare/2.0.2...2.1.0
