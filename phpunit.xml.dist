@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.6/phpunit.xsd"
          backupGlobals="false"
-         backupStaticAttributes="false"
          colors="true"
-         processIsolation="false"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         stopOnError="false"
-         stopOnFailure="false"
-         stopOnIncomplete="false"
-         stopOnSkipped="false"
          bootstrap="vendor/autoload.php">
     <testsuites>
         <testsuite name="ISO4217 Test Suite">
             <file>ISO4217Test.php</file>
         </testsuite>
     </testsuites>
-    <filters>
+    <filter>
         <whitelist>
             <file>ISO4217.php</file>
         </whitelist>
-    </filters>
+    </filter>
 </phpunit>

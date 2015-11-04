@@ -21,6 +21,7 @@ class ISO4217
      * @param string $code
      *
      * @throws \OutOfBoundsException
+     *
      * @return array
      */
     public function getByCode($code)
@@ -32,7 +33,7 @@ class ISO4217
             }
         }
 
-        throw new \OutOfBoundsException('ISO 4217 does not contain: ' . $code);
+        throw new \OutOfBoundsException('ISO 4217 does not contain: '.$code);
     }
 
     /**
@@ -41,12 +42,13 @@ class ISO4217
      * @param string $alpha3
      *
      * @throws \DomainException
+     *
      * @return array
      */
     public function getByAlpha3($alpha3)
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
-            throw new \DomainException('Not a valid alpha3: ' . $alpha3);
+            throw new \DomainException('Not a valid alpha3: '.$alpha3);
         }
 
         return $this->getByCode($alpha3);
@@ -58,12 +60,13 @@ class ISO4217
      * @param string $numeric
      *
      * @throws \DomainException
+     *
      * @return array
      */
     public function getByNumeric($numeric)
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
-            throw new \DomainException('Not a valid numeric: ' . $numeric);
+            throw new \DomainException('Not a valid numeric: '.$numeric);
         }
 
         return $this->getByCode($numeric);
@@ -542,7 +545,7 @@ class ISO4217
             'country' => 'HN',
         ],
         [
-            'name' => 'Croatian Kuna',
+            'name' => 'Kuna',
             'alpha3' => 'HRK',
             'numeric' => '191',
             'exp' => 2,
@@ -958,7 +961,7 @@ class ISO4217
             'country' => 'QA',
         ],
         [
-            'name' => 'Romanian New Leu',
+            'name' => 'Romanian Leu',
             'alpha3' => 'RON',
             'numeric' => '946',
             'exp' => 2,

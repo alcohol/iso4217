@@ -13,7 +13,7 @@
     "source": "https://github.com/alcohol/iso4217"
   },
   "require": {
-    "php": ">=5.4"
+    "php": "^5.4 || ^7.0"
   },
   "autoload": {
     "psr-4": {
@@ -21,13 +21,8 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.6",
+    "phpunit/phpunit": "^4.6 || ^5.0",
     "phpunit/php-invoker": "@stable"
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Alcohol\\Tests\\": "."
-    }
   },
   "extra": {
     "branch-alias": {

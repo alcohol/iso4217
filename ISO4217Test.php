@@ -7,14 +7,13 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Alcohol\Tests;
-
-use Alcohol\ISO4217;
+namespace Alcohol;
 
 class ISO4217Test extends \PHPUnit_Framework_TestCase
 {
     /**
      * @testdox Calling getByAlpha3 with an invalid alpha3 throws a DomainException.
+     *
      * @param string $alpha3
      * @dataProvider invalidAlpha3Provider
      * @expectedException \DomainException
@@ -40,6 +39,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     /**
      * @testdox Calling getByAlpha3 with a known alpha3 returns an associative array with the data.
      * @dataProvider alpha3Provider
+     *
      * @param string $alpha3
      * @param array $expected
      */
@@ -51,6 +51,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
 
     /**
      * @testdox Calling getByNumeric with an invalid numeric throws a DomainException.
+     *
      * @param string $numeric
      * @dataProvider invalidNumericProvider
      * @expectedException \DomainException
@@ -76,6 +77,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
     /**
      * @testdox Calling getByNumeric with a known numeric returns an associative array with the data.
      * @dataProvider numericProvider
+     *
      * @param string $numeric
      * @param array $expected
      */
@@ -100,7 +102,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function invalidAlpha3Provider()
     {
-        return array(array('ZZ'), array('ZZZZ'), array(12), array(1234));
+        return [['ZZ'], ['ZZZZ'], [12], [1234]];
     }
 
     /**
@@ -116,7 +118,7 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
      */
     public function invalidNumericProvider()
     {
-        return array(array('00'), array('0000'), array('ZZ'), array('ZZZZ'));
+        return [['00'], ['0000'], ['ZZ'], ['ZZZZ']];
     }
 
     /**
@@ -140,11 +142,11 @@ class ISO4217Test extends \PHPUnit_Framework_TestCase
         return array_reduce(
             $currencies,
             function (array $carry, array $currency) use ($indexedBy) {
-                $carry[] = array($currency[$indexedBy], $currency);
+                $carry[] = [$currency[$indexedBy], $currency];
 
                 return $carry;
             },
-            array()
+            []
         );
     }
 }
