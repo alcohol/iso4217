@@ -25,9 +25,11 @@ matrix:
   allow_failures:
     - php: nightly
 
-before_script:
+before_install:
   - composer self-update --no-interaction --no-progress
   - composer config --no-interaction --global github-oauth.github.com $GITHUB_TRAVIS_TOKEN
+
+install:
   - composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
 script:
