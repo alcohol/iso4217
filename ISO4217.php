@@ -15,8 +15,7 @@ namespace Alcohol;
 class ISO4217
 {
     /**
-     * @used-by ::getByAlpha3()
-     * @used-by ::getByNumeric()
+     * @api
      *
      * @param string $code
      *
@@ -37,6 +36,8 @@ class ISO4217
     }
 
     /**
+     * @api
+     *
      * @uses ::getByCode()
      *
      * @param string $alpha3
@@ -55,6 +56,8 @@ class ISO4217
     }
 
     /**
+     * @api
+     *
      * @uses ::getByCode()
      *
      * @param string $numeric
@@ -73,6 +76,8 @@ class ISO4217
     }
 
     /**
+     * @api
+     *
      * @uses ::$currencies
      *
      * @return array
@@ -83,7 +88,7 @@ class ISO4217
     }
 
     /**
-     * @used-by ::getAll()
+     * @internal
      *
      * @var array
      */
