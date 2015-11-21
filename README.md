@@ -90,7 +90,7 @@ Feel free to submit a pull request or create an issue.
 
 ## License
 
-Alcohol\ISO4217 is licensed under the MIT license.
+alcohol/iso4217 is licensed under the MIT license.
 
 ## Source(s)
 
