@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>iso4217 by alcohol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">iso4217</h1>
+      <h2 class="project-tagline">ISO 4217 PHP Library</h2>
+      <a href="https://github.com/alcohol/iso4217" class="btn">View on GitHub</a>
+      <a href="https://github.com/alcohol/iso4217/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/alcohol/iso4217/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="alcoholiso4217" class="anchor" href="#alcoholiso4217" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>alcohol/iso4217</h1>
+
+<p>A PHP library providing ISO 4217 data.</p>
+
+<p><a href="https://travis-ci.org/alcohol/iso4217"><img src="https://img.shields.io/travis/alcohol/iso4217/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://packagist.org/packages/alcohol/iso4217"><img src="https://img.shields.io/packagist/l/alcohol/iso4217.svg?style=flat-square" alt="License"></a></p>
+
+<h2>
+<a id="what-is-iso-4217" class="anchor" href="#what-is-iso-4217" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is ISO 4217</h2>
+
+<blockquote>
+<p>ISO 4217 is a standard published by the International Organization for Standardization, which delineates currency designators, country codes (alpha and numeric), and references to minor units in three tables.</p>
+
+<p><em>-- <a href="http://en.wikipedia.org/wiki/ISO_4217">Wikipedia</a></em></p>
+</blockquote>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ composer require alcohol/iso4217</pre></div>
+
+<h2>
+<a id="using" class="anchor" href="#using" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using</h2>
+
+<p>Code:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$iso4217</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Alcohol\</span><span class="pl-c1">ISO4217</span>();</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$iso4217</span><span class="pl-k">-&gt;</span>getByAlpha3(<span class="pl-s"><span class="pl-pds">'</span>EUR<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-c">// or</span></span>
+<span class="pl-s1"><span class="pl-smi">$iso4217</span><span class="pl-k">-&gt;</span>getByNumeric(<span class="pl-s"><span class="pl-pds">'</span>978<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c">// also</span></span>
+<span class="pl-s1"><span class="pl-smi">$iso4217</span><span class="pl-k">-&gt;</span>getAll();</span></pre></div>
+
+<p>Result:</p>
+
+<pre><code>Array
+(
+    [name] =&gt; Euro
+    [alpha3] =&gt; EUR
+    [numeric] =&gt; 978
+    [exp] =&gt; 2
+    [country] =&gt; Array
+        (
+            [0] =&gt; AD
+            [1] =&gt; AT
+            ...
+            [30] =&gt; YT
+            [31] =&gt; ZW
+        )
+)
+</code></pre>
+
+<h2>
+<a id="excluded" class="anchor" href="#excluded" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Excluded</h2>
+
+<p>The following codes have been intentionally left out:</p>
+
+<ul>
+<li>BOV Bolivian Mvdol (funds code)</li>
+<li>CHE WIR Euro (complementary currency)</li>
+<li>CHW WIR Franc (complementary currency)</li>
+<li>CLF Unidad de Fomento (funds code)</li>
+<li>CNH Chinese yuan when traded in Hong Kong</li>
+<li>COU Unidad de Valor Real (UVR) (funds code)</li>
+<li>MXV Mexican Unidad de Inversion (UDI) (funds code)</li>
+<li>USN United States dollar (next day) (funds code)</li>
+<li>USS United States dollar (same day) (funds code)</li>
+<li>UYI Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)</li>
+<li>XAG Silver (one troy ounce)</li>
+<li>XAU Gold (one troy ounce)</li>
+<li>XBA European Composite Unit (EURCO) (bond market unit)</li>
+<li>XBB European Monetary Unit (E.M.U.-6) (bond market unit)</li>
+<li>XBC European Unit of Account 9 (E.U.A.-9) (bond market unit)</li>
+<li>XBD European Unit of Account 17 (E.U.A.-17) (bond market unit)</li>
+<li>XDR Special drawing rights</li>
+<li>XFU UIC franc (special settlement currency)</li>
+<li>XPD Palladium (one troy ounce)</li>
+<li>XPT Platinum (one troy ounce)</li>
+<li>XSU Unified System for Regional Compensation (SUCRE)</li>
+<li>XTS Code reserved for testing purposes</li>
+<li>XUA ADB Unit of Account (African Development Bank)</li>
+<li>XXX No currency</li>
+<li>ZWD Zimbabwe dollar</li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Feel free to submit a pull request or create an issue.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>alcohol/iso4217 is licensed under the MIT license.</p>
+
+<h2>
+<a id="sources" class="anchor" href="#sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source(s)</h2>
+
+<ul>
+<li>"<a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>" by <a href="http://www.wikipedia.org">Wikipedia</a> licensed under <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">CC BY-SA 3.0 Unported License</a>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/alcohol/iso4217">iso4217</a> is maintained by <a href="https://github.com/alcohol">alcohol</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
