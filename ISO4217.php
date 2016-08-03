@@ -414,8 +414,8 @@ class ISO4217
             'alpha3' => 'EUR',
             'numeric' => '978',
             'exp' => 2,
-            'country' => array('AD', 'AT', 'AX', 'BE', 'BL', 'CY', 'DE', 'ES', 'FI', 'FR', 'GF', 'GP', 'GR', 'IE', 'IT', 'LU', 'MC',
-                'ME', 'MF', 'MQ', 'MT', 'NL', 'PM', 'PT', 'RE', 'SI', 'SK', 'SM', 'TF', 'VA', 'YT', 'ZW'),
+            'country' => array('AD', 'AT', 'AX', 'BE', 'BL', 'CY', 'DE', 'EE', 'ES', 'FI', 'FR', 'GF', 'GP', 'GR', 'IE', 'IT', 'LT',
+                'LU', 'LV', 'MC', 'ME', 'MF', 'MQ', 'MT', 'NL', 'PM', 'PT', 'RE', 'SI', 'SK', 'SM', 'TF', 'VA', 'YT', 'ZW'),
         ),
         array(
             'name' => 'Fiji Dollar',
@@ -683,20 +683,6 @@ class ISO4217
             'numeric' => '426',
             'exp' => 2,
             'country' => 'LS',
-        ),
-        array(
-            'name' => 'Lithuanian Litas',
-            'alpha3' => 'LTL',
-            'numeric' => '440',
-            'exp' => 2,
-            'country' => 'LT',
-        ),
-        array(
-            'name' => 'Latvian Lats',
-            'alpha3' => 'LVL',
-            'numeric' => '428',
-            'exp' => 2,
-            'country' => 'LV',
         ),
         array(
             'name' => 'Libyan Dinar',
