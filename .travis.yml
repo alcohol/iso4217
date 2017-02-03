@@ -1,36 +1,34 @@
 language: php
 
-env:
-  secure: "N51xNIgSMV36p8U6wdF3UweUMKN2R+pnyidUH6EO4RgE+5I5NugEOUfJdwolHinvubwM31oBCRFAyBL221cIw+XzxYe9SOIToonmuGW7wZcpYDAHSRtkUJNACTlPT1M3iH0H54lIPmVCh8/DEfrYHgNWBztMyg3YD512QTM45uc="
-
 cache:
   directories:
     - $HOME/.composer/cache/files
+    - $HOME/.php-cs-fixer
 
 git:
-  depth: 10
+  depth: 5
 
 sudo: false
 
 php:
-  - 5.4
-  - 5.5
   - 5.6
-  - 7
+  - 7.0
+  - 7.1
   - hhvm
   - nightly
 
 matrix:
   fast_finish: true
   allow_failures:
+    - php: hhvm
     - php: nightly
-
-before_install:
-  - composer self-update --no-interaction --no-progress
-  - composer config --no-interaction --global github-oauth.github.com $GITHUB_TRAVIS_TOKEN
 
 install:
   - composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
 script:
   - vendor/bin/phpunit
+
+after_script:
+  - mkdir -p "$HOME/.php-cs-fixer"
+  - vendor/bin/php-cs-fixer fix --cache-file "$HOME/.php-cs-fixer/.php_cs.cache" --dry-run --allow-risky true --diff --verbose
