@@ -2,10 +2,8 @@
     "name": "payum/iso4217",
     "description": "ISO 4217 PHP Library",
     "keywords": ["ISO 4217", "ISO", "4217", "currencies", "library"],
-    "homepage": "http://payum.org",
+    "homepage": "https://payum.forma-pro.com/",
     "license": "MIT",
-    "authors": [],
-
     "authors": [
         {
           "name": "Rob Bast",
