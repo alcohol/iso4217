@@ -271,9 +271,9 @@ class ISO4217
         ],
         [
             'name' => 'Belarussian Ruble',
-            'alpha3' => 'BYR',
-            'numeric' => '974',
-            'exp' => 0,
+            'alpha3' => 'BYN',
+            'numeric' => '933',
+            'exp' => 2,
             'country' => 'BY',
         ],
         [
