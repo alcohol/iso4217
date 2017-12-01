@@ -1081,6 +1081,13 @@ class ISO4217
             'country' => 'ST',
         ],
         [
+            'name' => 'Salvadoran colón',
+            'alpha3' => 'SVC',
+            'numeric' => '222',
+            'exp' => 2,
+            'country' => 'SV',
+        ],
+        [
             'name' => 'Syrian Pound',
             'alpha3' => 'SYP',
             'numeric' => '760',
@@ -1322,6 +1329,13 @@ class ISO4217
             'numeric' => '967',
             'exp' => 2,
             'country' => 'ZM',
+        ],
+        [
+            'name' => 'Zimbabwean dollar',
+            'alpha3' => 'ZWL',
+            'numeric' => '932',
+            'exp' => 2,
+            'country' => 'ZW',
         ],
     ];
 }
