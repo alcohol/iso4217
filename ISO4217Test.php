@@ -9,7 +9,9 @@
 
 namespace Alcohol;
 
-class ISO4217Test extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ISO4217Test extends TestCase
 {
     /**
      * @testdox Calling getByAlpha3 with an invalid alpha3 throws a DomainException.
