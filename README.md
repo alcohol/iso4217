@@ -2,7 +2,7 @@
 
 A PHP library providing ISO 4217 data. This is a **fork** of [alcohol/iso4217](https://github.com/alcohol/iso4217) and here's why I [did the fork](https://github.com/alcohol/iso4217/pull/1).
 
-[![Build Status](https://img.shields.io/travis/Payum/iso4217/master.svg?style=flat-square)](https://travis-ci.org/payum/iso4217)
+[![Build Status](https://img.shields.io/travis/Payum/iso4217/master.svg?style=flat-square)](https://travis-ci.org/Payum/iso4217)
 [![License](https://img.shields.io/packagist/l/Payum/iso4217.svg?style=flat-square)](https://packagist.org/packages/payum/iso4217)
 
 ## What is ISO 4217
