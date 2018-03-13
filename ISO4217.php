@@ -16,7 +16,7 @@ class ISO4217
 {
     /**
      * @param string $code
-     * @return array
+     * @return Currency
      * @throws \RuntimeException
      */
     public function findByCode($code)
