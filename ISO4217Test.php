@@ -136,13 +136,8 @@ class ISO4217Test extends TestCase
      */
     private function getCurrencies($indexedBy)
     {
-        $reflected = new \ReflectionClass('Alcohol\ISO4217');
-        $currencies = $reflected->getProperty('currencies');
-        $currencies->setAccessible(true);
-        $currencies = $currencies->getValue(new ISO4217());
-
         return array_reduce(
-            $currencies,
+            require __DIR__ . '/currency_codes.php',
             function (array $carry, array $currency) use ($indexedBy) {
                 $carry[] = [$currency[$indexedBy], $currency];
 
