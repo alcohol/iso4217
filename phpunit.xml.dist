@@ -11,6 +11,7 @@
     <testsuites>
         <testsuite name="ISO4217 Test Suite">
             <file>ISO4217Test.php</file>
+            <file>ISO4217FactoryTest.php</file>
         </testsuite>
     </testsuites>
 
