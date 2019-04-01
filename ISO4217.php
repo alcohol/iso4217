@@ -802,9 +802,9 @@ class ISO4217
         ],
         [
             'name' => 'Mauritanian Ouguiya',
-            'alpha3' => 'MRO',
-            'numeric' => '478',
-            'exp' => 0,
+            'alpha3' => 'MRU',
+            'numeric' => '929',
+            'exp' => 1,
             'country' => 'MR',
         ],
         [
@@ -1075,8 +1075,8 @@ class ISO4217
         ],
         [
             'name' => 'São Tomé and Principe Dobra',
-            'alpha3' => 'STD',
-            'numeric' => '678',
+            'alpha3' => 'STN',
+            'numeric' => '930',
             'exp' => 2,
             'country' => 'ST',
         ],
@@ -1212,9 +1212,9 @@ class ISO4217
             'country' => 'UZ',
         ],
         [
-            'name' => 'Venezuelan Bolivar',
-            'alpha3' => 'VEF',
-            'numeric' => '937',
+            'name' => 'Venezuelan Bolívar',
+            'alpha3' => 'VES',
+            'numeric' => '928',
             'exp' => 2,
             'country' => 'VE',
         ],

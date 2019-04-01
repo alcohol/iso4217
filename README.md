@@ -62,12 +62,11 @@ The following codes have been intentionally left out:
 * CHE WIR Euro (complementary currency)
 * CHW WIR Franc (complementary currency)
 * CLF Unidad de Fomento (funds code)
-* CNH Chinese yuan when traded in Hong Kong
 * COU Unidad de Valor Real (UVR) (funds code)
 * MXV Mexican Unidad de Inversion (UDI) (funds code)
 * USN United States dollar (next day) (funds code)
-* USS United States dollar (same day) (funds code)
 * UYI Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)
+* UYW Unidad Previsional (tracks nominal wage index)
 * XAG Silver (one troy ounce)
 * XAU Gold (one troy ounce)
 * XBA European Composite Unit (EURCO) (bond market unit)
@@ -75,14 +74,18 @@ The following codes have been intentionally left out:
 * XBC European Unit of Account 9 (E.U.A.-9) (bond market unit)
 * XBD European Unit of Account 17 (E.U.A.-17) (bond market unit)
 * XDR Special drawing rights
-* XFU UIC franc (special settlement currency)
 * XPD Palladium (one troy ounce)
 * XPT Platinum (one troy ounce)
 * XSU Unified System for Regional Compensation (SUCRE)
 * XTS Code reserved for testing purposes
 * XUA ADB Unit of Account (African Development Bank)
 * XXX No currency
-* ZWD Zimbabwe dollar
+
+Also some currencies that have recently become deprecated:
+
+* SVC El Salvador Colon
+* VEF The previous Venezuelan Bolívar
+* ZWD/ZWN/ZWR/ZWL Zimbabwean dollar(s)
 
 ## Contributing
 
