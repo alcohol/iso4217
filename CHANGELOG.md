@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.1.2] - 2019-04-01
 
+* Changed: updated exponent value of MGA and MRU
+
+## [3.1.2] - 2019-04-01
+
 * Changed: updated README
 * Changed: added accent on Venezuelan Bolívar
 * Changed: VEF superseded by VES
@@ -30,6 +34,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
+[3.1.3]: https://github.com/alcohol/iso4217/compare/3.1.2...3.1.3
 [3.1.2]: https://github.com/alcohol/iso4217/compare/3.1.1...3.1.2
 [3.1.1]: https://github.com/alcohol/iso4217/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/alcohol/iso4217/compare/3.0.0...3.1.0
