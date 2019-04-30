@@ -769,7 +769,7 @@ class ISO4217
             'name' => 'Malagasy Ariary',
             'alpha3' => 'MGA',
             'numeric' => '969',
-            'exp' => 0,
+            'exp' => 2,
             'country' => 'MG',
         ],
         [
@@ -804,7 +804,7 @@ class ISO4217
             'name' => 'Mauritanian Ouguiya',
             'alpha3' => 'MRU',
             'numeric' => '929',
-            'exp' => 1,
+            'exp' => 2,
             'country' => 'MR',
         ],
         [
