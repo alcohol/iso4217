@@ -976,7 +976,7 @@ class ISO4217
             'name' => 'Serbian Dinar',
             'alpha3' => 'RSD',
             'numeric' => '941',
-            'exp' => 0,
+            'exp' => 2,
             'country' => 'RS',
         ],
         [
