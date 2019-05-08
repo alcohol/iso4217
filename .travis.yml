@@ -21,6 +21,11 @@ php:
 - 7.4snapshot
 - nightly
 
+env:
+  matrix:
+  - COMPOSER_FLAGS="--prefer-lowest"
+  - COMPOSER_FLAGS=""
+
 matrix:
   fast_finish: true
   allow_failures:
