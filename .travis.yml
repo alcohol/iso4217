@@ -26,7 +26,6 @@ matrix:
   allow_failures:
   - php: 7.4snapshot
   - php: nightly
-  - php: 7.4snapshot
 
 install:
 - composer update --no-interaction --no-progress --prefer-dist --optimize-autoloader $COMPOSER_FLAGS
