@@ -3,11 +3,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.4] - 2019-04-01
+## [Unreleased]
+
+* ...
+
+## [3.1.5] - 2019-10-30
+
+* Changed: added Latvia and Estonia to EUR
+
+## [3.1.4] - 2019-04-30
 
 * Changed: updated exponent value of RSD
 
-## [3.1.3] - 2019-04-01
+## [3.1.3] - 2019-04-30
 
 * Changed: updated exponent value of MGA and MRU
 
@@ -19,7 +27,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Changed: STD superseded by STN
 * Changed: MRO superseded by MRU
 
-## [3.1.1] - 2015-11-04
+## [3.1.1] - 2017-12-01
 
 * Changed: BYR superseded by BYN
 
@@ -38,6 +46,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
+[Unreleased]: https://github.com/alcohol/iso4217/compare/3.1.5...HEAD
+[3.1.5]: https://github.com/alcohol/iso4217/compare/3.1.4...3.1.5
 [3.1.4]: https://github.com/alcohol/iso4217/compare/3.1.3...3.1.4
 [3.1.3]: https://github.com/alcohol/iso4217/compare/3.1.2...3.1.3
 [3.1.2]: https://github.com/alcohol/iso4217/compare/3.1.1...3.1.2
