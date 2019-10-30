@@ -429,6 +429,7 @@ class ISO4217
                 'BL',
                 'CY',
                 'DE',
+                'EE',
                 'ES',
                 'FI',
                 'FR',
