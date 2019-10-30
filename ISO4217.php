@@ -439,6 +439,7 @@ class ISO4217
                 'IE',
                 'IT',
                 'LT',
+                'LV',
                 'LU',
                 'MC',
                 'ME',
