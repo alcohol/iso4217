@@ -136,6 +136,8 @@ class ISO4217Test extends TestCase
     }
 
     /**
+     * @param string $indexedBy
+     *
      * @return array
      */
     private function getCurrencies(string $indexedBy): array
