@@ -16,24 +16,26 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getByAlpha3 with an invalid alpha3 throws a DomainException.
      *
-     * @param string $alpha3
+     * @param string|int $alpha3
      * @dataProvider invalidAlpha3Provider
-     * @expectedException \DomainException
-     * @expectedExceptionMessageRegExp /^Not a valid alpha3: .*$/
      */
-    public function testGetByAlpha3Invalid($alpha3)
+    public function testGetByAlpha3Invalid($alpha3): void
     {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessageMatches('/^Not a valid alpha3: .*$/');
+
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3($alpha3);
     }
 
     /**
      * @testdox Calling getByAlpha3 with an unknown alpha3 throws a OutOfBoundsException.
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage ISO 4217 does not contain: ZZZ
      */
-    public function testGetByAlpha3Unknown()
+    public function testGetByAlpha3Unknown(): void
     {
+        $this->expectException(\OutOfBoundsException::class);
+        $this->expectExceptionMessage('ISO 4217 does not contain: ZZZ');
+
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3('ZZZ');
     }
@@ -45,7 +47,7 @@ class ISO4217Test extends TestCase
      * @param string $alpha3
      * @param array $expected
      */
-    public function testGetByAlpha3($alpha3, array $expected)
+    public function testGetByAlpha3(string $alpha3, array $expected): void
     {
         $iso4217 = new ISO4217();
         $this->assertEquals($expected, $iso4217->getByAlpha3($alpha3));
@@ -56,22 +58,24 @@ class ISO4217Test extends TestCase
      *
      * @param string $numeric
      * @dataProvider invalidNumericProvider
-     * @expectedException \DomainException
-     * @expectedExceptionMessageRegExp /^Not a valid numeric: .*$/
      */
-    public function testGetByNumericInvalid($numeric)
+    public function testGetByNumericInvalid(string $numeric): void
     {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessageMatches('/^Not a valid numeric: .*$/');
+
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric($numeric);
     }
 
     /**
      * @testdox Calling getByNumeric with an unknown numeric throws a OutOfBoundsException.
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage ISO 4217 does not contain: 000
      */
-    public function testGetByNumericUnknown()
+    public function testGetByNumericUnknown(): void
     {
+        $this->expectException(\OutOfBoundsException::class);
+        $this->expectExceptionMessage('ISO 4217 does not contain: 000');
+
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric('000');
     }
@@ -83,7 +87,7 @@ class ISO4217Test extends TestCase
      * @param string $numeric
      * @param array $expected
      */
-    public function testGetByNumeric($numeric, $expected)
+    public function testGetByNumeric(string $numeric, array $expected): void
     {
         $iso4217 = new ISO4217();
         $this->assertEquals($expected, $iso4217->getByNumeric($numeric));
@@ -92,17 +96,17 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getAll returns an array with all elements.
      */
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $iso4217 = new ISO4217();
-        $this->assertInternalType('array', $iso4217->getAll());
+        $this->assertIsArray($iso4217->getAll());
         $this->assertCount(156, $iso4217->getAll());
     }
 
     /**
      * @return array
      */
-    public function invalidAlpha3Provider()
+    public function invalidAlpha3Provider(): array
     {
         return [['ZZ'], ['ZZZZ'], [12], [1234]];
     }
@@ -110,7 +114,7 @@ class ISO4217Test extends TestCase
     /**
      * @return array
      */
-    public function alpha3Provider()
+    public function alpha3Provider(): array
     {
         return $this->getCurrencies('alpha3');
     }
@@ -118,7 +122,7 @@ class ISO4217Test extends TestCase
     /**
      * @return array
      */
-    public function invalidNumericProvider()
+    public function invalidNumericProvider(): array
     {
         return [['00'], ['0000'], ['ZZ'], ['ZZZZ']];
     }
@@ -126,15 +130,17 @@ class ISO4217Test extends TestCase
     /**
      * @return array
      */
-    public function numericProvider()
+    public function numericProvider(): array
     {
         return $this->getCurrencies('numeric');
     }
 
     /**
+     * @param string $indexedBy
+     *
      * @return array
      */
-    private function getCurrencies($indexedBy)
+    private function getCurrencies(string $indexedBy): array
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
@@ -143,7 +149,7 @@ class ISO4217Test extends TestCase
 
         return array_reduce(
             $currencies,
-            function (array $carry, array $currency) use ($indexedBy) {
+            static function (array $carry, array $currency) use ($indexedBy) {
                 $carry[] = [$currency[$indexedBy], $currency];
 
                 return $carry;
