@@ -18,22 +18,24 @@ class ISO4217Test extends TestCase
      *
      * @param string $alpha3
      * @dataProvider invalidAlpha3Provider
-     * @expectedException \DomainException
-     * @expectedExceptionMessageRegExp /^Not a valid alpha3: .*$/
      */
     public function testGetByAlpha3Invalid($alpha3)
     {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessageMatches('/^Not a valid alpha3: .*$/');
+
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3($alpha3);
     }
 
     /**
      * @testdox Calling getByAlpha3 with an unknown alpha3 throws a OutOfBoundsException.
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage ISO 4217 does not contain: ZZZ
      */
     public function testGetByAlpha3Unknown()
     {
+        $this->expectException(\OutOfBoundsException::class);
+        $this->expectExceptionMessage('ISO 4217 does not contain: ZZZ');
+
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3('ZZZ');
     }
@@ -56,22 +58,24 @@ class ISO4217Test extends TestCase
      *
      * @param string $numeric
      * @dataProvider invalidNumericProvider
-     * @expectedException \DomainException
-     * @expectedExceptionMessageRegExp /^Not a valid numeric: .*$/
      */
     public function testGetByNumericInvalid($numeric)
     {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessageMatches('/^Not a valid numeric: .*$/');
+
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric($numeric);
     }
 
     /**
      * @testdox Calling getByNumeric with an unknown numeric throws a OutOfBoundsException.
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage ISO 4217 does not contain: 000
      */
     public function testGetByNumericUnknown()
     {
+        $this->expectException(\OutOfBoundsException::class);
+        $this->expectExceptionMessage('ISO 4217 does not contain: 000');
+
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric('000');
     }
@@ -95,7 +99,7 @@ class ISO4217Test extends TestCase
     public function testGetAll()
     {
         $iso4217 = new ISO4217();
-        $this->assertInternalType('array', $iso4217->getAll());
+        $this->assertIsArray($iso4217->getAll());
         $this->assertCount(156, $iso4217->getAll());
     }
 
