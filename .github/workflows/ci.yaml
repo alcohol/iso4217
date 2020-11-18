@@ -5,22 +5,28 @@ on: [push]
 jobs:
 
   ci:
+
     name: CI
+
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['7.3', '7.4', '8.0.0RC4']
+        php-version: ['7.0', '7.1', '7.2', '7.3', '7.4', '8.0.0RC4']
         dependencies: [locked, lowest]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install dependencies from .lock file
-        run: docker run --rm --volume $(pwd):/workdir --workdir /workdir composer install --no-interaction --no-progress
-      - name: Update dependencies versions to lowest allowed by constraints
-        if: contains(matrix.dependencies, 'lowest')
-        run: docker run --rm --volume $(pwd):/workdir --workdir /workdir composer update --no-interaction --no-progress --prefer-lowest
-      - name: Run PHPUnit tests
-        run: docker run --rm --volume $(pwd):/workdir --workdir /workdir php:${{ matrix.php-version }}-cli-alpine vendor/bin/phpunit  --coverage-text
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install dependencies from .lock file
+      run: docker run --rm --volume $(pwd):/workdir --workdir /workdir composer install --no-interaction --no-progress
+
+    - name: Update dependencies versions to lowest allowed by constraints
+      if: contains(matrix.dependencies, 'lowest')
+      run: docker run --rm --volume $(pwd):/workdir --workdir /workdir composer update --no-interaction --no-progress --prefer-lowest
+
+    - name: Run PHPUnit tests
+      run: docker run --rm --volume $(pwd):/workdir --workdir /workdir php:${{ matrix.php-version }}-cli-alpine vendor/bin/phpunit  --coverage-text
