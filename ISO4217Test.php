@@ -147,7 +147,7 @@ class ISO4217Test extends TestCase
 
         return array_reduce(
             $currencies,
-            function (array $carry, array $currency) use ($indexedBy) {
+            static function (array $carry, array $currency) use ($indexedBy) {
                 $carry[] = [$currency[$indexedBy], $currency];
 
                 return $carry;
