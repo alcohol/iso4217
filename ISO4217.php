@@ -92,7 +92,7 @@ class ISO4217
      *
      * @var array
      */
-    protected array $currencies = [
+    protected $currencies = [
         [
             'name' => 'UAE Dirham',
             'alpha3' => 'AED',
