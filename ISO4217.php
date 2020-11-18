@@ -23,7 +23,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getByCode($code)
+    public function getByCode($code): array
     {
         foreach ($this->currencies as $currency) {
             if (0 === strcasecmp($code, $currency['alpha3']) ||
@@ -46,7 +46,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getByAlpha3($alpha3)
+    public function getByAlpha3($alpha3): array
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
             throw new \DomainException('Not a valid alpha3: '.$alpha3);
@@ -66,7 +66,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getByNumeric($numeric)
+    public function getByNumeric($numeric): array
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
             throw new \DomainException('Not a valid numeric: '.$numeric);
@@ -82,7 +82,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getAll()
+    public function getAll(): array
     {
         return $this->currencies;
     }
@@ -92,7 +92,7 @@ class ISO4217
      *
      * @var array
      */
-    protected $currencies = [
+    protected array $currencies = [
         [
             'name' => 'UAE Dirham',
             'alpha3' => 'AED',
