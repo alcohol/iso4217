@@ -29,7 +29,7 @@ jobs:
       run: docker run --rm --volume $(pwd):/workdir --workdir /workdir composer update --no-interaction --no-progress --prefer-lowest
 
     - name: Run PHPUnit tests
-      run: docker run --rm --volume $(pwd):/workdir --workdir /workdir php:${{ matrix.php-version }}-cli-alpine vendor/bin/phpunit  --coverage-text
+      run: docker run --rm --volume $(pwd):/workdir --workdir /workdir php:${{ matrix.php-version }}-cli-alpine phpdbg -qrr vendor/bin/phpunit  --coverage-text
 
     - name: Upload codecoverage
       run: curl -s https://codecov.io/bash | bash
