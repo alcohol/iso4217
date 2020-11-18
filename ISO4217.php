@@ -17,7 +17,7 @@ class ISO4217
     /**
      * @api
      *
-     * @param string $code
+     * @param string|int $code
      *
      * @throws \OutOfBoundsException
      *
