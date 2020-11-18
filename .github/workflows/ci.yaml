@@ -10,11 +10,21 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    continue-on-error: ${{ matrix.experimental }}
+
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['7.3', '7.4', '8.0.0RC4']
+        php-version: ['7.3', '7.4']
         dependencies: [locked, lowest]
+        experimental: [false]
+        include:
+        - php-version: 8.0.0RC4
+          dependencies: locked
+          experimental: true
+        - php-version: 8.0.0RC4
+          dependencies: lowest
+          experimental: true
 
     steps:
 
