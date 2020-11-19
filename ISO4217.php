@@ -12,7 +12,7 @@ namespace Alcohol;
 /**
  * A library providing ISO 4217 data.
  */
-class ISO4217
+final class ISO4217
 {
     /**
      * @api
