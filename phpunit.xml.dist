@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.6/phpunit.xsd"
-    backupGlobals="false"
+    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/9.4/phpunit.xsd"
     bootstrap="vendor/autoload.php"
     colors="true"
     stderr="true"
@@ -14,17 +13,14 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist>
-            <file>ISO4217.php</file>
-        </whitelist>
-    </filter>
+    <coverage>
+	<exclude>
+	    <file>ISO4217Test.php</file>
+	</exclude>
+    </coverage>
 
     <logging>
-        <log type="coverage-text" target="php://stderr" />
-        <log type="coverage-html" target="build/coverage" showUncoveredFiles="true"/>
-        <log type="coverage-clover" target="build/coverage.xml" showUncoveredFiles="true"/>
+        <junit outputFile="junit.xml" />
     </logging>
-
 
 </phpunit>
