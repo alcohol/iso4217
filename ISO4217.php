@@ -46,7 +46,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getByAlpha3($alpha3): array
+    public function getByAlpha3(string $alpha3): array
     {
         if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
             throw new \DomainException('Not a valid alpha3: '.$alpha3);
@@ -66,7 +66,7 @@ class ISO4217
      *
      * @return array
      */
-    public function getByNumeric($numeric): array
+    public function getByNumeric(string $numeric): array
     {
         if (!preg_match('/^[0-9]{3}$/', $numeric)) {
             throw new \DomainException('Not a valid numeric: '.$numeric);
