@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [4.0.0] - 2020-01-06
+
 * Deprecated: dropped support for PHP 7.3 and lower
 * Added: support for PHP 8
 * Added: return type hints
@@ -48,7 +50,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
-[Unreleased]: https://github.com/alcohol/iso4217/compare/3.1.5...HEAD
+[Unreleased]: https://github.com/alcohol/iso4217/compare/4.0.0...HEAD
+[4.0.0]: https://github.com/alcohol/iso4217/compare/3.1.5...4.0.0
 [3.1.5]: https://github.com/alcohol/iso4217/compare/3.1.4...3.1.5
 [3.1.4]: https://github.com/alcohol/iso4217/compare/3.1.3...3.1.4
 [3.1.3]: https://github.com/alcohol/iso4217/compare/3.1.2...3.1.3
