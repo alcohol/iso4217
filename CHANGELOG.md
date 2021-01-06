@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-* Deprecated: dropped support for PHP 5
+* Deprecated: dropped support for PHP 7.3 and lower
 * Added: support for PHP 8
 * Added: return type hints
 
