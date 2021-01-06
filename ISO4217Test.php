@@ -43,9 +43,6 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getByAlpha3 with a known alpha3 returns an associative array with the data.
      * @dataProvider alpha3Provider
-     *
-     * @param string $alpha3
-     * @param array $expected
      */
     public function testGetByAlpha3(string $alpha3, array $expected): void
     {
@@ -56,7 +53,6 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getByNumeric with an invalid numeric throws a DomainException.
      *
-     * @param string $numeric
      * @dataProvider invalidNumericProvider
      */
     public function testGetByNumericInvalid(string $numeric): void
@@ -83,9 +79,6 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getByNumeric with a known numeric returns an associative array with the data.
      * @dataProvider numericProvider
-     *
-     * @param string $numeric
-     * @param array $expected
      */
     public function testGetByNumeric(string $numeric, array $expected): void
     {
@@ -103,43 +96,26 @@ class ISO4217Test extends TestCase
         $this->assertCount(156, $iso4217->getAll());
     }
 
-    /**
-     * @return array
-     */
     public function invalidAlpha3Provider(): array
     {
         return [['ZZ'], ['ZZZZ'], [12], [1234]];
     }
 
-    /**
-     * @return array
-     */
     public function alpha3Provider(): array
     {
         return $this->getCurrencies('alpha3');
     }
 
-    /**
-     * @return array
-     */
     public function invalidNumericProvider(): array
     {
         return [['00'], ['0000'], ['ZZ'], ['ZZZZ']];
     }
 
-    /**
-     * @return array
-     */
     public function numericProvider(): array
     {
         return $this->getCurrencies('numeric');
     }
 
-    /**
-     * @param string $indexedBy
-     *
-     * @return array
-     */
     private function getCurrencies(string $indexedBy): array
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');

@@ -20,8 +20,6 @@ final class ISO4217
      * @param string|int $code
      *
      * @throws \OutOfBoundsException
-     *
-     * @return array
      */
     public function getByCode($code): array
     {
@@ -40,11 +38,7 @@ final class ISO4217
      *
      * @uses ::getByCode()
      *
-     * @param string $alpha3
-     *
      * @throws \DomainException
-     *
-     * @return array
      */
     public function getByAlpha3(string $alpha3): array
     {
@@ -60,11 +54,7 @@ final class ISO4217
      *
      * @uses ::getByCode()
      *
-     * @param string $numeric
-     *
      * @throws \DomainException
-     *
-     * @return array
      */
     public function getByNumeric(string $numeric): array
     {
@@ -79,8 +69,6 @@ final class ISO4217
      * @api
      *
      * @uses ::$currencies
-     *
-     * @return array
      */
     public function getAll(): array
     {
@@ -89,10 +77,8 @@ final class ISO4217
 
     /**
      * @internal
-     *
-     * @var array
      */
-    protected array $currencies = [
+    private array $currencies = [
         [
             'name' => 'UAE Dirham',
             'alpha3' => 'AED',
