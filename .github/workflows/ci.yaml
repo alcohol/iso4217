@@ -49,7 +49,7 @@ jobs:
       - run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction # yamllint disable-line
       - run: vendor/bin/phpunit
 
-  yaml:
+  yamllint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
