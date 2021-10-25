@@ -7,12 +7,10 @@ For the full copyright and license information, please view
 the LICENSE file that was distributed with this source code.
 EOF;
 
-$finder = new PhpCsFixer\Finder();
-$config = new PhpCsFixer\Config('ISO4217', 'ISO4217 style guide');
-
-$finder
+$finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
 ;
+$config = new PhpCsFixer\Config('ISO4217', 'ISO4217 style guide');
 
 $config
     ->setRules([
@@ -21,6 +19,7 @@ $config
         '@Symfony' => true,
         // additionally
         'array_syntax' => ['syntax' => 'short'],
+        'declare_strict_types' => true,
         'concat_space' => false,
         'header_comment' => ['header' => $header],
         'no_unused_imports' => false,
@@ -29,7 +28,6 @@ $config
         'ordered_imports' => true,
         'phpdoc_align' => false,
         'phpdoc_order' => true,
-        'phpdoc_align' => false,
         'phpdoc_summary' => false,
         'simplified_null_return' => false,
         'ternary_to_null_coalescing' => true,

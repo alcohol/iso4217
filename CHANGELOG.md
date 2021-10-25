@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+* Added: argument type hint for getByCode()
+
 ## [4.0.0] - 2020-01-06
 
 * Deprecated: dropped support for PHP 7.3 and lower

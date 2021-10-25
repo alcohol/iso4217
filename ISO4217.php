@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Rob Bast <rob.bast@gmail.com>
  *
@@ -17,11 +19,9 @@ final class ISO4217
     /**
      * @api
      *
-     * @param string|int $code
-     *
      * @throws \OutOfBoundsException
      */
-    public function getByCode($code): array
+    public function getByCode(string $code): array
     {
         foreach ($this->currencies as $currency) {
             if (0 === strcasecmp($code, $currency['alpha3']) ||
