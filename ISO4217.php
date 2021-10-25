@@ -19,8 +19,6 @@ final class ISO4217
     /**
      * @api
      *
-     * @param string|int $code
-     *
      * @throws \OutOfBoundsException
      */
     public function getByCode(string $code): array
