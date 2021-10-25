@@ -14,7 +14,7 @@ jobs:
           php-version: '8.0'
           coverage: none
           tools: cs2pr, php-cs-fixer:3
-      - run: php-cs-fixer fix --allow-risky=yes --diff --dry-run --format=checkstyle | cs2pr
+      - run: php-cs-fixer fix --diff --dry-run --format=checkstyle | cs2pr
 
   phpstan:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
           php-version: '8.0'
           coverage: none
           tools: cs2pr, phpstan
-      - run: phpstan --error-format=checkstyle | cs2p
+      - run: phpstan --error-format=checkstyle | cs2pr
 
   phpunit:
     runs-on: ubuntu-latest
