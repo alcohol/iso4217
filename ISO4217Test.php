@@ -18,10 +18,9 @@ class ISO4217Test extends TestCase
     /**
      * @testdox Calling getByAlpha3 with an invalid alpha3 throws a DomainException.
      *
-     * @param string|int $alpha3
      * @dataProvider invalidAlpha3Provider
      */
-    public function testGetByAlpha3Invalid($input, $expectException): void
+    public function testGetByAlpha3Invalid($alpha3, $expectException): void
     {
         $this->expectException($expectException);
 
@@ -53,7 +52,6 @@ class ISO4217Test extends TestCase
 
     /**
      * @testdox Calling getByNumeric with an invalid numeric throws a DomainException.
-     *
      * @dataProvider invalidNumericProvider
      */
     public function testGetByNumericInvalid($numeric, $expectException): void
