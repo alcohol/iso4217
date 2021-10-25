@@ -1,3 +1,4 @@
+---
 name: Continuous Integration
 
 on: [push, pull_request]
@@ -45,7 +46,7 @@ jobs:
       - run: |
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
-      - run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+      - run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction # yamllint disable-line
       - run: vendor/bin/phpunit
 
   yaml:
@@ -53,3 +54,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ibiqlik/action-yamllint@v3
+        with:
+          format: github
+          config_data: |
+            extends: default
+            rules:
+              new-line-at-end-of-file:
+                level: warning
+              trailing-spaces:
+                level: warning
