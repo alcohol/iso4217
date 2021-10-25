@@ -21,10 +21,9 @@ class ISO4217Test extends TestCase
      * @param string|int $alpha3
      * @dataProvider invalidAlpha3Provider
      */
-    public function testGetByAlpha3Invalid($alpha3): void
+    public function testGetByAlpha3Invalid($input, $expectException): void
     {
-        $this->expectException(\DomainException::class);
-        $this->expectExceptionMessageMatches('/^Not a valid alpha3: .*$/');
+        $this->expectException($expectException);
 
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3($alpha3);
@@ -57,10 +56,9 @@ class ISO4217Test extends TestCase
      *
      * @dataProvider invalidNumericProvider
      */
-    public function testGetByNumericInvalid(string $numeric): void
+    public function testGetByNumericInvalid($numeric, $expectException): void
     {
-        $this->expectException(\DomainException::class);
-        $this->expectExceptionMessageMatches('/^Not a valid numeric: .*$/');
+        $this->expectException($expectException);
 
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric($numeric);
@@ -100,7 +98,14 @@ class ISO4217Test extends TestCase
 
     public function invalidAlpha3Provider(): array
     {
-        return [['ZZ'], ['ZZZZ'], [12], [1234]];
+        return [
+            ['00', \DomainException::class],
+            ['0000', \DomainException::class],
+            ['ZZ', \DomainException::class],
+            ['ZZZZ', \DomainException::class],
+            [12, \TypeError::class],
+            [1234, \TypeError::class],
+        ];
     }
 
     public function alpha3Provider(): array
@@ -110,7 +115,14 @@ class ISO4217Test extends TestCase
 
     public function invalidNumericProvider(): array
     {
-        return [['00'], ['0000'], ['ZZ'], ['ZZZZ']];
+        return [
+            ['00', \DomainException::class],
+            ['0000', \DomainException::class],
+            ['ZZ', \DomainException::class],
+            ['ZZZZ', \DomainException::class],
+            [12, \TypeError::class],
+            [1234, \TypeError::class],
+        ];
     }
 
     public function numericProvider(): array

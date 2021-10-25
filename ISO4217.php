@@ -23,7 +23,7 @@ final class ISO4217
      *
      * @throws \OutOfBoundsException
      */
-    public function getByCode($code): array
+    public function getByCode(string $code): array
     {
         foreach ($this->currencies as $currency) {
             if (0 === strcasecmp($code, $currency['alpha3']) ||

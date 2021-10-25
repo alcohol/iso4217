@@ -2,4 +2,4 @@ parameters:
 	level: 5
 	tmpDir: .
 	paths:
-		- .
+		- ISO4217.php
