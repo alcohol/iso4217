@@ -96,5 +96,6 @@ jobs:
           config_data: |
             extends: default
             rules:
+              line-length: false
               truthy:
                 check-keys: false
