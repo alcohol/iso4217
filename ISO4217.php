@@ -20,6 +20,8 @@ final class ISO4217
      * @api
      *
      * @throws \OutOfBoundsException
+     *
+     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
      */
     public function getByCode(string $code): array
     {
@@ -39,10 +41,12 @@ final class ISO4217
      * @uses ::getByCode()
      *
      * @throws \DomainException
+     *
+     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
      */
     public function getByAlpha3(string $alpha3): array
     {
-        if (!preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
+        if (0 === preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
             throw new \DomainException('Not a valid alpha3: '.$alpha3);
         }
 
@@ -55,10 +59,12 @@ final class ISO4217
      * @uses ::getByCode()
      *
      * @throws \DomainException
+     *
+     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
      */
     public function getByNumeric(string $numeric): array
     {
-        if (!preg_match('/^[0-9]{3}$/', $numeric)) {
+        if (0 === preg_match('/^[0-9]{3}$/', $numeric)) {
             throw new \DomainException('Not a valid numeric: '.$numeric);
         }
 
@@ -69,6 +75,8 @@ final class ISO4217
      * @api
      *
      * @uses ::$currencies
+     *
+     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}[]
      */
     public function getAll(): array
     {
@@ -77,6 +85,8 @@ final class ISO4217
 
     /**
      * @internal
+     *
+     * @var array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}[]
      */
     private array $currencies = [
         [
