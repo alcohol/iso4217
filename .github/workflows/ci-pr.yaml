@@ -60,7 +60,10 @@ jobs:
           php-version: '8.1'
           coverage: none
           tools: cs2pr, phpstan
-      - run: phpstan --error-format=checkstyle | cs2pr
+      - run: |
+        composer install
+        composer --working-dir=tools/phpstan install
+        tools/phpstan/vendor/bin/phpstan --error-format=checkstyle | cs2pr
 
   phpunit:
     runs-on: ubuntu-latest
