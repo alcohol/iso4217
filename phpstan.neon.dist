@@ -1,5 +1,10 @@
+includes:
+  - tools/phpstan/vendor/phpstan/phpstan-deprecation-rules/rules.neon
+  - tools/phpstan/vendor/phpstan/phpstan-php-parser/extension.neon
+  - tools/phpstan/vendor/phpstan/phpstan-strict-rules/rules.neon
+
 parameters:
-	level: 5
-	tmpDir: .
-	paths:
-		- ISO4217.php
+  level: max
+  tmpDir: .
+  paths:
+    - ISO4217.php

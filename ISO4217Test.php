@@ -42,6 +42,7 @@ class ISO4217Test extends TestCase
 
     /**
      * @testdox Calling getByAlpha3 with a known alpha3 returns an associative array with the data.
+     *
      * @dataProvider alpha3Provider
      */
     public function testGetByAlpha3(string $alpha3, array $expected): void
@@ -52,6 +53,7 @@ class ISO4217Test extends TestCase
 
     /**
      * @testdox Calling getByNumeric with an invalid numeric throws a DomainException.
+     *
      * @dataProvider invalidNumericProvider
      */
     public function testGetByNumericInvalid($numeric, $expectException): void
@@ -76,6 +78,7 @@ class ISO4217Test extends TestCase
 
     /**
      * @testdox Calling getByNumeric with a known numeric returns an associative array with the data.
+     *
      * @dataProvider numericProvider
      */
     public function testGetByNumeric(string $numeric, array $expected): void
