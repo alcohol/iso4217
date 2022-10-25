@@ -1,29 +1,55 @@
 ---
-name: Continuous Integration
+name: Continuous Integration - Main
 
-on: [push, pull_request]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
 
   php-cs-fixer:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0'
+          php-version: '8.1'
           coverage: none
-          tools: cs2pr, php-cs-fixer:3
-      - run: php-cs-fixer fix --diff --dry-run --format=checkstyle | cs2pr
+          tools: composer, cs2pr
+      - id: cache-php-cs-fixer-vendor
+        uses: actions/cache@v3
+        with:
+          path: |
+            tools/php-cs-fixer/vendor
+          key: php-cs-fixer-vendor-${{ hashFiles('tools/php-cs-fixer/composer.lock') }}
+      - run: composer --working-dir=tools/php-cs-fixer install
+        if: steps.cache-php-cs-fixer-vendor.outputs.cache-hit != 'true'
+      - uses: actions/cache@v3
+        with:
+          path: .php-cs-fixer.cache
+          key: php-cs-fixer-cache-${{ hashFiles('tools/php-cs-fixer/composer.*', '.php-cs-fixer.dist.php') }}
+      - run: >
+          tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+          --diff
+          --dry-run
+          --format=checkstyle
+          | cs2pr --colorize --prepend-filename --prepend-source
 
   phpstan:
     runs-on: ubuntu-latest
     name: phpstan
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0'
+          php-version: '8.1'
           coverage: none
           tools: cs2pr, phpstan
       - run: phpstan --error-format=checkstyle | cs2pr
@@ -37,7 +63,7 @@ jobs:
         stability: [prefer-lowest, prefer-stable]
     name: phpunit on PHP ${{ matrix.php }}@${{ matrix.stability }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -52,7 +78,7 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ibiqlik/action-yamllint@v3
         with:
           format: github
