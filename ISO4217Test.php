@@ -94,7 +94,7 @@ class ISO4217Test extends TestCase
     {
         $iso4217 = new ISO4217();
         $this->assertIsArray($iso4217->getAll());
-        $this->assertCount(156, $iso4217->getAll());
+        $this->assertCount(157, $iso4217->getAll());
     }
 
     public function invalidAlpha3Provider(): array
