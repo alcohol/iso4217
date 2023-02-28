@@ -1044,9 +1044,16 @@ final class ISO4217
             'country' => 'SH',
         ],
         [
-            'name' => 'Sierra Leonean Leone',
+            'name' => 'Sierra Leonean Leone (old)',
             'alpha3' => 'SLL',
             'numeric' => '694',
+            'exp' => 2,
+            'country' => 'SL',
+        ],
+        [
+            'name' => 'Sierra Leonean Leone (new)',
+            'alpha3' => 'SLE',
+            'numeric' => '925',
             'exp' => 2,
             'country' => 'SL',
         ],
