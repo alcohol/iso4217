@@ -24,6 +24,7 @@
     "phpunit/phpunit": "^9.5"
   },
   "scripts": {
+    "test": "vendor/bin/phpunit",
     "phpstan": "tools/phpstan/vendor/bin/phpstan",
     "php-cs-fixer": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --dry-run --diff",
     "php-cs-fixer-fix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix"

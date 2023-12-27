@@ -1,7 +1,7 @@
-/build/
-/cache/
+/.*.cache/
 /tools/*/vendor/
 /vendor/
 /.php-cs-fixer.cache
 /composer.lock
+/coverage.xml
 /phpunit.xml

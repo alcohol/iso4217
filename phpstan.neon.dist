@@ -5,6 +5,6 @@ includes:
 
 parameters:
   level: max
-  tmpDir: .
+  tmpDir: .phpstan.cache
   paths:
     - ISO4217.php

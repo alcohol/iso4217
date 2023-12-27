@@ -3,6 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/9.5/phpunit.xsd"
     bootstrap="vendor/autoload.php"
+    cacheResultFile=".phpunit.cache/test-results"
     colors="true"
     stderr="true"
 >
@@ -13,10 +14,18 @@
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <coverage cacheDirectory=".phpunit.cache/code-coverage"
+              processUncoveredFiles="true">
+        <include>
+            <file>ISO4217.php</file>
+        </include>
         <exclude>
             <file>ISO4217Test.php</file>
         </exclude>
+        <report>
+            <clover outputFile="coverage.xml"/>
+            <text outputFile="php://stderr"/>
+        </report>
     </coverage>
 
     <logging>
