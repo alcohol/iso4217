@@ -21,16 +21,16 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-main": "4.x-dev"
-    }
+    "phpunit/phpunit": "^9.5"
   },
   "scripts": {
     "phpstan": "tools/phpstan/vendor/bin/phpstan",
     "php-cs-fixer": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --dry-run --diff",
     "php-cs-fixer-fix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "4.x-dev"
+    }
   }
 }
