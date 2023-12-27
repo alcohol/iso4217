@@ -81,7 +81,7 @@ The following codes have been intentionally left out:
 * XUA ADB Unit of Account (African Development Bank)
 * XXX No currency
 
-Also some currencies that have recently become deprecated:
+Also some currencies that are deprecated:
 
 * SVC El Salvador Colon
 * VEF The previous Venezuelan Bolívar
