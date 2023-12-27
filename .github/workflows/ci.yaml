@@ -52,7 +52,8 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
       - run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction # yamllint disable-line
-      - run: vendor/bin/phpunit
+      - run: vendor/bin/phpunit --coverage-clover coverage.xml
+      - uses: codecov/codecov-action@v3
 
   yamllint:
     runs-on: ubuntu-latest

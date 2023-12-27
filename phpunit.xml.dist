@@ -20,7 +20,6 @@
     </coverage>
 
     <logging>
-        <junit outputFile="junit.xml" />
         <text outputFile="php://stderr"/>
     </logging>
 
