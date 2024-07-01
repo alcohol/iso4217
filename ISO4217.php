@@ -1328,5 +1328,12 @@ final class ISO4217
             'exp' => 2,
             'country' => 'ZM',
         ],
+        [
+            'name' => 'Zimbabwe Gold',
+            'alpha3' => 'ZWG',
+            'numeric' => '924',
+            'exp' => 2,
+            'country' => 'ZW',
+        ],
     ];
 }

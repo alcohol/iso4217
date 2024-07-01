@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [4.2.0] - 2023-06-01
+
+* Added: ZWG for Zimbabwe Gold
+
 ## [4.1.0] - 2023-02-28
 
 * Added: argument type hint for getByCode()
@@ -55,7 +59,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
-[Unreleased]: https://github.com/alcohol/iso4217/compare/4.1.0...HEAD
+[Unreleased]: https://github.com/alcohol/iso4217/compare/4.2.0...HEAD
+[4.2.0]: https://github.com/alcohol/iso4217/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/alcohol/iso4217/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/alcohol/iso4217/compare/3.1.5...4.0.0
 [3.1.5]: https://github.com/alcohol/iso4217/compare/3.1.4...3.1.5
