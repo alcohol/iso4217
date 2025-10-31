@@ -97,7 +97,7 @@ class ISO4217Test extends TestCase
         $this->assertCount(158, $iso4217->getAll());
     }
 
-    public function invalidAlpha3Provider(): array
+    public static function invalidAlpha3Provider(): array
     {
         return [
             ['00', \DomainException::class],
@@ -109,12 +109,12 @@ class ISO4217Test extends TestCase
         ];
     }
 
-    public function alpha3Provider(): array
+    public static function alpha3Provider(): array
     {
-        return $this->getCurrencies('alpha3');
+        return self::getCurrencies('alpha3');
     }
 
-    public function invalidNumericProvider(): array
+    public static function invalidNumericProvider(): array
     {
         return [
             ['00', \DomainException::class],
@@ -126,12 +126,12 @@ class ISO4217Test extends TestCase
         ];
     }
 
-    public function numericProvider(): array
+    public static function numericProvider(): array
     {
-        return $this->getCurrencies('numeric');
+        return self::getCurrencies('numeric');
     }
 
-    private function getCurrencies(string $indexedBy): array
+    private static function getCurrencies(string $indexedBy): array
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
