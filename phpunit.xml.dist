@@ -14,6 +14,12 @@
         </testsuite>
     </testsuites>
 
+    <source ignoreSuppressionOfDeprecations="true" restrictNotices="true" restrictWarnings="true">
+        <include>
+            <file>ISO4217.php</file>
+        </include>
+    </source>
+
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
               processUncoveredFiles="true">
         <include>
