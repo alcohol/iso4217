@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Alcohol;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class ISO4217Test extends TestCase
@@ -20,6 +21,7 @@ class ISO4217Test extends TestCase
      *
      * @dataProvider invalidAlpha3Provider
      */
+    #[DataProvider('invalidAlpha3Provider')]
     public function testGetByAlpha3Invalid($alpha3, $expectException): void
     {
         $this->expectException($expectException);
@@ -45,6 +47,7 @@ class ISO4217Test extends TestCase
      *
      * @dataProvider alpha3Provider
      */
+    #[DataProvider('alpha3Provider')]
     public function testGetByAlpha3(string $alpha3, array $expected): void
     {
         $iso4217 = new ISO4217();
@@ -56,6 +59,7 @@ class ISO4217Test extends TestCase
      *
      * @dataProvider invalidNumericProvider
      */
+    #[DataProvider('invalidNumericProvider')]
     public function testGetByNumericInvalid($numeric, $expectException): void
     {
         $this->expectException($expectException);
@@ -81,6 +85,7 @@ class ISO4217Test extends TestCase
      *
      * @dataProvider numericProvider
      */
+    #[DataProvider('numericProvider')]
     public function testGetByNumeric(string $numeric, array $expected): void
     {
         $iso4217 = new ISO4217();
@@ -135,7 +140,6 @@ class ISO4217Test extends TestCase
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
-        $currencies->setAccessible(true);
         $currencies = $currencies->getValue(new ISO4217());
 
         return array_reduce(
