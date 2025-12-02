@@ -140,7 +140,9 @@ class ISO4217Test extends TestCase
     {
         $reflected = new \ReflectionClass('Alcohol\ISO4217');
         $currencies = $reflected->getProperty('currencies');
-        $currencies->setAccessible(true);
+        if (PHP_VERSION_ID < 80100) {
+            $currencies->setAccessible(true);
+        }
         $currencies = $currencies->getValue(new ISO4217());
 
         return array_reduce(
