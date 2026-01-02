@@ -422,6 +422,7 @@ final class ISO4217
                 'AT',
                 'AX',
                 'BE',
+                'BG',
                 'BL',
                 'CY',
                 'DE',
