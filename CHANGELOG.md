@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [4.5.0] - 2026-11-02
+
 * Added: XCG Caribbean Guilder (CW, SX) and VED Venezuelan Digital Bolívar (VE)
 * Removed: currencies withdrawn from ISO 4217: ANG, BGN, CUC, HRK, LVL and SLL;
   looking them up now throws `OutOfBoundsException`
@@ -87,7 +89,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
-[Unreleased]: https://github.com/alcohol/iso4217/compare/4.4.0...HEAD
+[Unreleased]: https://github.com/alcohol/iso4217/compare/4.5.0...HEAD
+[4.5.0]: https://github.com/alcohol/iso4217/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/alcohol/iso4217/compare/4.3.1...4.4.0
 [4.3.1]: https://github.com/alcohol/iso4217/compare/4.3.0...4.3.1
 [4.3.0]: https://github.com/alcohol/iso4217/compare/4.2.0...4.3.0
