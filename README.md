@@ -86,7 +86,7 @@ array of strings when it is used in several.
 * `Alcohol\ISO4217\Exception\OutOfBoundsException` (extends `\OutOfBoundsException`) is thrown when
   a well-formed code is not in the data, e.g. `getByAlpha3('ZZZ')`.
 
-Both implement `Alcohol\ISO4217\Exception\ISO4217Exception`, so you can catch every exception
+Both implement `Alcohol\ISO4217\Exception`, so you can catch every exception
 thrown by this library with a single `catch` block.
 
 ## Excluded

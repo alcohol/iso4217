@@ -9,11 +9,11 @@ declare(strict_types=1);
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Alcohol\ISO4217\Exception;
+namespace Alcohol\ISO4217;
 
 /**
  * Marker interface implemented by every exception thrown by this library.
  */
-interface ISO4217Exception extends \Throwable
+interface Exception extends \Throwable
 {
 }

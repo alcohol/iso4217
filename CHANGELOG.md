@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 * Added: `getByCountry()` returns every currency used in a country (ISO 3166-1 alpha2)
 * Added: `ISO4217` implements `Countable` and `IteratorAggregate`
 * Added: `Alcohol\ISO4217\Exception\DomainException` and `OutOfBoundsException`, which extend
-  the SPL exceptions thrown so far and implement the `Alcohol\ISO4217\Exception\ISO4217Exception`
+  the SPL exceptions thrown so far and implement the `Alcohol\ISO4217\Exception`
   marker interface; existing `catch` blocks and exception messages are unaffected
 * Changed: tests moved to `tests/` and excluded, together with tooling and CI config, from release archives
 * Changed: php-cs-fixer uses `@PER-CS` instead of `@PSR2`, PHPStan 2 now also analyses the tests

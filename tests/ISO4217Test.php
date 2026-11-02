@@ -12,7 +12,7 @@ declare(strict_types=1);
 namespace Alcohol\Tests;
 
 use Alcohol\ISO4217;
-use Alcohol\ISO4217\Exception\ISO4217Exception;
+use Alcohol\ISO4217\Exception;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
@@ -23,8 +23,6 @@ use PHPUnit\Framework\TestCase;
 final class ISO4217Test extends TestCase
 {
     /**
-     * @testdox Calling getByAlpha3 with an invalid alpha3 throws a DomainException.
-     *
      * @dataProvider invalidAlpha3Provider
      *
      * @param class-string<\Throwable> $expectException
@@ -39,9 +37,6 @@ final class ISO4217Test extends TestCase
         $iso4217->getByAlpha3($alpha3);
     }
 
-    /**
-     * @testdox Calling getByAlpha3 with a non-string throws a TypeError.
-     */
     #[TestDox('Calling getByAlpha3 with a non-string throws a TypeError.')]
     public function testGetByAlpha3NonString(): void
     {
@@ -52,9 +47,6 @@ final class ISO4217Test extends TestCase
         $method(12); // @phpstan-ignore argument.type (deliberately wrong type)
     }
 
-    /**
-     * @testdox Calling getByAlpha3 with an unknown alpha3 throws a OutOfBoundsException.
-     */
     #[TestDox('Calling getByAlpha3 with an unknown alpha3 throws a OutOfBoundsException.')]
     public function testGetByAlpha3Unknown(): void
     {
@@ -66,8 +58,6 @@ final class ISO4217Test extends TestCase
     }
 
     /**
-     * @testdox Calling getByAlpha3 with a known alpha3 returns an associative array with the data.
-     *
      * @dataProvider alpha3Provider
      *
      * @param Currency $expected
@@ -80,9 +70,6 @@ final class ISO4217Test extends TestCase
         self::assertSame($expected, $iso4217->getByAlpha3($alpha3));
     }
 
-    /**
-     * @testdox Calling getByAlpha3 is case insensitive.
-     */
     #[TestDox('Calling getByAlpha3 is case insensitive.')]
     public function testGetByAlpha3CaseInsensitive(): void
     {
@@ -91,8 +78,6 @@ final class ISO4217Test extends TestCase
     }
 
     /**
-     * @testdox Calling getByNumeric with an invalid numeric throws a DomainException.
-     *
      * @dataProvider invalidNumericProvider
      *
      * @param class-string<\Throwable> $expectException
@@ -107,9 +92,6 @@ final class ISO4217Test extends TestCase
         $iso4217->getByNumeric($numeric);
     }
 
-    /**
-     * @testdox Calling getByNumeric with a non-string throws a TypeError.
-     */
     #[TestDox('Calling getByNumeric with a non-string throws a TypeError.')]
     public function testGetByNumericNonString(): void
     {
@@ -120,9 +102,6 @@ final class ISO4217Test extends TestCase
         $method(978); // @phpstan-ignore argument.type (deliberately wrong type)
     }
 
-    /**
-     * @testdox Calling getByNumeric with an unknown numeric throws a OutOfBoundsException.
-     */
     #[TestDox('Calling getByNumeric with an unknown numeric throws a OutOfBoundsException.')]
     public function testGetByNumericUnknown(): void
     {
@@ -134,8 +113,6 @@ final class ISO4217Test extends TestCase
     }
 
     /**
-     * @testdox Calling getByNumeric with a known numeric returns an associative array with the data.
-     *
      * @dataProvider numericProvider
      *
      * @param Currency $expected
@@ -149,8 +126,6 @@ final class ISO4217Test extends TestCase
     }
 
     /**
-     * @testdox Calling getByCountry with an invalid alpha2 throws a DomainException.
-     *
      * @dataProvider invalidAlpha2Provider
      */
     #[DataProvider('invalidAlpha2Provider')]
@@ -164,22 +139,16 @@ final class ISO4217Test extends TestCase
         $iso4217->getByCountry($alpha2);
     }
 
-    /**
-     * @testdox Calling getByCountry with an unknown alpha2 throws a OutOfBoundsException.
-     */
     #[TestDox('Calling getByCountry with an unknown alpha2 throws a OutOfBoundsException.')]
     public function testGetByCountryUnknown(): void
     {
         $this->expectException(\OutOfBoundsException::class);
-        $this->expectExceptionMessage('ISO 4217 does not contain a currency for: ZZ');
+        $this->expectExceptionMessage('ISO 4217 does not contain a currency for: zz');
 
         $iso4217 = new ISO4217();
         $iso4217->getByCountry('zz');
     }
 
-    /**
-     * @testdox Calling getByCountry returns every currency whose country list contains the alpha2.
-     */
     #[TestDox('Calling getByCountry returns every currency whose country list contains the alpha2.')]
     public function testGetByCountry(): void
     {
@@ -193,9 +162,6 @@ final class ISO4217Test extends TestCase
         self::assertSame(['CUC', 'CUP'], self::alpha3s($iso4217->getByCountry('CU')));
     }
 
-    /**
-     * @testdox Calling getByCountry is case insensitive.
-     */
     #[TestDox('Calling getByCountry is case insensitive.')]
     public function testGetByCountryCaseInsensitive(): void
     {
@@ -203,9 +169,6 @@ final class ISO4217Test extends TestCase
         self::assertSame($iso4217->getByCountry('NL'), $iso4217->getByCountry('nl'));
     }
 
-    /**
-     * @testdox Every country referenced in the data resolves through getByCountry.
-     */
     #[TestDox('Every country referenced in the data resolves through getByCountry.')]
     public function testGetByCountryCoversAllData(): void
     {
@@ -219,14 +182,12 @@ final class ISO4217Test extends TestCase
     }
 
     /**
-     * @testdox Exceptions thrown by the library implement the ISO4217Exception marker interface.
-     *
      * @dataProvider exceptionProvider
      *
      * @param class-string<\Throwable> $spl
      */
     #[DataProvider('exceptionProvider')]
-    #[TestDox('Exceptions thrown by the library implement the ISO4217Exception marker interface.')]
+    #[TestDox('Exceptions thrown by the library implement the Alcohol\\ISO4217\\Exception marker interface.')]
     public function testExceptionsImplementMarkerInterface(string $method, string $argument, string $spl): void
     {
         $iso4217 = new ISO4217();
@@ -235,18 +196,15 @@ final class ISO4217Test extends TestCase
 
         try {
             $callable($argument);
-        } catch (ISO4217Exception $e) {
+        } catch (Exception $e) {
             self::assertInstanceOf($spl, $e);
 
             return;
         }
 
-        self::fail('Expected an exception implementing '.ISO4217Exception::class);
+        self::fail('Expected an exception implementing '.Exception::class);
     }
 
-    /**
-     * @testdox Calling getAll returns an array with all elements.
-     */
     #[TestDox('Calling getAll returns an array with all elements.')]
     public function testGetAll(): void
     {
@@ -254,9 +212,6 @@ final class ISO4217Test extends TestCase
         self::assertCount(158, $iso4217->getAll());
     }
 
-    /**
-     * @testdox The class is countable.
-     */
     #[TestDox('The class is countable.')]
     public function testCount(): void
     {
@@ -265,9 +220,6 @@ final class ISO4217Test extends TestCase
         self::assertSame(count($iso4217->getAll()), count($iso4217));
     }
 
-    /**
-     * @testdox Iterating over the class yields the same records as getAll.
-     */
     #[TestDox('Iterating over the class yields the same records as getAll.')]
     public function testIterator(): void
     {

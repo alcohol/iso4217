@@ -11,6 +11,8 @@ declare(strict_types=1);
 
 namespace Alcohol\ISO4217\Exception;
 
-final class DomainException extends \DomainException implements ISO4217Exception
+use Alcohol\ISO4217\Exception;
+
+final class DomainException extends \DomainException implements Exception
 {
 }
