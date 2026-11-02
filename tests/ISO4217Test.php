@@ -159,7 +159,7 @@ final class ISO4217Test extends TestCase
         // multi-country currency (country is an array)
         self::assertSame(['EUR'], self::alpha3s($iso4217->getByCountry('NL')));
         // more than one currency for a country, in data order
-        self::assertSame(['CUC', 'CUP'], self::alpha3s($iso4217->getByCountry('CU')));
+        self::assertSame(['LSL', 'ZAR'], self::alpha3s($iso4217->getByCountry('LS')));
     }
 
     #[TestDox('Calling getByCountry is case insensitive.')]
@@ -167,6 +167,32 @@ final class ISO4217Test extends TestCase
     {
         $iso4217 = new ISO4217();
         self::assertSame($iso4217->getByCountry('NL'), $iso4217->getByCountry('nl'));
+    }
+
+    /**
+     * @dataProvider countryCurrenciesProvider
+     *
+     * @param list<string> $expected
+     */
+    #[DataProvider('countryCurrenciesProvider')]
+    #[TestDox('Calling getByCountry returns the currencies currently in use in that country.')]
+    public function testGetByCountryCurrentCurrencies(string $alpha2, array $expected): void
+    {
+        $iso4217 = new ISO4217();
+        self::assertSame($expected, self::alpha3s($iso4217->getByCountry($alpha2)));
+    }
+
+    /**
+     * @dataProvider withdrawnProvider
+     */
+    #[DataProvider('withdrawnProvider')]
+    #[TestDox('Withdrawn currencies are no longer listed.')]
+    public function testWithdrawnCurrencies(string $alpha3): void
+    {
+        $this->expectException(\OutOfBoundsException::class);
+
+        $iso4217 = new ISO4217();
+        $iso4217->getByAlpha3($alpha3);
     }
 
     #[TestDox('Every country referenced in the data resolves through getByCountry.')]
@@ -209,14 +235,14 @@ final class ISO4217Test extends TestCase
     public function testGetAll(): void
     {
         $iso4217 = new ISO4217();
-        self::assertCount(158, $iso4217->getAll());
+        self::assertCount(154, $iso4217->getAll());
     }
 
     #[TestDox('The class is countable.')]
     public function testCount(): void
     {
         $iso4217 = new ISO4217();
-        self::assertCount(158, $iso4217);
+        self::assertCount(154, $iso4217);
         self::assertSame(count($iso4217->getAll()), count($iso4217));
     }
 
@@ -280,6 +306,35 @@ final class ISO4217Test extends TestCase
             ['12'],
             [''],
         ];
+    }
+
+    /**
+     * @return array<array{string, list<string>}>
+     */
+    public static function countryCurrenciesProvider(): array
+    {
+        return [
+            ['BG', ['EUR']],
+            ['BT', ['BTN', 'INR']],
+            ['CU', ['CUP']],
+            ['CW', ['XCG']],
+            ['HR', ['EUR']],
+            ['HT', ['HTG', 'USD']],
+            ['LV', ['EUR']],
+            ['PA', ['PAB', 'USD']],
+            ['SL', ['SLE']],
+            ['SX', ['XCG']],
+            ['VE', ['VED', 'VES']],
+            ['XK', ['EUR']],
+        ];
+    }
+
+    /**
+     * @return array<array{string}>
+     */
+    public static function withdrawnProvider(): array
+    {
+        return [['ANG'], ['BGN'], ['CUC'], ['HRK'], ['LVL'], ['SLL']];
     }
 
     /**

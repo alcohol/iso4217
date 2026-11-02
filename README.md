@@ -49,8 +49,8 @@ Array
             [0] => AD
             [1] => AT
             ...
-            [30] => YT
-            [31] => ZW
+            [36] => YT
+            [37] => ZW
         )
 )
 ```
@@ -60,8 +60,8 @@ All currencies used in a country (by ISO 3166-1 alpha2 code):
 ``` php
 <?php
 
-$iso4217->getByCountry('CU');
-// [['name' => 'Cuban Convertible Peso', 'alpha3' => 'CUC', ...], ['name' => 'Cuban Peso', 'alpha3' => 'CUP', ...]]
+$iso4217->getByCountry('LS');
+// [['name' => 'Lesotho Loti', 'alpha3' => 'LSL', ...], ['name' => 'South African Rand', 'alpha3' => 'ZAR', ...]]
 ```
 
 The class is also `Countable` and iterable:
@@ -102,6 +102,7 @@ The following codes have been intentionally left out:
 * USN United States dollar (next day) (funds code)
 * UYI Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)
 * UYW Unidad Previsional (tracks nominal wage index)
+* XAD Arab Accounting Dinar (Arab Monetary Fund unit of account)
 * XAG Silver (one troy ounce)
 * XAU Gold (one troy ounce)
 * XBA European Composite Unit (EURCO) (bond market unit)
@@ -116,11 +117,21 @@ The following codes have been intentionally left out:
 * XUA ADB Unit of Account (African Development Bank)
 * XXX No currency
 
-Also some currencies that are deprecated:
+Also left out, although ISO 4217 still lists it:
 
-* SVC El Salvador Colon
-* VEF The previous Venezuelan Bolívar
-* ZWD/ZWN/ZWR/ZWL Zimbabwean dollar(s)
+* SVC El Salvador Colon (El Salvador has used the US Dollar since 2001)
+
+Currencies that have been withdrawn from ISO 4217 are removed:
+
+* ANG Netherlands Antillean Guilder (replaced by XCG, 2025)
+* BGN Bulgarian Lev (replaced by EUR, 2026)
+* CUC Cuban Convertible Peso (2021)
+* HRK Croatian Kuna (replaced by EUR, 2023)
+* LTL Lithuanian Litas (replaced by EUR, 2015)
+* LVL Latvian Lats (replaced by EUR, 2014)
+* SLL Sierra Leonean Leone (replaced by SLE, 2023)
+* VEF Venezuelan Bolívar Fuerte (replaced by VES)
+* ZWD/ZWN/ZWR/ZWL Zimbabwean dollar(s) (replaced by ZWG)
 
 ## Contributing
 
