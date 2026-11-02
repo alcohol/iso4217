@@ -26,8 +26,8 @@ final class ISO4217
     public function getByCode(string $code): array
     {
         foreach ($this->currencies as $currency) {
-            if (0 === strcasecmp($code, $currency['alpha3']) ||
-                0 === strcasecmp($code, $currency['numeric'])) {
+            if (0 === strcasecmp($code, $currency['alpha3'])
+                || 0 === strcasecmp($code, $currency['numeric'])) {
                 return $currency;
             }
         }
