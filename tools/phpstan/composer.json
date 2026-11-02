@@ -1,7 +1,12 @@
 {
     "require": {
-        "phpstan/phpstan": "*",
-        "phpstan/phpstan-deprecation-rules": "*",
-        "phpstan/phpstan-strict-rules": "*"
+        "phpstan/phpstan": "^2.3",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.1"
+    },
+    "config": {
+        "platform": {
+            "php": "8.4"
+        }
     }
 }
