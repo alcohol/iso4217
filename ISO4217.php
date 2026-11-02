@@ -318,7 +318,10 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'alpha3' => 'BYN',
             'numeric' => '933',
             'exp' => 2,
-            'country' => 'BY',
+            'country' => [
+                'AQ',
+                'BY',
+            ],
         ],
         [
             'name' => 'Belize Dollar',
@@ -1208,6 +1211,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'numeric' => '840',
             'exp' => 2,
             'country' => [
+                'AQ',
                 'AS',
                 'BQ',
                 'EC',
