@@ -50,8 +50,7 @@ final class ISO4217Test extends TestCase
     #[TestDox('Calling getByAlpha3 with an unknown alpha3 throws a OutOfBoundsException.')]
     public function testGetByAlpha3Unknown(): void
     {
-        $this->expectException(\OutOfBoundsException::class);
-        $this->expectExceptionMessage('ISO 4217 does not contain: ZZZ');
+        $this->expectExceptionObject(new \OutOfBoundsException('ISO 4217 does not contain: ZZZ'));
 
         $iso4217 = new ISO4217();
         $iso4217->getByAlpha3('ZZZ');
@@ -105,8 +104,7 @@ final class ISO4217Test extends TestCase
     #[TestDox('Calling getByNumeric with an unknown numeric throws a OutOfBoundsException.')]
     public function testGetByNumericUnknown(): void
     {
-        $this->expectException(\OutOfBoundsException::class);
-        $this->expectExceptionMessage('ISO 4217 does not contain: 000');
+        $this->expectExceptionObject(new \OutOfBoundsException('ISO 4217 does not contain: 000'));
 
         $iso4217 = new ISO4217();
         $iso4217->getByNumeric('000');
@@ -132,8 +130,7 @@ final class ISO4217Test extends TestCase
     #[TestDox('Calling getByCountry with an invalid alpha2 throws a DomainException.')]
     public function testGetByCountryInvalid(string $alpha2): void
     {
-        $this->expectException(\DomainException::class);
-        $this->expectExceptionMessage('Not a valid alpha2: '.$alpha2);
+        $this->expectExceptionObject(new \DomainException('Not a valid alpha2: '.$alpha2));
 
         $iso4217 = new ISO4217();
         $iso4217->getByCountry($alpha2);
@@ -142,8 +139,7 @@ final class ISO4217Test extends TestCase
     #[TestDox('Calling getByCountry with an unknown alpha2 throws a OutOfBoundsException.')]
     public function testGetByCountryUnknown(): void
     {
-        $this->expectException(\OutOfBoundsException::class);
-        $this->expectExceptionMessage('ISO 4217 does not contain a currency for: zz');
+        $this->expectExceptionObject(new \OutOfBoundsException('ISO 4217 does not contain a currency for: zz'));
 
         $iso4217 = new ISO4217();
         $iso4217->getByCountry('zz');
