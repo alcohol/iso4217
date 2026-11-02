@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [4.4.0] - 2026-11-02
+
 * Added: `getByCountry()` returns every currency used in a country (ISO 3166-1 alpha2)
 * Added: `ISO4217` implements `Countable` and `IteratorAggregate`
 * Added: `Alcohol\ISO4217\Exception\DomainException` and `OutOfBoundsException`, which extend
