@@ -16,3 +16,13 @@ updates:
       interval: "weekly"
     assignees:
       - "alcohol"
+
+  # isolated tooling (php-cs-fixer, phpstan)
+  - package-ecosystem: "composer"
+    directories:
+      - "/tools/php-cs-fixer"
+      - "/tools/phpstan"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "alcohol"
