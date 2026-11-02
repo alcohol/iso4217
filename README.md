@@ -2,6 +2,9 @@
 
 A PHP library providing ISO 4217 data.
 
+> [!NOTE]
+> I do my best to keep the data up to date, but if you find any errors or omissions, please [open an issue](https://github.com/alcohol/iso4217/issues/new).
+
 [![Continuous Integration](https://github.com/alcohol/iso4217/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/alcohol/iso4217/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/alcohol/iso4217/branch/main/graph/badge.svg)](https://codecov.io/gh/alcohol/iso4217)
 [![License](https://img.shields.io/packagist/l/alcohol/iso4217.svg?style=flat-square)](https://packagist.org/packages/alcohol/iso4217)
