@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+* Fixed: codes with a trailing newline (e.g. `"EUR\n"`) are rejected with `DomainException`
+  instead of passing the format check and throwing `OutOfBoundsException`
+
 * Changed: added AQ to BYN and USD
 
 ## [4.5.0] - 2026-11-02
