@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 * Changed: tests moved to `tests/` and excluded, together with tooling and CI config, from release archives
 * Changed: php-cs-fixer uses `@PER-CS` instead of `@PSR2`, PHPStan 2 now also analyses the tests
 * Changed: CI runs once per pull request, with read-only permissions, and uploads coverage from a single job
+* Changed: CI no longer runs a `prefer-lowest` PHPUnit matrix (there are no runtime dependencies to test at their lowest versions)
 
 ## [4.3.1] - 2026-10-26
 
