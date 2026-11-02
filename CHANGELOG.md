@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+* Added: XCG Caribbean Guilder (CW, SX) and VED Venezuelan Digital Bolívar (VE)
+* Removed: currencies withdrawn from ISO 4217: ANG, BGN, CUC, HRK, LVL and SLL;
+  looking them up now throws `OutOfBoundsException`
+* Changed: added HR and XK to EUR, BT to INR, and HT, IO and PA to USD
+* Changed: renamed 'Sierra Leonean Leone (new)' to 'Sierra Leonean Leone'
+
 ## [4.4.0] - 2026-11-02
 
 * Added: `getByCountry()` returns every currency used in a country (ISO 3166-1 alpha2)

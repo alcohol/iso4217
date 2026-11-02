@@ -183,16 +183,6 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'country' => 'AM',
         ],
         [
-            'name' => 'Netherlands Antillean Guilder',
-            'alpha3' => 'ANG',
-            'numeric' => '532',
-            'exp' => 2,
-            'country' => [
-                'CW',
-                'SX',
-            ],
-        ],
-        [
             'name' => 'Angolan Kwanza',
             'alpha3' => 'AOA',
             'numeric' => '973',
@@ -256,13 +246,6 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'numeric' => '050',
             'exp' => 2,
             'country' => 'BD',
-        ],
-        [
-            'name' => 'Bulgarian Lev',
-            'alpha3' => 'BGN',
-            'numeric' => '975',
-            'exp' => 2,
-            'country' => 'BG',
         ],
         [
             'name' => 'Bahraini Dinar',
@@ -397,13 +380,6 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'country' => 'CR',
         ],
         [
-            'name' => 'Cuban Convertible Peso',
-            'alpha3' => 'CUC',
-            'numeric' => '931',
-            'exp' => 2,
-            'country' => 'CU',
-        ],
-        [
             'name' => 'Cuban Peso',
             'alpha3' => 'CUP',
             'numeric' => '192',
@@ -498,6 +474,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
                 'GF',
                 'GP',
                 'GR',
+                'HR',
                 'IE',
                 'IT',
                 'LT',
@@ -517,6 +494,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
                 'SM',
                 'TF',
                 'VA',
+                'XK',
                 'YT',
                 'ZW',
             ],
@@ -614,13 +592,6 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'country' => 'HN',
         ],
         [
-            'name' => 'Kuna',
-            'alpha3' => 'HRK',
-            'numeric' => '191',
-            'exp' => 2,
-            'country' => 'HR',
-        ],
-        [
             'name' => 'Haitian Gourde',
             'alpha3' => 'HTG',
             'numeric' => '332',
@@ -656,7 +627,10 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'alpha3' => 'INR',
             'numeric' => '356',
             'exp' => 2,
-            'country' => 'IN',
+            'country' => [
+                'BT',
+                'IN',
+            ],
         ],
         [
             'name' => 'Iraqi Dinar',
@@ -797,13 +771,6 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'numeric' => '426',
             'exp' => 2,
             'country' => 'LS',
-        ],
-        [
-            'name' => 'Latvian Lats',
-            'alpha3' => 'LVL',
-            'numeric' => '428',
-            'exp' => 2,
-            'country' => 'LV',
         ],
         [
             'name' => 'Libyan Dinar',
@@ -1110,14 +1077,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'country' => 'SH',
         ],
         [
-            'name' => 'Sierra Leonean Leone (old)',
-            'alpha3' => 'SLL',
-            'numeric' => '694',
-            'exp' => 2,
-            'country' => 'SL',
-        ],
-        [
-            'name' => 'Sierra Leonean Leone (new)',
+            'name' => 'Sierra Leonean Leone',
             'alpha3' => 'SLE',
             'numeric' => '925',
             'exp' => 2,
@@ -1253,9 +1213,12 @@ final class ISO4217 implements \Countable, \IteratorAggregate
                 'EC',
                 'FM',
                 'GU',
+                'HT',
+                'IO',
                 'MF',
                 'MH',
                 'MP',
+                'PA',
                 'PR',
                 'PW',
                 'SV',
@@ -1281,6 +1244,13 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             'numeric' => '860',
             'exp' => 2,
             'country' => 'UZ',
+        ],
+        [
+            'name' => 'Venezuelan Digital Bolívar',
+            'alpha3' => 'VED',
+            'numeric' => '926',
+            'exp' => 2,
+            'country' => 'VE',
         ],
         [
             'name' => 'Venezuelan Bolívar',
@@ -1338,6 +1308,16 @@ final class ISO4217 implements \Countable, \IteratorAggregate
                 'LC',
                 'MS',
                 'VC',
+            ],
+        ],
+        [
+            'name' => 'Caribbean Guilder',
+            'alpha3' => 'XCG',
+            'numeric' => '532',
+            'exp' => 2,
+            'country' => [
+                'CW',
+                'SX',
             ],
         ],
         [
