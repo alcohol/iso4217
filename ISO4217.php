@@ -54,7 +54,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
      */
     public function getByAlpha3(string $alpha3): array
     {
-        if (0 === preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
+        if (0 === preg_match('/^[a-zA-Z]{3}\z/', $alpha3)) {
             throw new DomainException('Not a valid alpha3: '.$alpha3);
         }
 
@@ -73,7 +73,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
      */
     public function getByNumeric(string $numeric): array
     {
-        if (0 === preg_match('/^[0-9]{3}$/', $numeric)) {
+        if (0 === preg_match('/^[0-9]{3}\z/', $numeric)) {
             throw new DomainException('Not a valid numeric: '.$numeric);
         }
 
@@ -92,7 +92,7 @@ final class ISO4217 implements \Countable, \IteratorAggregate
      */
     public function getByCountry(string $alpha2): array
     {
-        if (0 === preg_match('/^[a-zA-Z]{2}$/', $alpha2)) {
+        if (0 === preg_match('/^[a-zA-Z]{2}\z/', $alpha2)) {
             throw new DomainException('Not a valid alpha2: '.$alpha2);
         }
 

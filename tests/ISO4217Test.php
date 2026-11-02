@@ -259,6 +259,7 @@ final class ISO4217Test extends TestCase
             ['0000', \DomainException::class],
             ['ZZ', \DomainException::class],
             ['ZZZZ', \DomainException::class],
+            ["EUR\n", \DomainException::class],
         ];
     }
 
@@ -280,6 +281,7 @@ final class ISO4217Test extends TestCase
             ['0000', \DomainException::class],
             ['ZZ', \DomainException::class],
             ['ZZZZ', \DomainException::class],
+            ["978\n", \DomainException::class],
         ];
     }
 
@@ -301,6 +303,7 @@ final class ISO4217Test extends TestCase
             ['NLD'],
             ['12'],
             [''],
+            ["NL\n"],
         ];
     }
 
