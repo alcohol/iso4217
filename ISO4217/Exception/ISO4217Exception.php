@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+
+/*
+ * (c) Rob Bast <rob.bast@gmail.com>
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
+namespace Alcohol\ISO4217\Exception;
+
+/**
+ * Marker interface implemented by every exception thrown by this library.
+ */
+interface ISO4217Exception extends \Throwable
+{
+}
