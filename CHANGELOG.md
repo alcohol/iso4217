@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+* Changed: added AQ to BYN and USD
+
 ## [4.5.0] - 2026-11-02
 
 * Added: XCG Caribbean Guilder (CW, SX) and VED Venezuelan Digital Bolívar (VE)

@@ -314,6 +314,7 @@ final class ISO4217Test extends TestCase
     public static function countryCurrenciesProvider(): array
     {
         return [
+            ['AQ', ['BYN', 'NOK', 'USD']],
             ['BG', ['EUR']],
             ['BT', ['BTN', 'INR']],
             ['CU', ['CUP']],
