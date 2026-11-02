@@ -2,14 +2,15 @@
 
 A PHP library providing ISO 4217 data.
 
-[![codecov](https://codecov.io/gh/alcohol/iso4217/branch/master/graph/badge.svg)](https://codecov.io/gh/alcohol/iso4217)
+[![Continuous Integration](https://github.com/alcohol/iso4217/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/alcohol/iso4217/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/alcohol/iso4217/branch/main/graph/badge.svg)](https://codecov.io/gh/alcohol/iso4217)
 [![License](https://img.shields.io/packagist/l/alcohol/iso4217.svg?style=flat-square)](https://packagist.org/packages/alcohol/iso4217)
 
 ## What is ISO 4217
 
 > ISO 4217 is a standard published by the International Organization for Standardization, which delineates currency designators, country codes (alpha and numeric), and references to minor units in three tables.
 >
-> *-- [Wikipedia](http://en.wikipedia.org/wiki/ISO_4217)*
+> *-- [Wikipedia](https://en.wikipedia.org/wiki/ISO_4217)*
 
 ## Installing
 
@@ -54,6 +55,40 @@ Array
 )
 ```
 
+All currencies used in a country (by ISO 3166-1 alpha2 code):
+
+``` php
+<?php
+
+$iso4217->getByCountry('CU');
+// [['name' => 'Cuban Convertible Peso', 'alpha3' => 'CUC', ...], ['name' => 'Cuban Peso', 'alpha3' => 'CUP', ...]]
+```
+
+The class is also `Countable` and iterable:
+
+``` php
+<?php
+
+count($iso4217); // number of currencies
+
+foreach ($iso4217 as $currency) {
+    // ...
+}
+```
+
+Note that `country` is a string when a currency is used in a single country, and an
+array of strings when it is used in several.
+
+### Exceptions
+
+* `Alcohol\ISO4217\Exception\DomainException` (extends `\DomainException`) is thrown when a code
+  is not well-formed, e.g. `getByAlpha3('EU')`.
+* `Alcohol\ISO4217\Exception\OutOfBoundsException` (extends `\OutOfBoundsException`) is thrown when
+  a well-formed code is not in the data, e.g. `getByAlpha3('ZZZ')`.
+
+Both implement `Alcohol\ISO4217\Exception`, so you can catch every exception
+thrown by this library with a single `catch` block.
+
 ## Excluded
 
 The following codes have been intentionally left out:
@@ -97,4 +132,4 @@ alcohol/iso4217 is licensed under the MIT license.
 
 ## Source(s)
 
-* "[ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)" by [Wikipedia](http://www.wikipedia.org) licensed under [CC BY-SA 3.0 Unported License](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
+* "[ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)" by [Wikipedia](https://www.wikipedia.org) licensed under [CC BY-SA 3.0 Unported License](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)

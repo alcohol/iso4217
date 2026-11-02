@@ -11,28 +11,35 @@ declare(strict_types=1);
 
 namespace Alcohol;
 
+use Alcohol\ISO4217\Exception\DomainException;
+use Alcohol\ISO4217\Exception\OutOfBoundsException;
+
 /**
  * A library providing ISO 4217 data.
+ *
+ * @phpstan-type Currency array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
+ *
+ * @implements \IteratorAggregate<int, Currency>
  */
-final class ISO4217
+final class ISO4217 implements \Countable, \IteratorAggregate
 {
     /**
      * @api
      *
-     * @throws \OutOfBoundsException
+     * @throws OutOfBoundsException
      *
-     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
+     * @return Currency
      */
     public function getByCode(string $code): array
     {
         foreach ($this->currencies as $currency) {
-            if (0 === strcasecmp($code, $currency['alpha3']) ||
-                0 === strcasecmp($code, $currency['numeric'])) {
+            if (0 === strcasecmp($code, $currency['alpha3'])
+                || 0 === strcasecmp($code, $currency['numeric'])) {
                 return $currency;
             }
         }
 
-        throw new \OutOfBoundsException('ISO 4217 does not contain: '.$code);
+        throw new OutOfBoundsException('ISO 4217 does not contain: '.$code);
     }
 
     /**
@@ -40,14 +47,15 @@ final class ISO4217
      *
      * @uses ::getByCode()
      *
-     * @throws \DomainException
+     * @throws DomainException
+     * @throws OutOfBoundsException
      *
-     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
+     * @return Currency
      */
     public function getByAlpha3(string $alpha3): array
     {
         if (0 === preg_match('/^[a-zA-Z]{3}$/', $alpha3)) {
-            throw new \DomainException('Not a valid alpha3: '.$alpha3);
+            throw new DomainException('Not a valid alpha3: '.$alpha3);
         }
 
         return $this->getByCode($alpha3);
@@ -58,17 +66,50 @@ final class ISO4217
      *
      * @uses ::getByCode()
      *
-     * @throws \DomainException
+     * @throws DomainException
+     * @throws OutOfBoundsException
      *
-     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}
+     * @return Currency
      */
     public function getByNumeric(string $numeric): array
     {
         if (0 === preg_match('/^[0-9]{3}$/', $numeric)) {
-            throw new \DomainException('Not a valid numeric: '.$numeric);
+            throw new DomainException('Not a valid numeric: '.$numeric);
         }
 
         return $this->getByCode($numeric);
+    }
+
+    /**
+     * Returns every currency used in the country with the given ISO 3166-1 alpha2 code.
+     *
+     * @api
+     *
+     * @throws DomainException
+     * @throws OutOfBoundsException
+     *
+     * @return non-empty-list<Currency>
+     */
+    public function getByCountry(string $alpha2): array
+    {
+        if (0 === preg_match('/^[a-zA-Z]{2}$/', $alpha2)) {
+            throw new DomainException('Not a valid alpha2: '.$alpha2);
+        }
+
+        $needle = strtoupper($alpha2);
+        $matches = [];
+
+        foreach ($this->currencies as $currency) {
+            if (in_array($needle, (array) $currency['country'], true)) {
+                $matches[] = $currency;
+            }
+        }
+
+        if ([] === $matches) {
+            throw new OutOfBoundsException('ISO 4217 does not contain a currency for: '.$alpha2);
+        }
+
+        return $matches;
     }
 
     /**
@@ -76,7 +117,7 @@ final class ISO4217
      *
      * @uses ::$currencies
      *
-     * @return array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}[]
+     * @return list<Currency>
      */
     public function getAll(): array
     {
@@ -84,9 +125,33 @@ final class ISO4217
     }
 
     /**
+     * @api
+     *
+     * @see \Countable
+     */
+    public function count(): int
+    {
+        return count($this->currencies);
+    }
+
+    /**
+     * @api
+     *
+     * @see \IteratorAggregate
+     *
+     * @return \Generator<int, Currency>
+     */
+    public function getIterator(): \Generator
+    {
+        foreach ($this->currencies as $currency) {
+            yield $currency;
+        }
+    }
+
+    /**
      * @internal
      *
-     * @var array{name: string, alpha3: string, numeric: string, exp: int, country: string|string[]}[]
+     * @var list<Currency>
      */
     private array $currencies = [
         [

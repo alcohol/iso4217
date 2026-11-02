@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- PHPUnit 10.5+ configuration. PHPUnit 9 (installed on PHP 7.4/8.0) uses phpunit9.xml.dist. -->
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/9.5/phpunit.xsd"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
     bootstrap="vendor/autoload.php"
     colors="true"
     stderr="true"
+    failOnDeprecation="true"
+    failOnNotice="true"
+    failOnWarning="true"
+    displayDetailsOnTestsThatTriggerDeprecations="true"
+    displayDetailsOnTestsThatTriggerNotices="true"
+    displayDetailsOnTestsThatTriggerWarnings="true"
 >
 
     <testsuites>
         <testsuite name="ISO4217 Test Suite">
-            <file>ISO4217Test.php</file>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
     <source ignoreSuppressionOfDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <file>ISO4217.php</file>
+            <directory>ISO4217</directory>
         </include>
     </source>
 
-    <coverage>
-        <report>
-            <clover outputFile="coverage.xml"/>
-            <text outputFile="php://stderr"/>
-        </report>
-    </coverage>
 </phpunit>

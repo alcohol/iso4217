@@ -2,7 +2,7 @@
   "name": "alcohol/iso4217",
   "description": "ISO 4217 PHP Library",
   "keywords": ["ISO 4217", "ISO", "4217", "currencies", "library"],
-  "homepage": "http://alcohol.github.io/iso4217/",
+  "homepage": "https://alcohol.github.io/iso4217/",
   "license": "MIT",
   "authors": [{
     "name": "Rob Bast",
@@ -18,6 +18,12 @@
   "autoload": {
     "psr-4": {
       "Alcohol\\": "."
+    },
+    "exclude-from-classmap": ["/tests/", "/tools/"]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alcohol\\Tests\\": "tests/"
     }
   },
   "require-dev": {

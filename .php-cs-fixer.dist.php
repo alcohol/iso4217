@@ -7,16 +7,19 @@ For the full copyright and license information, please view
 the LICENSE file that was distributed with this source code.
 EOF;
 
-use PhpCsFixer\Finder;
 use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
-$finder = new Finder();
-$finder->in(__DIR__)->exclude(['cache', 'tools']);
-$config = new Config('ISO4217', 'ISO4217 style guide');
-$config
+$finder = (new Finder())
+    ->in(__DIR__)
+    ->exclude(['tools', 'vendor'])
+;
+
+return (new Config('ISO4217'))
     ->setRules([
         // default
-        '@PSR2' => true,
+        '@PER-CS' => true,
         '@Symfony' => true,
         // additionally
         'array_syntax' => ['syntax' => 'short'],
@@ -35,6 +38,5 @@ $config
     ])
     ->setFinder($finder)
     ->setRiskyAllowed(true)
+    ->setParallelConfig(ParallelConfigFactory::detect())
 ;
-
-return $config;

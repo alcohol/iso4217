@@ -1,11 +1,31 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-## [4.2.0] - 2023-06-01
+* Added: `getByCountry()` returns every currency used in a country (ISO 3166-1 alpha2)
+* Added: `ISO4217` implements `Countable` and `IteratorAggregate`
+* Added: `Alcohol\ISO4217\Exception\DomainException` and `OutOfBoundsException`, which extend
+  the SPL exceptions thrown so far and implement the `Alcohol\ISO4217\Exception`
+  marker interface; existing `catch` blocks and exception messages are unaffected
+* Changed: tests moved to `tests/` and excluded, together with tooling and CI config, from release archives
+* Changed: php-cs-fixer uses `@PER-CS` instead of `@PSR2`, PHPStan 2 now also analyses the tests
+* Changed: CI runs once per pull request, with read-only permissions, and uploads coverage from a single job
+* Changed: CI no longer runs a `prefer-lowest` PHPUnit matrix (there are no runtime dependencies to test at their lowest versions)
+
+## [4.3.1] - 2026-10-26
+
+* Changed: dependency updates for CI (actions/checkout 7, codecov/codecov-action 7) and tooling
+
+## [4.3.0] - 2026-01-02
+
+* Changed: added Bulgaria to EUR
+* Added: support for PHPUnit 10, 11 and 12
+* Added: CI for PHP 8.4 and 8.5
+
+## [4.2.0] - 2024-07-01
 
 * Added: ZWG for Zimbabwe Gold
 

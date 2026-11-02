@@ -7,3 +7,7 @@ parameters:
   tmpDir: .phpstan.cache
   paths:
     - ISO4217.php
+    - ISO4217
+    - tests
+  bootstrapFiles:
+    - vendor/autoload.php
