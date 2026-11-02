@@ -5,10 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [4.5.1] - 2026-11-02
+
+* Added: support for PHPUnit 13
+* Changed: added AQ to BYN and USD
 * Fixed: codes with a trailing newline (e.g. `"EUR\n"`) are rejected with `DomainException`
   instead of passing the format check and throwing `OutOfBoundsException`
-
-* Changed: added AQ to BYN and USD
 
 ## [4.5.0] - 2026-11-02
 
@@ -94,7 +96,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 * Changed: removed Lithuanian currency.
 
-[Unreleased]: https://github.com/alcohol/iso4217/compare/4.5.0...HEAD
+[Unreleased]: https://github.com/alcohol/iso4217/compare/4.5.1...HEAD
+[4.5.1]: https://github.com/alcohol/iso4217/compare/4.5.0...4.5.1
 [4.5.0]: https://github.com/alcohol/iso4217/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/alcohol/iso4217/compare/4.3.1...4.4.0
 [4.3.1]: https://github.com/alcohol/iso4217/compare/4.3.0...4.3.1
