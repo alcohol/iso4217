@@ -96,11 +96,11 @@ final class ISO4217 implements \Countable, \IteratorAggregate
             throw new DomainException('Not a valid alpha2: '.$alpha2);
         }
 
-        $alpha2 = strtoupper($alpha2);
+        $needle = strtoupper($alpha2);
         $matches = [];
 
         foreach ($this->currencies as $currency) {
-            if (in_array($alpha2, (array) $currency['country'], true)) {
+            if (in_array($needle, (array) $currency['country'], true)) {
                 $matches[] = $currency;
             }
         }

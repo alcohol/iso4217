@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PHPUnit 9 configuration, used in CI when PHPUnit 9 is installed. PHPUnit 10.5+ uses phpunit.xml.dist. -->
+<!-- PHPUnit 9 configuration (installed on PHP 7.4/8.0), selected in CI by version. PHPUnit 10.5+ uses phpunit.xml.dist. -->
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
